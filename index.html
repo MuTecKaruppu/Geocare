@@ -39,7 +39,7 @@
 
             <!-- Header Start -->
 
-            <header class="header-wrapper">
+            <header class="header-wrapper mt__header">
 
                 <!-- Topbar -->
                 <div class="mt__topbar_wrapper">
@@ -72,25 +72,145 @@
 
                 <div class="mt__header_wrapper">
                     <div class="container">
-                        <div class="mt__header">
+                        <div class="mt__header_main">
+                            <!-- Logo -->
                             <div class="mt__logo">
                                 <a href="index.html" class="site-logo"><img src="assets/images/header/geocare-logo.png" alt="Site Logo"></a>
                             </div>
-                            <nav class="mt__nav">
-                                <ul class="main-menu">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </nav>
-                            <div class="mt__header_icon">
+
+                            <!-- Search Form -->
+                            <div class="mt__search_form mt__text_center">
+                                <form action="#" method="get">
+                                    <input type="text" name="search" placeholder="Search for gloves...">
+                                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Header Icons -->
+                            <div class="mt__header_icon mt__text_end">
                                 <button class="search-icon" id="search_icon"><i class="fa-solid fa-magnifying-glass"></i></button>
                                 <button class="search-icon" id="search_close"><i class="fa-solid fa-xmark"></i></button>
                                 <button id="open_offcanvas"><img src="assets/imgs/icon/menu-black.png" alt="Menu Icon"></button>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Header Navigation -->
+
+                <div class="mt__header_navbar">
+                    <nav class="mt__navbar">
+                        <div class="container">
+
+                            <!-- Menu -->
+                            <div class="collapse navbar-collapse" id="mainMenu">
+                                <ul class="mt-primary-menu">
+
+                                    <li class="menu-item">
+                                        <a class="menu-link" href="#">Home</a>
+                                    </li>
+
+                                    <!-- Masks -->
+                                    <li class="menu-item dropdown">
+                                        <a class="menu-link dropdown-toggle" href="#" id="masksMenu" data-toggle="dropdown">
+                                            Masks
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <a class="dropdown-item" href="#">3PLY Geocare Blue Mask</a>
+                                            <a class="dropdown-item" href="#">3PLY Geocare Black Mask</a>
+                                        </ul>
+                                    </li>
+
+                                    <!-- Gloves -->
+                                    <li class="menu-item dropdown">
+                                        <a class="menu-link dropdown-toggle" href="#" id="glovesMenu" data-toggle="dropdown">
+                                            Gloves
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <a class="dropdown-item" href="#">Nitrile Gloves (S, M, L, XL)</a>
+                                            <a class="dropdown-item" href="#">Latex Gloves (S, M, L, XL)</a>
+                                            <a class="dropdown-item" href="#">Black Nitrile Gloves</a>
+                                            <a class="dropdown-item" href="#">Premium Nitrile Gloves</a>
+                                            <a class="dropdown-item" href="#">Sky Blue Nitrile Gloves</a>
+                                            <a class="dropdown-item" href="#">Nitrile Gloves 16 inch</a>
+                                        </ul>
+                                    </li>
+
+                                    <!-- Patient Care -->
+                                    <li class="menu-item dropdown">
+                                        <a class="menu-link dropdown-toggle" href="#" id="patientMenu" data-toggle="dropdown">
+                                            Patient Care
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <a class="dropdown-item" href="#">Patient Kit</a>
+                                            <a class="dropdown-item" href="#">Geo Underpad 10s Pack</a>
+                                            <a class="dropdown-item" href="#">Geo Underpad Singles Pack</a>
+                                            <a class="dropdown-item" href="#">Adult Diaper M</a>
+                                            <a class="dropdown-item" href="#">Adult Diaper L</a>
+                                            <a class="dropdown-item" href="#">Adult Diaper XL</a>
+                                            <a class="dropdown-item" href="#">Adult Wipes</a>
+                                            <a class="dropdown-item" href="#">Air Bed Mattress</a>
+                                        </ul>
+                                    </li>
+
+                                    <!-- Protection Wear -->
+                                    <li class="menu-item dropdown">
+                                        <a class="menu-link dropdown-toggle" href="#" id="protectionMenu" data-toggle="dropdown">
+                                            Protection Wear
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <a class="dropdown-item" href="#">Plastic Apron</a>
+                                            <a class="dropdown-item" href="#">Visitor Gown</a>
+                                            <a class="dropdown-item" href="#">Surgeon Gown with Hand Towel</a>
+                                            <a class="dropdown-item" href="#">Head Cap 18"</a>
+                                            <a class="dropdown-item" href="#">Head Cap 21"</a>
+                                            <a class="dropdown-item" href="#">Surgeon Cap</a>
+                                            <a class="dropdown-item" href="#">Shoe Cover (Non-Woven)</a>
+                                            <a class="dropdown-item" href="#">Shoe Cover (Poly)</a>
+                                        </ul>
+                                    </li>
+
+                                    <!-- Hospital Supplies -->
+                                    <li class="menu-item dropdown">
+                                        <a class="menu-link dropdown-toggle" href="#" id="hospitalMenu" data-toggle="dropdown">
+                                            Hospital Supplies
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <a class="dropdown-item" href="#">Bedsheet with Pillow Cover</a>
+                                            <a class="dropdown-item" href="#">Bedsheet with Pillow Cover (SMS)</a>
+                                        </ul>
+                                    </li>
+
+                                    <!-- Medical Devices -->
+                                    <li class="menu-item dropdown">
+                                        <a class="menu-link dropdown-toggle" href="#" id="medicalMenu" data-toggle="dropdown">
+                                            Medical Devices
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <a class="dropdown-item" href="#">Nebulizer</a>
+                                            <a class="dropdown-item" href="#">Geocare Digital Thermometer</a>
+                                            <a class="dropdown-item" href="#">Geocare Flexi Thermometer</a>
+                                            <a class="dropdown-item" href="#">BP Monitor</a>
+                                            <a class="dropdown-item" href="#">Stethoscope</a>
+                                            <a class="dropdown-item" href="#">Blood Lancet</a>
+                                        </ul>
+                                    </li>
+
+                                    <!-- Hygiene -->
+                                    <li class="menu-item dropdown">
+                                        <a class="menu-link dropdown-toggle" href="#" id="hygieneMenu" data-toggle="dropdown">
+                                            Hygiene
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <a class="dropdown-item" href="#">Sanitizer Blue</a>
+                                            <a class="dropdown-item" href="#">Sanitizer Pink</a>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
 
 
