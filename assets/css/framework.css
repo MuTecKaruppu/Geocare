@@ -44,7 +44,6 @@
 
     1. Reset & Box Sizing
         1.1 Global Reset
-        1.2 Box Sizing
     2. Embedded Content & Images
     3. Typography
     4. Button
@@ -60,11 +59,9 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* 1.1 Global Reset */
+    html { scroll-behavior: smooth; tab-size: 4; }
 
-/* 1.2 Box Sizing */
-
-    .container { width: 100%; max-width: 1600px; margin: 0 auto; padding: 0 30px; }
+    /* 1.1 Global Reset */
 
 /**
     2. Embedded Content & Images
@@ -100,7 +97,7 @@
     3. Typography 
 */
 
-body { color: var(--mt-body-text); background-color: var(--mt-body-bg); }
+body { color: var(--mt-body-text); background-color: var(--mt-body-bg); max-width: 1920px; margin: 0 auto; overflow-x: hidden; }
 
 body, button, input, textarea, select {
     font-family: var(--mt-base-font);

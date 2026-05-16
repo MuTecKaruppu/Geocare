@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,52 +17,87 @@
     <link rel="stylesheet" href="assets/css/framework.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/custom.css">
 
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="loading">
-            <div class="mt__bar mt__bar1"></div>
-            <div class="mt__bar mt__bar2"></div>
-            <div class="mt__bar mt__bar3"></div>
-            <div class="mt__bar mt__bar4"></div>
-            <div class="mt__bar mt__bar5"></div>
-            <div class="mt__bar mt__bar6"></div>
-            <div class="mt__bar mt__bar7"></div>
-            <div class="mt__bar mt__bar8"></div>
-        </div>
-    </div>
+</head>
+
+<body>
 
     <div class="wrapper">
         <div class="inner-wrapper">
 
             <!-- Header Start -->
 
-            <header class="header-wrapper mt__header">
+            <header id="header-wrapper" class="header-wrapper mt__header">
 
                 <!-- Topbar -->
                 <div class="mt__topbar_wrapper">
                     <div class="container">
                         <div class="mt__topbar">
                             <div class="mt__topbar_item">
-                                <a href="#">Wholesale</a> & 
-                                <a href="#">Retail</a> Supplies
-                                <a href="#">Get Quote</a>
+
+                                <div class="tb-left">
+                                    <span class="tb-supply-label">Wholesale &amp; Retail Supplies</span>
+                                    <span class="tb-pipe">|</span>
+                                    <a href="b2b-terms.html" class="tb-cta-pill tb-cta-b2b">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+                                        Wholesale
+                                    </a>
+                                    <a href="b2c-terms.html" class="tb-cta-pill tb-cta-b2c">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                                        Retail
+                                    </a>
+                                </div>
+
                             </div>
 
                             <div class="mt__topbar_item mt__text_center">
-                                <ul class="mt__topbar_counts">
-                                    <li class="mt__tabbar_count"><span class="mt_count">5000</span><span class="mt__suffix">+</span> Businesses Served</li>
-                                    <li class="mt__tabbar_count"><span class="mt_count">600000</span><span class="mt__suffix">+</span> Products Delivered</li>
-                                </ul>
+                                
+                                <div class="tb-center">
+                                    <div class="tb-ticker">
+                                        <!-- Item 1: Businesses -->
+                                        <div class="tb-ticker-item active" id="tickerItem0">
+                                            <span class="tb-ticker-icon">🏢</span>
+                                            <div class="tb-ticker-text">
+                                                <span class="tb-ticker-num" id="tickerCount0">0</span>
+                                                <span>+</span>
+                                                <span class="tb-ticker-label">Businesses Served</span>
+                                            </div>
+                                        </div>
+                                        <!-- Item 2: Products -->
+                                        <div class="tb-ticker-item" id="tickerItem1">
+                                            <span class="tb-ticker-icon">📦</span>
+                                            <div class="tb-ticker-text">
+                                                <span class="tb-ticker-num" id="tickerCount1">0</span>
+                                                <span>+</span>
+                                                <span class="tb-ticker-label">Products Delivered</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
                             </div>
                             
                             <div class="mt__topbar_item mt__text_end">
-                                <ul class="mt__topbar_contacts">
-                                    <li class="mt__tabbar_contact">Bulk Orders (B2B): +91xxxxxxxxxx</li>
-                                    <li class="mt__tabbar_contact">Retail (B2C): +91xxxxxxxxxx</li>
-                                </ul>
+
+                                <div class="tb-right">
+                                    <div class="tb-phone-block">
+                                        <span class="tb-phone-tag b2b">Bulk (B2B)</span>
+                                        <a href="tel:+919100000000" class="tb-phone-num">
+                                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.61 3.38 2 2 0 013.59 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.55a16 16 0 006 6l.92-.92a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                                        +91 91000 00000
+                                        </a>
+                                    </div>
+                                    <span class="tb-pipe">|</span>
+                                    <div class="tb-phone-block">
+                                        <span class="tb-phone-tag b2c">Retail (B2C)</span>
+                                        <a href="tel:+919200000000" class="tb-phone-num">
+                                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.61 3.38 2 2 0 013.59 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.55a16 16 0 006 6l.92-.92a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                                        +91 92000 00000
+                                        </a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -81,15 +117,24 @@
                             <div class="mt__search_form mt__text_center">
                                 <form action="#" method="get">
                                     <input type="text" name="search" placeholder="Search for gloves...">
-                                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    <button type="submit"><svg viewBox="0 0 24 24" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
                                 </form>
                             </div>
 
                             <!-- Header Icons -->
                             <div class="mt__header_icon mt__text_end">
-                                <button class="search-icon" id="search_icon"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                <button class="search-icon" id="search_close"><i class="fa-solid fa-xmark"></i></button>
-                                <button id="open_offcanvas"><img src="assets/imgs/icon/menu-black.png" alt="Menu Icon"></button>
+                                <div class="header-actions">
+                                    <a href="#" class="btn-ghost">Sign In</a>
+                                    <a href="#" class="btn-ghost">New Account</a>
+                                    <button class="btn-basket">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                                        Basket
+                                        <span class="basket-count">0</span>
+                                    </button>
+                                    <button class="hamburger" id="hamburger" aria-label="Open menu">
+                                        <span></span><span></span><span></span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -213,23 +258,879 @@
                 </div>
 
 
+                <!-- MOBILE NAV DRAWER -->
+                <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+                <div class="mobile-nav-drawer">
+                    <div class="mnav-header">
+                    <img src="https://muteckaruppu.github.io/Geocare/assets/images/header/geocare-logo.png" alt="GeoCare">
+                    <button class="mnav-close" id="mobileNavClose">✕</button>
+                    </div>
+                    <div class="mnav-links">
+                    <a href="#" class="mnav-link">Home</a>
+
+                    <div class="mnav-link" onclick="toggleMSub('msub1',this)">
+                        Full Shop
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="mnav-sub" id="msub1">
+                        <div style="padding:8px 20px 4px 32px;font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)">Popular Brands</div>
+                        <a href="#">Ansell</a><a href="#">ATG Gloves</a><a href="#">Aurelia</a><a href="#">Portwest</a><a href="#">Skytec</a><a href="#">Traffiglove</a><a href="#">Uvex</a>
+                        <div style="padding:8px 20px 4px 32px;font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)">Reusable Gloves</div>
+                        <a href="#">Cut Resistant</a><a href="#">Leather</a><a href="#">Thermal</a><a href="#">Waterproof</a><a href="#">Kevlar</a>
+                        <div style="padding:8px 20px 4px 32px;font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)">Disposable Gloves</div>
+                        <a href="#">Nitrile</a><a href="#">Latex</a><a href="#">Vinyl</a><a href="#">Surgical</a>
+                    </div>
+
+                    <div class="mnav-link" onclick="toggleMSub('msub2',this)">
+                        Industry (A–Z)
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="mnav-sub" id="msub2">
+                        <a href="#">Agriculture</a><a href="#">Automotive</a><a href="#">Construction</a>
+                        <a href="#">Healthcare</a><a href="#">Hospitality</a><a href="#">Manufacturing</a>
+                        <a href="#">Medical</a><a href="#">Oil &amp; Gas</a><a href="#">Warehousing</a>
+                    </div>
+
+                    <div class="mnav-link" onclick="toggleMSub('msub3',this)">
+                        Special Offers
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="mnav-sub" id="msub3">
+                        <a href="#">Clearance Lines</a><a href="#">Bundle Offers</a>
+                        <a href="#">Bulk Discounts</a><a href="#">New In</a>
+                    </div>
+
+                    <div class="mnav-link" onclick="toggleMSub('msub4',this)">
+                        Our Guides
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="mnav-sub" id="msub4">
+                        <a href="#">How to Choose Gloves</a><a href="#">Sizing Guide</a>
+                        <a href="#">Material Guide</a><a href="#">Blog &amp; News</a><a href="#">FAQs</a>
+                    </div>
+                    </div>
+
+                    <div class="mnav-footer">
+                    <div class="mnav-phone">
+                        <a href="tel:+919100000000">
+                        <span class="b2b-tag">Bulk B2B</span>
+                        +91 91000 00000
+                        </a>
+                        <a href="tel:+919200000000">
+                        <span class="b2c-tag">Retail B2C</span>
+                        +91 92000 00000
+                        </a>
+                    </div>
+                    <div class="mnav-ctas">
+                        <a href="b2b-terms.html" class="b2b-cta">Wholesale →</a>
+                        <a href="b2c-terms.html" class="b2c-cta">Retail →</a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- NAV -->
+                <nav>
+                <div class="nav-inner">
+
+                    <div class="nav-item">
+                    <a href="#" class="nav-link active">Home</a>
+                    </div>
+
+                    <div class="nav-item">
+                    <span class="nav-link">Full Shop
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </span>
+                    <div class="mega-menu wide">
+                        <div class="mega-col">
+                        <h4>Popular Brands</h4>
+                        <ul>
+                            <li><a href="#">Ansell</a></li><li><a href="#">ATG Gloves</a></li><li><a href="#">Aurelia</a></li>
+                            <li><a href="#">Black Mamba</a></li><li><a href="#">Delta Plus</a></li><li><a href="#">Ejendals Tegera</a></li>
+                            <li><a href="#">Grippaz</a></li><li><a href="#">HexArmor</a></li><li><a href="#">KLASS</a></li>
+                            <li><a href="#">Polyco</a></li><li><a href="#">Portwest</a></li><li><a href="#">Showa</a></li>
+                            <li><a href="#">Skytec</a></li><li><a href="#">Traffiglove</a></li><li><a href="#">Uvex</a></li>
+                        </ul>
+                        <a href="#" class="mega-more">More...</a>
+                        </div>
+                        <div class="mega-col">
+                        <h4>Environment</h4>
+                        <ul>
+                            <li><a href="#">Clean</a></li><li><a href="#">Cold</a></li><li><a href="#">Cutting</a></li>
+                            <li><a href="#">Dark</a></li><li><a href="#">Dirty</a></li><li><a href="#">Dry</a></li>
+                            <li><a href="#">Freezers</a></li><li><a href="#">Garden</a></li><li><a href="#">Grease</a></li>
+                            <li><a href="#">Hot</a></li><li><a href="#">Indoor</a></li><li><a href="#">Kitchen</a></li>
+                            <li><a href="#">Oil</a></li><li><a href="#">Outdoor</a></li><li><a href="#">Thermal</a></li>
+                            <li><a href="#">Waterproof</a></li><li><a href="#">Wet</a></li><li><a href="#">Winter Work</a></li>
+                        </ul>
+                        </div>
+                        <div class="mega-col">
+                        <h4>Hazard (A–F)</h4>
+                        <ul>
+                            <li><a href="#">Abrasion</a></li><li><a href="#">Adhesives</a></li><li><a href="#">Anti-Static</a></li>
+                            <li><a href="#">Barbed Wire</a></li><li><a href="#">Blade</a></li><li><a href="#">Cans</a></li>
+                            <li><a href="#">Chainsaws</a></li><li><a href="#">Chemicals</a></li><li><a href="#">Cold</a></li>
+                            <li><a href="#">Cut</a></li><li><a href="#">Cut + Heat</a></li><li><a href="#">Debris</a></li>
+                            <li><a href="#">Detergents</a></li><li><a href="#">Electricity</a></li><li><a href="#">Fire</a></li>
+                            <li><a href="#">Food</a></li><li><a href="#">Freezing Temp</a></li>
+                        </ul>
+                        </div>
+                        <div class="mega-col">
+                        <h4>Hazard (G–S)</h4>
+                        <ul>
+                            <li><a href="#">Glass</a></li><li><a href="#">Grease</a></li><li><a href="#">HAVS</a></li>
+                            <li><a href="#">Heat</a></li><li><a href="#">Hot Water</a></li><li><a href="#">Hygiene</a></li>
+                            <li><a href="#">Impact</a></li><li><a href="#">Janitorial</a></li><li><a href="#">Kilns</a></li>
+                            <li><a href="#">Knives</a></li><li><a href="#">Medical Contamination</a></li><li><a href="#">Needlestick</a></li>
+                            <li><a href="#">Oil</a></li><li><a href="#">Puncture</a></li><li><a href="#">Sharp Objects</a></li>
+                        </ul>
+                        </div>
+                        <div class="mega-col">
+                        <h4>Hazard (T–Z)</h4>
+                        <ul>
+                            <li><a href="#">Tear</a></li><li><a href="#">Thermal</a></li><li><a href="#">Thermal + Waterproof</a></li>
+                            <li><a href="#">Vibration</a></li><li><a href="#">Visibility</a></li><li><a href="#">Waterproof</a></li>
+                            <li><a href="#">Wood</a></li><li><a href="#">Welding</a></li>
+                        </ul>
+                        <h4 style="margin-top:16px">Disposable</h4>
+                        <ul>
+                            <li><a href="#">Latex Gloves</a></li><li><a href="#">Nitrile</a></li><li><a href="#">Powder Free</a></li>
+                            <li><a href="#">PVC</a></li><li><a href="#">Surgical Gloves</a></li><li><a href="#">Vinyl</a></li>
+                        </ul>
+                        </div>
+                        <div class="mega-col">
+                        <h4>Reusable Gloves</h4>
+                        <ul>
+                            <li><a href="#">Chainmail</a></li><li><a href="#">Cotton</a></li><li><a href="#">Cotton Drill</a></li>
+                            <li><a href="#">Cut Resistant</a></li><li><a href="#">Dyneema</a></li><li><a href="#">Fingerless</a></li>
+                            <li><a href="#">Gauntlet</a></li><li><a href="#">Kevlar</a></li><li><a href="#">Latex</a></li>
+                            <li><a href="#">Leather</a></li><li><a href="#">Liners</a></li><li><a href="#">Neoprene</a></li>
+                            <li><a href="#">PVC</a></li><li><a href="#">Rigger</a></li><li><a href="#">Rubber</a></li>
+                            <li><a href="#">Thermal</a></li><li><a href="#">Touchscreen</a></li><li><a href="#">Vegan</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="nav-item">
+                    <span class="nav-link">Industry (A–Z)
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </span>
+                    <div class="mega-menu">
+                        <div class="mega-col">
+                        <h4>A – C</h4>
+                        <ul>
+                            <li><a href="#">Agriculture</a></li><li><a href="#">Automotive</a></li><li><a href="#">Building</a></li>
+                            <li><a href="#">Catering</a></li><li><a href="#">Chemical</a></li><li><a href="#">Construction</a></li>
+                        </ul>
+                        </div>
+                        <div class="mega-col">
+                        <h4>D – F</h4>
+                        <ul>
+                            <li><a href="#">Dental</a></li><li><a href="#">Electronics</a></li><li><a href="#">Engineering</a></li>
+                            <li><a href="#">Farming</a></li><li><a href="#">Fire Service</a></li><li><a href="#">Fishing</a></li>
+                        </ul>
+                        </div>
+                        <div class="mega-col">
+                        <h4>G – L</h4>
+                        <ul>
+                            <li><a href="#">Gardening</a></li><li><a href="#">Glass</a></li><li><a href="#">Healthcare</a></li>
+                            <li><a href="#">Hospitality</a></li><li><a href="#">Industrial</a></li><li><a href="#">Logistics</a></li>
+                        </ul>
+                        </div>
+                        <div class="mega-col">
+                        <h4>M – P</h4>
+                        <ul>
+                            <li><a href="#">Manufacturing</a></li><li><a href="#">Medical</a></li><li><a href="#">Mining</a></li>
+                            <li><a href="#">Oil & Gas</a></li><li><a href="#">Petrochemical</a></li><li><a href="#">Pharmaceutical</a></li>
+                        </ul>
+                        </div>
+                        <div class="mega-col">
+                        <h4>R – Z</h4>
+                        <ul>
+                            <li><a href="#">Retail</a></li><li><a href="#">Security</a></li><li><a href="#">Utilities</a></li>
+                            <li><a href="#">Veterinary</a></li><li><a href="#">Warehousing</a></li><li><a href="#">Welding</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="nav-item">
+                    <span class="nav-link">Industry (1–9)
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </span>
+                    <div class="mega-menu">
+                        <div class="mega-col">
+                        <h4>Standards</h4>
+                        <ul>
+                            <li><a href="#">EN 388</a></li><li><a href="#">EN 374</a></li><li><a href="#">EN 407</a></li>
+                            <li><a href="#">EN 511</a></li><li><a href="#">EN 420</a></li>
+                        </ul>
+                        </div>
+                        <div class="mega-col">
+                        <h4>Cut Level</h4>
+                        <ul>
+                            <li><a href="#">Level A</a></li><li><a href="#">Level B</a></li><li><a href="#">Level C</a></li>
+                            <li><a href="#">Level D</a></li><li><a href="#">Level E</a></li><li><a href="#">Level F</a></li>
+                        </ul>
+                        </div>
+                        <div class="mega-col">
+                        <h4>Protection</h4>
+                        <ul>
+                            <li><a href="#">Chemical Grade 1</a></li><li><a href="#">Chemical Grade 2</a></li>
+                            <li><a href="#">Chemical Grade 3</a></li><li><a href="#">Heat Level 1-4</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="nav-item">
+                    <a href="#" class="nav-link" style="color: var(--gold);">Special Offers
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </a>
+                    <div class="mega-menu">
+                        <div class="mega-col">
+                        <h4>Deals</h4>
+                        <ul>
+                            <li><a href="#">Clearance Lines</a></li><li><a href="#">Bundle Offers</a></li>
+                            <li><a href="#">Bulk Discounts</a></li><li><a href="#">New In</a></li>
+                        </ul>
+                        </div>
+                        <div class="mega-col">
+                        <h4>By Price</h4>
+                        <ul>
+                            <li><a href="#">Under £1</a></li><li><a href="#">£1 – £5</a></li>
+                            <li><a href="#">£5 – £10</a></li><li><a href="#">£10+</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="nav-item">
+                    <span class="nav-link">Our Guides
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </span>
+                    <div class="mega-menu">
+                        <div class="mega-col">
+                        <h4>Buying Guides</h4>
+                        <ul>
+                            <li><a href="#">How to Choose Gloves</a></li><li><a href="#">Sizing Guide</a></li>
+                            <li><a href="#">Material Guide</a></li><li><a href="#">EN Standards Explained</a></li>
+                        </ul>
+                        </div>
+                        <div class="mega-col">
+                        <h4>Industry Guides</h4>
+                        <ul>
+                            <li><a href="#">Construction Guide</a></li><li><a href="#">Healthcare Guide</a></li>
+                            <li><a href="#">Chemical Guide</a></li><li><a href="#">Food Industry Guide</a></li>
+                        </ul>
+                        </div>
+                        <div class="mega-col">
+                        <h4>Knowledge Base</h4>
+                        <ul>
+                            <li><a href="#">PPE Regulations UK</a></li><li><a href="#">Glove Care Tips</a></li>
+                            <li><a href="#">Blog & News</a></li><li><a href="#">FAQs</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+                </nav>
+
+
             </header>
 
             <!-- Header End -->
 
             <!-- Content Start -->
+
              <main class="main-area">
-                <div id="primary"></div>
+                <div id="primary">
+
+                    <!-- HERO SWIPER SLIDER -->
+                    <section class="hero-swiper swiper" id="heroSwiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- SLIDE 1: Product-focused -->
+                        <div class="swiper-slide">
+                        <div class="slide-bg" style="background-image: url('https://www.safetygloves.co.uk/user/construction-slideshow-2026-v3.jpg'); background-position: center center;"></div>
+                        <div class="slide-overlay slide-overlay-1"></div>
+                        <div class="slide-hex"></div>
+                        <div class="slide-content">
+                            <div class="slide-text">
+                            <div class="slide-eyebrow">🛡️ India's Trusted PPE Supplier</div>
+                            <h1 class="slide-h1">
+                                Premium Safety Gloves
+                                <em>For Every Hazard</em>
+                            </h1>
+                            <p class="slide-sub">From cut-resistant work gloves to sterile nitrile disposables — the most comprehensive range of safety gloves for industrial, medical, and food-handling applications.</p>
+                            <div class="slide-cta">
+                                <a href="#" class="btn-primary">
+                                Shop Now
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                                <a href="#" class="btn-secondary">View Full Range</a>
+                            </div>
+                            </div>
+                            <div class="slide-panel">
+                            <div class="slide-panel-title">Why Choose <em>GeoCare?</em></div>
+                            <div class="slide-panel-sub">Trusted by 5,000+ businesses across India</div>
+                            <ul class="slide-panel-list">
+                                <li><span class="panel-icon green">✂️</span> Cut, heat & chemical resistant options</li>
+                                <li><span class="panel-icon green">🧤</span> EN 388 & ISO certified gloves</li>
+                                <li><span class="panel-icon gold">📦</span> Bulk wholesale pricing available</li>
+                                <li><span class="panel-icon gold">🚚</span> Pan-India fast dispatch</li>
+                            </ul>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- SLIDE 2: Healthcare/B2B focused -->
+                        <div class="swiper-slide">
+                        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1600&q=80'); background-position: center 40%;"></div>
+                        <div class="slide-overlay slide-overlay-2"></div>
+                        <div class="slide-hex"></div>
+                        <div class="slide-content">
+                            <div class="slide-text">
+                            <div class="slide-eyebrow">🏥 Complete Healthcare Supply Partner</div>
+                            <h1 class="slide-h1">
+                                Full-Spectrum PPE
+                                <em>For Healthcare & Clinics</em>
+                            </h1>
+                            <p class="slide-sub">Equipping hospitals, clinics, and pharmaceutical labs with sterile gloves, patient-care products, and complete PPE solutions — from a single trusted B2B source.</p>
+                            <div class="slide-cta">
+                                <a href="#" class="btn-primary">
+                                Explore Products
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                                <a href="#" class="btn-gold">
+                                Get Bulk Quote
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                                </a>
+                            </div>
+                            </div>
+                            <div class="slide-panel">
+                            <div class="slide-panel-title">Healthcare <em>Solutions</em></div>
+                            <div class="slide-panel-sub">From OPDs to surgical suites — covered</div>
+                            <ul class="slide-panel-list">
+                                <li><span class="panel-icon green">💊</span> Sterile & powder-free nitrile gloves</li>
+                                <li><span class="panel-icon green">🔬</span> Lab-grade latex & vinyl options</li>
+                                <li><span class="panel-icon gold">🏥</span> Medical-grade certified products</li>
+                                <li><span class="panel-icon gold">🤝</span> Dedicated B2B account managers</li>
+                            </ul>
+                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-progress" id="swiperProgress"></div>
+                    </section>
+
+                    <!-- BRANDS -->
+                    <div class="brands">
+                    <div class="brands-inner">
+                        <div class="brands-track">
+                        <span class="brand-logo">Portwest</span>
+                        <span class="brand-logo">Traffi.</span>
+                        <span class="brand-logo">Skytec</span>
+                        <span class="brand-logo">GTG</span>
+                        <span class="brand-logo">Polyco</span>
+                        <span class="brand-logo">Ejendals</span>
+                        <span class="brand-logo">Aurelia</span>
+                        <span class="brand-logo">Ansell</span>
+                        <span class="brand-logo">Supertouch</span>
+                        <span class="brand-logo">Ultimate</span>
+                        <span class="brand-logo">ATG</span>
+                        <span class="brand-logo">UniGloves</span>
+                        <!-- duplicate for seamless loop -->
+                        <span class="brand-logo">Portwest</span>
+                        <span class="brand-logo">Traffi.</span>
+                        <span class="brand-logo">Skytec</span>
+                        <span class="brand-logo">GTG</span>
+                        <span class="brand-logo">Polyco</span>
+                        <span class="brand-logo">Ejendals</span>
+                        <span class="brand-logo">Aurelia</span>
+                        <span class="brand-logo">Ansell</span>
+                        <span class="brand-logo">Supertouch</span>
+                        <span class="brand-logo">Ultimate</span>
+                        <span class="brand-logo">ATG</span>
+                        <span class="brand-logo">UniGloves</span>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- FEATURED PRODUCTS -->
+                    <section class="featured">
+                    <div class="container">
+                        <div class="featured-header">Featured Products</div>
+                        <div class="products-grid">
+
+                        <!-- Product 1 -->
+                        <div class="product-card reveal">
+                            <div class="product-card-top">
+                            <div class="product-img-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 11V6a2 2 0 00-2-2v0a2 2 0 00-2 2v0M14 10V4a2 2 0 00-2-2v0a2 2 0 00-2 2v2M10 10.5V6a2 2 0 00-2-2v0a2 2 0 00-2 2v8l2.5-1.5"/><path d="M18 8a2 2 0 014 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
+                            </div>
+                            <div class="product-price-box">
+                                <div class="price-from">from</div>
+                                <div class="price-amount">£2.70</div>
+                            </div>
+                            </div>
+                            <div class="product-name">Skytec Aria Heat-Resistant Touchscreen Work Gloves</div>
+                            <div class="stars-row">
+                            <span class="star-icons">★★★★★</span>
+                            <span class="star-count">(9)</span>
+                            </div>
+                            <ul class="product-features">
+                            <li>Lightweight & grippy with touchscreen capability</li>
+                            <li>High-level abrasion and tear resistance</li>
+                            <li>Heat protection up to 100°C</li>
+                            <li>Seamless liner and breathable flexible design</li>
+                            </ul>
+                            <div class="product-delivery">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            In stock, delivery as soon as Tuesday 19 May
+                            </div>
+                            <a href="#" class="btn-details">Details <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card reveal">
+                            <span class="badge badge-best">Best Seller</span>
+                            <div class="product-card-top">
+                            <div class="product-img-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 11V6a2 2 0 00-2-2v0a2 2 0 00-2 2v0M14 10V4a2 2 0 00-2-2v0a2 2 0 00-2 2v2M10 10.5V6a2 2 0 00-2-2v0a2 2 0 00-2 2v8l2.5-1.5"/><path d="M18 8a2 2 0 014 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
+                            </div>
+                            <div class="product-price-box">
+                                <div class="price-from">from</div>
+                                <div class="price-amount">£0.74</div>
+                            </div>
+                            </div>
+                            <div class="product-name">Polyco Matrix F Grip Work Gloves</div>
+                            <div class="stars-row">
+                            <span class="star-icons">★★★★★</span>
+                            <span class="star-count">(24)</span>
+                            </div>
+                            <ul class="product-features">
+                            <li>Nitrile palm coated for light, tactile & handling work</li>
+                            <li>Ideal for outdoor, tactile work to machine handling</li>
+                            <li>Offers light resistance to water, oil and grease</li>
+                            <li>Price is per pair of gloves</li>
+                            </ul>
+                            <div class="product-delivery">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            In stock, delivery as soon as Tuesday 19 May
+                            </div>
+                            <a href="#" class="btn-details">Details <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card reveal">
+                            <span class="badge badge-top">Top Pick</span>
+                            <div class="product-card-top">
+                            <div class="product-img-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 11V6a2 2 0 00-2-2v0a2 2 0 00-2 2v0M14 10V4a2 2 0 00-2-2v0a2 2 0 00-2 2v2M10 10.5V6a2 2 0 00-2-2v0a2 2 0 00-2 2v8l2.5-1.5"/><path d="M18 8a2 2 0 014 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
+                            </div>
+                            <div class="product-price-box">
+                                <div class="price-from">from</div>
+                                <div class="price-amount">£6.11</div>
+                            </div>
+                            </div>
+                            <div class="product-name">Aurelia Robust Medical Grade Nitrile Gloves 93895-9</div>
+                            <div class="stars-row">
+                            <span class="star-icons">★★★★★</span>
+                            <span class="star-count">(14)</span>
+                            </div>
+                            <ul class="product-features">
+                            <li>Price is per box of 100 gloves</li>
+                            <li>Blue nitrile construction for added protection</li>
+                            <li>Can resist forces up to 6 Newtons</li>
+                            <li>Ambidextrous gloves</li>
+                            </ul>
+                            <div class="product-delivery">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            In stock, delivery as soon as Tuesday 19 May
+                            </div>
+                            <a href="#" class="btn-details">Details <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card reveal">
+                            <div class="product-card-top">
+                            <div class="product-img-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 11V6a2 2 0 00-2-2v0a2 2 0 00-2 2v0M14 10V4a2 2 0 00-2-2v0a2 2 0 00-2 2v2M10 10.5V6a2 2 0 00-2-2v0a2 2 0 00-2 2v8l2.5-1.5"/><path d="M18 8a2 2 0 014 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
+                            </div>
+                            <div class="product-price-box">
+                                <div class="price-from">from</div>
+                                <div class="price-amount">£1.39</div>
+                            </div>
+                            </div>
+                            <div class="product-name">Portwest A350 Dermiflex Nitrile Foam Gloves</div>
+                            <div class="stars-row">
+                            <span class="star-icons">★★★★☆</span>
+                            <span class="star-count">(76)</span>
+                            </div>
+                            <ul class="product-features">
+                            <li>Nylon and elastane liner for exceptional lightweight dexterity</li>
+                            <li>Full soft nitrile foam PU coating enhances grip</li>
+                            <li>Suitable for general handling in oil and grease</li>
+                            <li>Price shown is per pair of gloves</li>
+                            </ul>
+                            <div class="product-delivery">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            In stock, delivery as soon as Tuesday 19 May
+                            </div>
+                            <a href="#" class="btn-details">Details <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+                        </div>
+
+                        <!-- Product 5 -->
+                        <div class="product-card reveal">
+                            <span class="badge badge-best">Best Seller</span>
+                            <div class="product-card-top">
+                            <div class="product-img-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 11V6a2 2 0 00-2-2v0a2 2 0 00-2 2v0M14 10V4a2 2 0 00-2-2v0a2 2 0 00-2 2v2M10 10.5V6a2 2 0 00-2-2v0a2 2 0 00-2 2v8l2.5-1.5"/><path d="M18 8a2 2 0 014 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
+                            </div>
+                            <div class="product-price-box">
+                                <div class="price-from">from</div>
+                                <div class="price-amount">£0.38</div>
+                            </div>
+                            </div>
+                            <div class="product-name">Portwest A120 Black PU Palm Gloves</div>
+                            <div class="stars-row">
+                            <span class="star-icons">★★★★★</span>
+                            <span class="star-count">(380)</span>
+                            </div>
+                            <ul class="product-features">
+                            <li>PU palm coating ideal for general handling</li>
+                            <li>Sensitive design suited to tactile tasks</li>
+                            <li>Available in a wide range of colours and sizes</li>
+                            <li>Price is per pair</li>
+                            </ul>
+                            <div class="product-delivery">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            In stock, delivery as soon as Tuesday 19 May
+                            </div>
+                            <a href="#" class="btn-details">Details <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+                        </div>
+
+                        <!-- Product 6 -->
+                        <div class="product-card reveal">
+                            <div class="product-card-top">
+                            <div class="product-img-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 11V6a2 2 0 00-2-2v0a2 2 0 00-2 2v0M14 10V4a2 2 0 00-2-2v0a2 2 0 00-2 2v2M10 10.5V6a2 2 0 00-2-2v0a2 2 0 00-2 2v8l2.5-1.5"/><path d="M18 8a2 2 0 014 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
+                            </div>
+                            <div class="product-price-box">
+                                <div class="price-from">from</div>
+                                <div class="price-amount">£6.66</div>
+                            </div>
+                            </div>
+                            <div class="product-name">Aurelia Bold Medical-Grade Black Nitrile Gloves (Box of 100)</div>
+                            <div class="stars-row">
+                            <span class="star-icons">★★★★☆</span>
+                            <span class="star-count">(76)</span>
+                            </div>
+                            <ul class="product-features">
+                            <li>Box of 100 nitrile gloves for medical and food handling</li>
+                            <li>Designed with micro-texture palms for secure grip</li>
+                            <li>Completely latex-free and suitable for sensitive skin</li>
+                            </ul>
+                            <div class="product-delivery">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            In stock, delivery as soon as Tuesday 19 May
+                            </div>
+                            <a href="#" class="btn-details">Details <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+                        </div>
+
+                        </div>
+                    </div>
+                    </section>
+
+                    <!-- CATEGORIES ROW 1 -->
+                    <section class="categories">
+                    <div class="container">
+                        <div class="section-header reveal">
+                        <div class="section-label">Browse by Type</div>
+                        <div class="section-title">Find Out All <span>About Us</span></div>
+                        </div>
+                        <div class="cat-grid">
+                        <div class="cat-card reveal">
+                            <div class="cat-img"><span class="cat-img-icon">✂️</span></div>
+                            <div class="cat-body">
+                            <div class="cat-name">Cut Resistant Gloves <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                            <p class="cat-desc">Whether you're working with knives or just sharp-edged objects, our cut-resistant gloves are a must-have. We provide the highest level of resistance.</p>
+                            <span class="cat-tag">Shop Range</span>
+                            </div>
+                        </div>
+                        <div class="cat-card reveal">
+                            <div class="cat-img"><span class="cat-img-icon">🔥</span></div>
+                            <div class="cat-body">
+                            <div class="cat-name">Heat Resistant Gloves <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                            <p class="cat-desc">When the temperature starts to rise, it's vital you have the correct heat-resistant gloves. Protect your hands from burns today.</p>
+                            <span class="cat-tag">Shop Range</span>
+                            </div>
+                        </div>
+                        <div class="cat-card reveal">
+                            <div class="cat-img"><span class="cat-img-icon">❄️</span></div>
+                            <div class="cat-body">
+                            <div class="cat-name">Thermal Gloves <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+                            <p class="cat-desc">Keep your hands warm, comfortable and dry with our excellent range of thermal gloves. Perfect for cold, wet and windy conditions.</p>
+                            <span class="cat-tag">Shop Range</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </section>
+
+                    <div class="divider"></div>
+
+                    <!-- INFO ROW -->
+                    <div class="info-row">
+                    <div class="container">
+                        <div class="info-aside reveal">
+                        <div>
+                            <div class="info-aside-label">Explore</div>
+                            <h3>Find Out All About Us</h3>
+                        </div>
+                        <p>Learn more about SafetyGloves.co.uk — who we are, the wide selection we have available, and exactly what we can do to help protect your hands.</p>
+                        <a href="#" class="btn-primary" style="width:fit-content">Learn More →</a>
+                        </div>
+                        <div class="info-main">
+                        <div class="info-card reveal">
+                            <div class="info-card-img">🌱</div>
+                            <div class="info-card-body">
+                            <div class="info-card-name">Gardening Gloves</div>
+                            <p class="info-card-desc">Full selection of high-quality gardening gloves ideal for both professional landscapers and everyday amateur use.</p>
+                            </div>
+                        </div>
+                        <div class="info-card reveal">
+                            <div class="info-card-img">⚗️</div>
+                            <div class="info-card-body">
+                            <div class="info-card-name">Chemical Gloves</div>
+                            <p class="info-card-desc">If you're dealing with dangerous, corrosive chemicals, having the right pair of chemical-resistant gloves is absolutely crucial.</p>
+                            </div>
+                        </div>
+                        <div class="info-card reveal">
+                            <div class="info-card-img">🌿</div>
+                            <div class="info-card-body">
+                            <div class="info-card-name">Thorn Proof Gloves</div>
+                            <p class="info-card-desc">From pruning roses to picking blackberries from brambles — we've got the perfect thorn-proof gardening gloves for you.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- LEARN ROW -->
+                    <div class="learn-row">
+                    <div class="container">
+                        <div class="learn-aside reveal">
+                        <div>
+                            <div style="font-size:0.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:8px;">Knowledge Centre</div>
+                            <h3>Learn About Gloves</h3>
+                        </div>
+                        <p>With our wide selection of work gloves, you may be a little unsure about which gloves are right for you. Our Knowledge Centre is full of helpful guides to help you choose.</p>
+                        <a href="#" class="btn-outline-white">Learn More →</a>
+                        </div>
+                        <div class="info-main">
+                        <div class="info-card reveal">
+                            <div class="info-card-img" style="background: linear-gradient(135deg,#003B46,#008F5A);">🧤</div>
+                            <div class="info-card-body">
+                            <div class="info-card-name">Nitrile Gloves</div>
+                            <p class="info-card-desc">Ideal for protection against chemicals, nitrile gloves provide low irritation and are excellent for a number of industries. View our extensive range.</p>
+                            </div>
+                        </div>
+                        <div class="info-card reveal">
+                            <div class="info-card-img" style="background: linear-gradient(135deg,#6b4c2a,#9c6f3a);">🥊</div>
+                            <div class="info-card-body">
+                            <div class="info-card-name">Leather Gloves</div>
+                            <p class="info-card-desc">Hardwearing and dependable, our range of leather gloves provides excellent protection that lasts longer. Suitable for a wide variety of industries.</p>
+                            </div>
+                        </div>
+                        <div class="info-card reveal">
+                            <div class="info-card-img" style="background: linear-gradient(135deg,#1a4a3a,#2d7a55);">🌲</div>
+                            <div class="info-card-body">
+                            <div class="info-card-name">Outdoor Gloves</div>
+                            <p class="info-card-desc">From hardwearing gloves for felling timber to thermal gloves for cold weather, our range of outdoor gloves will keep your hands safe outdoors.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- BULK ROW -->
+                    <div class="bulk-row">
+                    <div class="container">
+                        <div class="bulk-aside reveal">
+                        <div>
+                            <div style="font-size:0.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(3,35,59,0.65);margin-bottom:8px;">Wholesale</div>
+                            <h3>Bulk Buying & Wholesale</h3>
+                        </div>
+                        <p>If you're looking to buy in bulk, we can help you save money on your PPE. We offer discounts on all of our gloves when you are buying wholesale.</p>
+                        <a href="#" class="btn-primary" style="width:fit-content;background:var(--navy)">Learn More →</a>
+                        </div>
+                        <div class="info-main">
+                        <div class="info-card reveal">
+                            <div class="info-card-img" style="background:linear-gradient(135deg,var(--navy),var(--teal))">📦</div>
+                            <div class="info-card-body">
+                            <div class="info-card-name">Bulk Discounts</div>
+                            <p class="info-card-desc">The more you order, the more you save. We offer tiered pricing across our entire catalogue for volume buyers and trade accounts.</p>
+                            </div>
+                        </div>
+                        <div class="info-card reveal">
+                            <div class="info-card-img" style="background:linear-gradient(135deg,var(--teal),var(--green))">🏭</div>
+                            <div class="info-card-body">
+                            <div class="info-card-name">Trade Accounts</div>
+                            <p class="info-card-desc">Set up a dedicated trade account for streamlined ordering, invoicing, and priority dispatch for your business.</p>
+                            </div>
+                        </div>
+                        <div class="info-card reveal">
+                            <div class="info-card-img" style="background:linear-gradient(135deg,var(--green),#00b870)">🤝</div>
+                            <div class="info-card-body">
+                            <div class="info-card-name">Custom Orders</div>
+                            <p class="info-card-desc">Need a bespoke solution? Our team can source, brand, or customise gloves for your organisation's specific requirements.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- ABOUT -->
+                    <section class="about-section">
+                    <div class="about-inner">
+                        <div class="about-text reveal">
+                        <div class="about-text-label">The Experts in Hand Protection</div>
+                        <h2>Safety Gloves — <br>The UK's No.1 <br>Specialist</h2>
+                        <p>Welcome to SafetyGloves.co.uk — the experts in safety gloves and hand protection. Our focus is on providing the UK's most comprehensive range of safety gloves to help protect your hands.</p>
+                        <p>Safety gloves play a crucial part in safe handling and can be a vital addition to your PPE. If you're looking to protect your hands in the workplace, we can help — with a team of hand protection experts ready to assist.</p>
+                        <a href="#" class="btn-primary" style="width:fit-content">Read More →</a>
+                        </div>
+                        <div class="about-stats">
+                        <div class="stat-card reveal">
+                            <div class="stat-number">5,370+</div>
+                            <div class="stat-label">Verified Trustpilot Reviews</div>
+                        </div>
+                        <div class="stat-card reveal">
+                            <div class="stat-number">10,000+</div>
+                            <div class="stat-label">Products In Stock</div>
+                        </div>
+                        <div class="stat-card reveal">
+                            <div class="stat-number">£40</div>
+                            <div class="stat-label">Free UK Delivery Threshold</div>
+                        </div>
+                        <div class="stat-card reveal">
+                            <div class="stat-number">24hrs</div>
+                            <div class="stat-label">Fast Dispatch on Most Orders</div>
+                        </div>
+                        </div>
+                    </div>
+                    </section>
+
+                    <!-- NEWSLETTER -->
+                    <div class="newsletter">
+                    <div class="newsletter-inner">
+                        <div class="newsletter-text">
+                        <h3>Sign Up for Exclusive Offers</h3>
+                        <p>Get the latest updates on new products, special offers, and news from SafetyGloves.co.uk. No spam, ever.</p>
+                        </div>
+                        <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address">
+                        <button>Subscribe</button>
+                        </div>
+                    </div>
+                    </div>
+
+
+                </div>
              </main>
+
             <!-- Content End -->
 
             <!-- Footer Start -->
+
+            <footer id="footer-wrapper" class="footer-wrapper mt__footer">
+                <div class="footer-inner">
+                    <div class="footer-grid">
+                        <div class="footer-col">
+                            <h4>Popular Searches</h4>
+                            <ul>
+                                <li><a href="#">Cut Resistant Gloves</a></li>
+                                <li><a href="#">Thermal Waterproof Gloves</a></li>
+                                <li><a href="#">Gardening Gloves</a></li>
+                                <li><a href="#">Nitrile Gloves</a></li>
+                                <li><a href="#">Waterproof Gloves</a></li>
+                                <li><a href="#">Outdoor Work Gloves</a></li>
+                                <li><a href="#">Heat Resistant Gloves</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Your Account</h4>
+                            <ul>
+                                <li><a href="#">Track My Order</a></li>
+                                <li><a href="#">New Account</a></li>
+                                <li><a href="#">Sign In</a></li>
+                                <li><a href="#">Basket (0)</a></li>
+                                <li><a href="#">Purchase Orders</a></li>
+                                <li><a href="#">Site Visits</a></li>
+                                <li><a href="#">Wholesale Orders</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Customer Service</h4>
+                            <ul>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Delivery Information</a></li>
+                                <li><a href="#">Returns Policy</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Track My Order</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Company Info</h4>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Affiliates & Partners</a></li>
+                                <li><a href="#">Invoice Printing</a></li>
+                                <li><a href="#">Net Zero Commitment</a></li>
+                                <li><a href="#">Site Map</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Customer Helpline</h4>
+                            <div class="footer-phone"><span>020 7501</span> 1104</div>
+                            <div class="footer-hours">Lines open 9:00am to 5:30pm, Monday to Friday</div>
+                            <br>
+                            <div class="payment-icons">
+                                <span class="payment-icon">Visa</span>
+                                <span class="payment-icon">MC</span>
+                                <span class="payment-icon">Amex</span>
+                                <span class="payment-icon">PayPal</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <p>© 2024 Health and Care (UK) Ltd | Reg No. 03808815 | Reg in England & Wales | Unit 8, Union Court, Union Road, London, SW4 6JP<br>Information on this site is for reference only and does not constitute medical, clinical, or scientific advice.</p>
+                    </div>
+
+                </div>
+            </footer>
+
+            <!-- Floating CTA -->
+            <a href="#" class="float-cta"> <span class="float-dot"></span> Shop Gloves </a>
+
             <!-- Footer End -->
 
         </div>
     </div>
-
-    
 
     <!-- All JS files -->
     <script src="assets/js/swiper-bundle.min.js"></script>

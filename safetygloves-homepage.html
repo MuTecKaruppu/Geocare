@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SafetyGloves.co.uk – The UK's Safety Gloves Specialist</title>
+<title>GeoCare – Wholesale & Retail Medical Supplies</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 <style>
 /* ===== CSS VARIABLES ===== */
 :root {
@@ -37,29 +38,176 @@ body {
   background: var(--navy);
   color: #c9d4dc;
   font-size: 0.78rem;
-  padding: 7px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
+  padding: 0;
   animation: slideDown 0.5s ease both;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .topbar-inner {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: stretch;
   width: 100%;
-  gap: 12px;
+  gap: 0;
+  height: 42px;
 }
-.topbar span { display: flex; align-items: center; gap: 6px; }
 .topbar svg { width:14px; height:14px; flex-shrink:0; }
-.topbar .trustpilot { display: flex; align-items: center; gap: 8px; }
-.stars { color: #00b67a; letter-spacing: 1px; font-size: 1rem; }
-.topbar a { color: var(--gold); text-decoration: none; transition: opacity var(--transition); }
-.topbar a:hover { opacity: 0.8; }
+.topbar a { color: var(--gold); text-decoration: none; transition: all var(--transition); }
+.topbar a:hover { opacity: 0.85; }
+
+/* Left block – Wholesale/Retail */
+.tb-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-right: 20px;
+  border-right: 1px solid rgba(255,255,255,0.07);
+}
+.tb-supply-label {
+  color: rgba(247,239,231,0.55);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  margin-right: 4px;
+}
+.tb-cta-pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 11px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition);
+  white-space: nowrap;
+}
+.tb-cta-pill:hover { transform: translateY(-1px); }
+.tb-cta-b2b {
+  background: rgba(214,167,60,0.18);
+  border: 1px solid rgba(214,167,60,0.35);
+  color: var(--gold) !important;
+}
+.tb-cta-b2b:hover { background: rgba(214,167,60,0.28); }
+.tb-cta-b2c {
+  background: rgba(0,143,90,0.15);
+  border: 1px solid rgba(0,143,90,0.3);
+  color: #4ade80 !important;
+}
+.tb-cta-b2c:hover { background: rgba(0,143,90,0.25); }
+.tb-pipe { color: rgba(255,255,255,0.15); margin: 0 2px; }
+
+/* Center block – Ticker Stats */
+.tb-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  overflow: hidden;
+  position: relative;
+}
+.tb-ticker {
+  position: relative;
+  height: 42px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-width: 280px;
+  justify-content: center;
+}
+.tb-ticker-item {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  pointer-events: none;
+}
+.tb-ticker-item.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.tb-ticker-item.exit {
+  opacity: 0;
+  transform: translateY(-18px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.tb-ticker-icon { font-size: 1rem; flex-shrink: 0; }
+.tb-ticker-text {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-size: 0.73rem;
+  color: rgba(247,239,231,0.65);
+}
+.tb-ticker-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+  line-height: 1;
+  display: inline-block;
+  min-width: 46px;
+  text-align: right;
+}
+.tb-ticker-label { font-weight: 600; color: rgba(247,239,231,0.8); }
+
+/* Right block – Phone */
+.tb-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255,255,255,0.07);
+}
+.tb-phone-block {
+  display: flex; align-items: center; gap: 6px;
+}
+.tb-phone-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.tb-phone-tag.b2b { background: rgba(214,167,60,0.2); color: var(--gold); border: 1px solid rgba(214,167,60,0.3); }
+.tb-phone-tag.b2c { background: rgba(0,143,90,0.2); color: #4ade80; border: 1px solid rgba(0,143,90,0.25); }
+.tb-phone-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  display: inline-flex; align-items: center; gap: 5px;
+  transition: color var(--transition), transform var(--transition);
+  position: relative;
+}
+.tb-phone-num::after {
+  content: '';
+  position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+.tb-phone-num:hover { color: var(--gold); transform: scale(1.03); }
+.tb-phone-num:hover::after { transform: scaleX(1); }
+.tb-phone-num svg { width:11px; height:11px; fill:none; stroke:currentColor; stroke-width:2; }
 
 /* ===== HEADER ===== */
 header {
@@ -84,28 +232,16 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;
   text-decoration: none;
   flex-shrink: 0;
 }
-.logo-icon {
-  width: 42px; height: 42px;
-  background: var(--navy);
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
+.logo img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
-.logo-icon svg { width: 26px; height: 26px; fill: var(--gold); }
-.logo-text { line-height: 1; }
-.logo-text .brand {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--navy);
-  text-transform: uppercase;
-  letter-spacing: -0.5px;
-}
-.logo-text .brand em { color: var(--green); font-style: normal; }
-.logo-text .domain { font-size: 0.68rem; color: var(--muted); font-weight: 500; letter-spacing: 0.5px; margin-top: 1px; }
 
 /* Search */
 .search-bar {
@@ -286,91 +422,206 @@ nav {
 }
 .mega-more:hover { background: var(--green); }
 
-/* ===== HERO ===== */
-.hero {
-  background: var(--navy);
+/* ===== HERO SWIPER ===== */
+.hero-swiper {
+  width: 100%;
+  height: 520px;
   position: relative;
   overflow: hidden;
-  min-height: 440px;
+}
+.swiper-slide {
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
 }
-.hero::before {
-  content: '';
+/* Slide backgrounds via inline style + overlay */
+.slide-bg {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 60% 80% at 30% 50%, rgba(0,59,70,0.6) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 80% 30%, rgba(0,143,90,0.08) 0%, transparent 60%);
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.06);
+  transition: transform 8s ease;
+}
+.swiper-slide-active .slide-bg { transform: scale(1); }
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+}
+.slide-overlay-1 {
+  background: linear-gradient(105deg,
+    rgba(3,35,59,0.92) 0%,
+    rgba(3,35,59,0.75) 45%,
+    rgba(0,59,70,0.3) 75%,
+    transparent 100%);
+}
+.slide-overlay-2 {
+  background: linear-gradient(105deg,
+    rgba(0,59,70,0.88) 0%,
+    rgba(0,59,70,0.65) 40%,
+    rgba(3,35,59,0.25) 70%,
+    transparent 100%);
 }
 /* Hex pattern */
-.hero-hex {
+.slide-hex {
   position: absolute;
-  right: -60px; top: -40px;
-  width: 55%;
-  height: 140%;
-  opacity: 0.07;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17' fill='none' stroke='white' stroke-width='1'/%3E%3C/svg%3E");
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17' fill='none' stroke='white' stroke-width='0.8'/%3E%3C/svg%3E");
   background-size: 56px 100px;
+  opacity: 0.04;
+  pointer-events: none;
 }
-.hero-inner {
+.slide-content {
+  position: relative;
+  z-index: 10;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 64px 24px;
+  padding: 0 24px;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
   gap: 40px;
-  position: relative;
-  z-index: 2;
-  width: 100%;
+  align-items: center;
 }
-.hero-label {
+.slide-text { max-width: 580px; }
+.slide-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(214,167,60,0.15);
   border: 1px solid rgba(214,167,60,0.3);
   color: var(--gold);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 5px 14px;
   border-radius: 50px;
-  margin-bottom: 20px;
-  animation: fadeUp 0.6s 0.2s both;
+  margin-bottom: 18px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s 0.3s ease, transform 0.5s 0.3s ease;
 }
-.hero h1 {
+.swiper-slide-active .slide-eyebrow { opacity: 1; transform: translateY(0); }
+.slide-h1 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
   font-weight: 900;
-  line-height: 1;
+  line-height: 1.0;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: -1px;
-  margin-bottom: 16px;
-  animation: fadeUp 0.6s 0.3s both;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s 0.45s ease, transform 0.55s 0.45s ease;
 }
-.hero h1 em { color: var(--gold); font-style: normal; }
-.hero-sub {
-  color: rgba(247,239,231,0.7);
-  font-size: 1.05rem;
-  font-weight: 400;
-  line-height: 1.6;
-  margin-bottom: 32px;
-  animation: fadeUp 0.6s 0.4s both;
+.swiper-slide-active .slide-h1 { opacity: 1; transform: translateY(0); }
+.slide-h1 em { color: var(--gold); font-style: normal; display: block; }
+.slide-sub {
+  color: rgba(247,239,231,0.75);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 28px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.55s 0.6s ease, transform 0.55s 0.6s ease;
 }
-.hero-cta {
+.swiper-slide-active .slide-sub { opacity: 1; transform: translateY(0); }
+.slide-cta {
   display: flex; gap: 14px; flex-wrap: wrap;
-  animation: fadeUp 0.6s 0.5s both;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s 0.75s ease, transform 0.5s 0.75s ease;
 }
+.swiper-slide-active .slide-cta { opacity: 1; transform: translateY(0); }
+
+/* Slide visual panel */
+.slide-panel {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 28px;
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity 0.6s 0.5s ease, transform 0.6s 0.5s ease;
+}
+.swiper-slide-active .slide-panel { opacity: 1; transform: translateX(0); }
+.slide-panel-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+.slide-panel-title em { color: var(--gold); font-style: normal; }
+.slide-panel-sub { color: rgba(247,239,231,0.5); font-size: 0.8rem; margin-bottom: 18px; }
+.slide-panel-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.slide-panel-list li {
+  display: flex; align-items: center; gap: 12px;
+  color: rgba(247,239,231,0.85);
+  font-size: 0.86rem;
+}
+.panel-icon {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+.panel-icon.green { background: rgba(0,143,90,0.2); border: 1px solid rgba(0,143,90,0.3); }
+.panel-icon.gold  { background: rgba(214,167,60,0.15); border: 1px solid rgba(214,167,60,0.25); }
+
+/* Swiper custom nav */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  color: #fff !important;
+  transition: background var(--transition), transform var(--transition);
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background: var(--green);
+  transform: scale(1.08);
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 14px !important;
+  font-weight: 900;
+}
+.swiper-pagination-bullet {
+  background: rgba(255,255,255,0.4) !important;
+  width: 8px; height: 8px;
+  transition: all 0.3s;
+}
+.swiper-pagination-bullet-active {
+  background: var(--gold) !important;
+  width: 28px;
+  border-radius: 4px;
+}
+/* Progress bar */
+.swiper-progress {
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 3px;
+  background: var(--gold);
+  z-index: 20;
+  width: 0%;
+  transition: width linear;
+}
+
+/* ===== BUTTONS ===== */
 .btn-primary {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 32px;
+  padding: 13px 30px;
   background: var(--green);
   color: #fff;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -384,11 +635,11 @@ nav {
 .btn-primary:hover { background: #00a367; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,143,90,0.45); }
 .btn-secondary {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 28px;
+  padding: 13px 26px;
   background: transparent;
   color: #fff;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -399,48 +650,24 @@ nav {
   transition: border-color var(--transition), background var(--transition), transform var(--transition);
 }
 .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
-
-.hero-visual {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  animation: fadeLeft 0.8s 0.3s both;
-}
-.hero-card {
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 20px;
-  padding: 28px;
-  max-width: 340px;
-  width: 100%;
-}
-.hero-card-title {
+.btn-gold {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 28px;
+  background: var(--gold);
+  color: var(--navy);
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1.4rem;
+  font-size: 0.95rem;
   font-weight: 800;
-  color: #fff;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 4px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 18px rgba(214,167,60,0.35);
 }
-.hero-card-title em { color: var(--gold); font-style: normal; }
-.hero-card-sub { color: rgba(247,239,231,0.55); font-size: 0.8rem; margin-bottom: 20px; }
-.feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.feature-list li {
-  display: flex; align-items: center; gap: 12px;
-  color: rgba(247,239,231,0.85);
-  font-size: 0.88rem;
-}
-.feature-icon {
-  width: 32px; height: 32px;
-  background: rgba(0,143,90,0.2);
-  border: 1px solid rgba(0,143,90,0.3);
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.feature-icon svg { width:15px; height:15px; stroke: var(--green); fill:none; stroke-width:2; }
+.btn-gold:hover { background: #e6b84a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(214,167,60,0.45); }
 
 /* ===== BRANDS ===== */
 .brands {
@@ -1138,6 +1365,365 @@ footer {
   margin: 0;
 }
 
+/* ===== HAMBURGER BUTTON ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px; height: 40px;
+  background: none;
+  border: 1.5px solid rgba(3,35,59,0.15);
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background var(--transition);
+}
+.hamburger:hover { background: rgba(0,59,70,0.06); }
+.hamburger span {
+  display: block;
+  width: 20px; height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ===== MOBILE NAV DRAWER ===== */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 8000;
+  pointer-events: none;
+}
+.mobile-nav.open { pointer-events: all; }
+.mobile-nav-overlay {
+  position: absolute; inset: 0;
+  background: rgba(3,35,59,0.55);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(2px);
+}
+.mobile-nav.open .mobile-nav-overlay { opacity: 1; }
+.mobile-nav-drawer {
+  position: absolute;
+  top: 0; left: 0;
+  width: min(320px, 88vw);
+  height: 100%;
+  background: var(--navy);
+  transform: translateX(-100%);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-nav.open .mobile-nav-drawer { transform: translateX(0); }
+.mnav-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mnav-header img { height: 36px; width: auto; filter: brightness(0) invert(1); }
+.mnav-close {
+  width: 32px; height: 32px;
+  background: rgba(255,255,255,0.08);
+  border: none; border-radius: 6px;
+  color: #fff; font-size: 1.2rem;
+  cursor: pointer; display: flex;
+  align-items: center; justify-content: center;
+}
+.mnav-links { flex: 1; padding: 8px 0; }
+.mnav-section-title {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 14px 20px 6px;
+}
+.mnav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  color: rgba(247,239,231,0.85);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+.mnav-link:hover { background: rgba(255,255,255,0.06); color: var(--gold); }
+.mnav-link svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.5; transition: transform 0.2s; }
+.mnav-sub {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  background: rgba(0,0,0,0.2);
+}
+.mnav-sub.open { max-height: 600px; }
+.mnav-sub a {
+  display: block;
+  padding: 9px 20px 9px 32px;
+  color: rgba(247,239,231,0.6);
+  font-size: 0.83rem;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: color var(--transition), padding-left var(--transition);
+}
+.mnav-sub a:hover { color: var(--gold); padding-left: 38px; }
+.mnav-footer {
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.mnav-phone {
+  display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px;
+}
+.mnav-phone a {
+  display: flex; align-items: center; gap: 8px;
+  color: #fff; text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.95rem; font-weight: 700;
+}
+.mnav-phone a span {
+  font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.8px; padding: 2px 7px; border-radius: 4px;
+}
+.mnav-phone a .b2b-tag { background: rgba(214,167,60,0.2); color: var(--gold); border: 1px solid rgba(214,167,60,0.3); }
+.mnav-phone a .b2c-tag { background: rgba(0,143,90,0.2); color: #4ade80; border: 1px solid rgba(0,143,90,0.25); }
+.mnav-ctas { display: flex; gap: 8px; }
+.mnav-ctas a {
+  flex: 1; text-align: center;
+  padding: 10px; border-radius: 8px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.82rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.8px;
+  text-decoration: none;
+}
+.mnav-ctas .b2b-cta { background: rgba(214,167,60,0.15); color: var(--gold); border: 1px solid rgba(214,167,60,0.3); }
+.mnav-ctas .b2c-cta { background: rgba(0,143,90,0.15); color: #4ade80; border: 1px solid rgba(0,143,90,0.25); }
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+/* ---- TABLET: ≤1024px ---- */
+@media (max-width: 1024px) {
+  /* Topbar: stack center below, or simplify */
+  .topbar-inner {
+    grid-template-columns: 1fr auto;
+    height: auto;
+    padding: 8px 16px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .tb-center { padding: 0 12px; }
+  .tb-right { gap: 8px; padding-left: 12px; }
+
+  /* Header */
+  .header-inner { padding: 0 16px; gap: 12px; height: 64px; }
+  .search-bar { max-width: 320px; }
+
+  /* Nav hidden, hamburger shown */
+  nav { display: none; }
+  .hamburger { display: flex; }
+  .mobile-nav { display: block; }
+
+  /* Hero */
+  .hero-swiper { height: 480px; }
+  .slide-content { grid-template-columns: 1fr; }
+  .slide-panel { display: none; }
+  .slide-h1 { font-size: 2.6rem; }
+
+  /* Products */
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Category grid */
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Info rows */
+  .info-row .container,
+  .learn-row .container,
+  .bulk-row .container { grid-template-columns: 1fr; }
+  .info-main { grid-template-columns: repeat(3, 1fr); }
+
+  /* About */
+  .about-inner { grid-template-columns: 1fr; gap: 40px; }
+  .about-stats { grid-template-columns: repeat(4, 1fr); }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---- MOBILE LARGE: ≤768px ---- */
+@media (max-width: 768px) {
+  /* Topbar: full rethink */
+  .topbar-inner {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 0;
+    gap: 0;
+  }
+  .tb-left {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 7px 16px;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tb-supply-label { font-size: 0.68rem; }
+  .tb-center {
+    padding: 7px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .tb-ticker { min-width: 220px; height: 30px; }
+  .tb-right {
+    border-left: none;
+    padding: 7px 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .tb-phone-block { gap: 5px; }
+  .tb-phone-num { font-size: 0.8rem; }
+
+  /* Header */
+  .header-inner {
+    padding: 0 14px;
+    gap: 10px;
+    height: auto;
+    min-height: 60px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .logo img { height: 40px; }
+  .search-bar { order: 3; flex: 0 0 100%; max-width: 100%; margin: 0; }
+  .search-bar input { padding: 10px 44px 10px 16px; font-size: 0.85rem; }
+  .header-actions { margin-left: auto; }
+  .btn-ghost { padding: 7px 12px; font-size: 0.75rem; }
+  .btn-basket { padding: 7px 14px; font-size: 0.75rem; }
+
+  /* Hero */
+  .hero-swiper { height: auto; min-height: 420px; }
+  .slide-content {
+    padding: 40px 20px;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .slide-h1 { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+  .slide-sub { font-size: 0.9rem; margin-bottom: 22px; }
+  .slide-cta { gap: 10px; }
+  .btn-primary, .btn-secondary, .btn-gold {
+    padding: 11px 22px;
+    font-size: 0.85rem;
+  }
+  .slide-panel { display: none; }
+  .swiper-button-next, .swiper-button-prev { display: none; }
+
+  /* Brands marquee */
+  .brands { padding: 16px 0; }
+
+  /* Featured products */
+  .products-grid { grid-template-columns: 1fr; }
+  .featured { padding: 40px 0; }
+  .featured .container { padding: 0 16px; }
+
+  /* Categories */
+  .cat-grid { grid-template-columns: 1fr; gap: 16px; }
+  .categories { padding: 40px 0; }
+  .categories .container { padding: 0 16px; }
+  .cat-img { height: 120px; }
+
+  /* Info rows */
+  .info-row, .learn-row, .bulk-row { padding: 40px 0; }
+  .info-row .container,
+  .learn-row .container,
+  .bulk-row .container { padding: 0 16px; grid-template-columns: 1fr; }
+  .info-aside, .learn-aside, .bulk-aside {
+    padding: 24px;
+    border-radius: 14px;
+  }
+  .info-aside h3, .learn-aside h3, .bulk-aside h3 { font-size: 1.5rem; }
+  .info-main { grid-template-columns: 1fr; gap: 12px; }
+  .info-card-img { height: 80px; font-size: 2rem; }
+
+  /* Section header */
+  .section-header { margin-bottom: 24px; }
+  .section-title { font-size: 1.6rem; }
+
+  /* About section */
+  .about-inner { padding: 0 16px; gap: 32px; }
+  .about-section { padding: 48px 0; }
+  .about-stats { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .stat-card { padding: 18px; }
+  .stat-number { font-size: 2rem; }
+
+  /* Newsletter */
+  .newsletter-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 16px;
+  }
+  .newsletter { padding: 36px 0; }
+  .newsletter-form { max-width: 100%; width: 100%; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .footer-inner { padding: 0 16px; }
+  footer { padding: 40px 0 24px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+
+  /* Float CTA */
+  .float-cta { padding: 11px 18px; font-size: 0.82rem; bottom: 16px; right: 16px; }
+}
+
+/* ---- MOBILE SMALL: ≤480px ---- */
+@media (max-width: 480px) {
+  /* Topbar */
+  .tb-left { gap: 5px; }
+  .tb-supply-label { display: none; }
+  .tb-cta-pill { font-size: 0.65rem; padding: 3px 9px; }
+  .tb-pipe { display: none; }
+  .tb-phone-tag { font-size: 0.6rem; }
+  .tb-phone-num { font-size: 0.75rem; }
+
+  /* Header */
+  .btn-ghost:first-child { display: none; } /* hide Sign In, keep New Account */
+  .logo img { height: 34px; }
+
+  /* Hero */
+  .hero-swiper { min-height: 360px; }
+  .slide-content { padding: 32px 16px; }
+  .slide-h1 { font-size: 1.8rem; }
+  .slide-sub { font-size: 0.85rem; }
+  .slide-eyebrow { font-size: 0.65rem; padding: 4px 10px; }
+
+  /* About stats */
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
+  .stat-number { font-size: 1.7rem; }
+
+  /* Footer: single column */
+  .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+  .footer-phone { font-size: 1.1rem; }
+
+  /* Products */
+  .product-card { padding: 18px; }
+  .product-img-placeholder { width: 72px; height: 72px; }
+  .price-amount { font-size: 1.25rem; }
+}
+
+/* ---- Prevent body scroll when mobile nav open ---- */
+body.nav-open { overflow: hidden; }
 </style>
 </head>
 <body>
@@ -1145,19 +1731,64 @@ footer {
 <!-- TOPBAR -->
 <div class="topbar">
   <div class="topbar-inner">
-    <span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-      Free UK delivery on all orders over £40
-    </span>
-    <span class="trustpilot">
-      <span>Excellent</span>
-      <span class="stars">★★★★★</span>
-      <a href="#">5,370 reviews on Trustpilot</a>
-    </span>
-    <span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.55a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      Call our sales team: <a href="tel:02075011104">020 7501 1104</a>
-    </span>
+
+    <!-- LEFT: Wholesale & Retail Supply -->
+    <div class="tb-left">
+      <span class="tb-supply-label">Wholesale &amp; Retail Supplies</span>
+      <span class="tb-pipe">|</span>
+      <a href="b2b-terms.html" class="tb-cta-pill tb-cta-b2b">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        Wholesale →
+      </a>
+      <a href="b2c-terms.html" class="tb-cta-pill tb-cta-b2c">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Retail →
+      </a>
+    </div>
+
+    <!-- CENTER: Vertical fade ticker stats -->
+    <div class="tb-center">
+      <div class="tb-ticker">
+        <!-- Item 1: Businesses -->
+        <div class="tb-ticker-item active" id="tickerItem0">
+          <span class="tb-ticker-icon">🏢</span>
+          <div class="tb-ticker-text">
+            <span class="tb-ticker-num" id="tickerCount0">0</span>
+            <span>+</span>
+            <span class="tb-ticker-label">Businesses Served</span>
+          </div>
+        </div>
+        <!-- Item 2: Products -->
+        <div class="tb-ticker-item" id="tickerItem1">
+          <span class="tb-ticker-icon">📦</span>
+          <div class="tb-ticker-text">
+            <span class="tb-ticker-num" id="tickerCount1">0</span>
+            <span>+</span>
+            <span class="tb-ticker-label">Products Delivered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Phone numbers -->
+    <div class="tb-right">
+      <div class="tb-phone-block">
+        <span class="tb-phone-tag b2b">Bulk (B2B)</span>
+        <a href="tel:+919100000000" class="tb-phone-num">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.61 3.38 2 2 0 013.59 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.55a16 16 0 006 6l.92-.92a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 91000 00000
+        </a>
+      </div>
+      <span class="tb-pipe">|</span>
+      <div class="tb-phone-block">
+        <span class="tb-phone-tag b2c">Retail (B2C)</span>
+        <a href="tel:+919200000000" class="tb-phone-num">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.61 3.38 2 2 0 013.59 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.55a16 16 0 006 6l.92-.92a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 92000 00000
+        </a>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -1165,13 +1796,7 @@ footer {
 <header>
   <div class="header-inner">
     <a href="#" class="logo">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5" fill="none" stroke="#D6A73C" stroke-width="1.5"/><path d="M2 12l10 5 10-5" fill="none" stroke="#D6A73C" stroke-width="1.5" opacity="0.6"/></svg>
-      </div>
-      <div class="logo-text">
-        <div class="brand">Safety<em>Gloves</em></div>
-        <div class="domain">.co.uk · The UK's Safety Gloves Specialist</div>
-      </div>
+      <img src="https://muteckaruppu.github.io/Geocare/assets/images/header/geocare-logo.png" alt="GeoCare Logo">
     </a>
 
     <div class="search-bar">
@@ -1189,9 +1814,84 @@ footer {
         Basket
         <span class="basket-count">0</span>
       </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </header>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <div class="mobile-nav-drawer">
+    <div class="mnav-header">
+      <img src="https://muteckaruppu.github.io/Geocare/assets/images/header/geocare-logo.png" alt="GeoCare">
+      <button class="mnav-close" id="mobileNavClose">✕</button>
+    </div>
+    <div class="mnav-links">
+      <a href="#" class="mnav-link">Home</a>
+
+      <div class="mnav-link" onclick="toggleMSub('msub1',this)">
+        Full Shop
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="mnav-sub" id="msub1">
+        <div style="padding:8px 20px 4px 32px;font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)">Popular Brands</div>
+        <a href="#">Ansell</a><a href="#">ATG Gloves</a><a href="#">Aurelia</a><a href="#">Portwest</a><a href="#">Skytec</a><a href="#">Traffiglove</a><a href="#">Uvex</a>
+        <div style="padding:8px 20px 4px 32px;font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)">Reusable Gloves</div>
+        <a href="#">Cut Resistant</a><a href="#">Leather</a><a href="#">Thermal</a><a href="#">Waterproof</a><a href="#">Kevlar</a>
+        <div style="padding:8px 20px 4px 32px;font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)">Disposable Gloves</div>
+        <a href="#">Nitrile</a><a href="#">Latex</a><a href="#">Vinyl</a><a href="#">Surgical</a>
+      </div>
+
+      <div class="mnav-link" onclick="toggleMSub('msub2',this)">
+        Industry (A–Z)
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="mnav-sub" id="msub2">
+        <a href="#">Agriculture</a><a href="#">Automotive</a><a href="#">Construction</a>
+        <a href="#">Healthcare</a><a href="#">Hospitality</a><a href="#">Manufacturing</a>
+        <a href="#">Medical</a><a href="#">Oil &amp; Gas</a><a href="#">Warehousing</a>
+      </div>
+
+      <div class="mnav-link" onclick="toggleMSub('msub3',this)">
+        Special Offers
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="mnav-sub" id="msub3">
+        <a href="#">Clearance Lines</a><a href="#">Bundle Offers</a>
+        <a href="#">Bulk Discounts</a><a href="#">New In</a>
+      </div>
+
+      <div class="mnav-link" onclick="toggleMSub('msub4',this)">
+        Our Guides
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="mnav-sub" id="msub4">
+        <a href="#">How to Choose Gloves</a><a href="#">Sizing Guide</a>
+        <a href="#">Material Guide</a><a href="#">Blog &amp; News</a><a href="#">FAQs</a>
+      </div>
+    </div>
+
+    <div class="mnav-footer">
+      <div class="mnav-phone">
+        <a href="tel:+919100000000">
+          <span class="b2b-tag">Bulk B2B</span>
+          +91 91000 00000
+        </a>
+        <a href="tel:+919200000000">
+          <span class="b2c-tag">Retail B2C</span>
+          +91 92000 00000
+        </a>
+      </div>
+      <div class="mnav-ctas">
+        <a href="b2b-terms.html" class="b2b-cta">Wholesale →</a>
+        <a href="b2c-terms.html" class="b2c-cta">Retail →</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav>
@@ -1402,49 +2102,88 @@ footer {
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-hex"></div>
-  <div class="hero-inner">
-    <div class="hero-text">
-      <div class="hero-label">
-        <span>🛡️</span> UK's No.1 Safety Gloves Specialist
-      </div>
-      <h1>Keep Your Hands<br><em>Safe & Protected</em></h1>
-      <p class="hero-sub">From nitrile disposables to cut-resistant work gloves — the most comprehensive range of safety gloves for every industry and application.</p>
-      <div class="hero-cta">
-        <a href="#" class="btn-primary">
-          Shop Now
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="#" class="btn-secondary">Browse All Categories</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-card">
-        <div class="hero-card-title"><em>ATG</em> Gloves with AD-APT</div>
-        <div class="hero-card-sub">Cooling Technology — Keep Hands Cool, Dry & Productive</div>
-        <ul class="feature-list">
-          <li>
-            <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-            Touchscreen compatible, ultra-thin grip
-          </li>
-          <li>
-            <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-            Heat protection up to 100°C
-          </li>
-          <li>
-            <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-            Seamless, flexible, long-lasting comfort
-          </li>
-          <li>
-            <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-            Free UK delivery on orders over £40
-          </li>
-        </ul>
+<!-- HERO SWIPER SLIDER -->
+<section class="hero-swiper swiper" id="heroSwiper">
+  <div class="swiper-wrapper">
+
+    <!-- SLIDE 1: Product-focused -->
+    <div class="swiper-slide">
+      <div class="slide-bg" style="background-image: url('https://www.safetygloves.co.uk/user/construction-slideshow-2026-v3.jpg'); background-position: center center;"></div>
+      <div class="slide-overlay slide-overlay-1"></div>
+      <div class="slide-hex"></div>
+      <div class="slide-content">
+        <div class="slide-text">
+          <div class="slide-eyebrow">🛡️ India's Trusted PPE Supplier</div>
+          <h1 class="slide-h1">
+            Premium Safety Gloves
+            <em>For Every Hazard</em>
+          </h1>
+          <p class="slide-sub">From cut-resistant work gloves to sterile nitrile disposables — the most comprehensive range of safety gloves for industrial, medical, and food-handling applications.</p>
+          <div class="slide-cta">
+            <a href="#" class="btn-primary">
+              Shop Now
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#" class="btn-secondary">View Full Range</a>
+          </div>
+        </div>
+        <div class="slide-panel">
+          <div class="slide-panel-title">Why Choose <em>GeoCare?</em></div>
+          <div class="slide-panel-sub">Trusted by 5,000+ businesses across India</div>
+          <ul class="slide-panel-list">
+            <li><span class="panel-icon green">✂️</span> Cut, heat & chemical resistant options</li>
+            <li><span class="panel-icon green">🧤</span> EN 388 & ISO certified gloves</li>
+            <li><span class="panel-icon gold">📦</span> Bulk wholesale pricing available</li>
+            <li><span class="panel-icon gold">🚚</span> Pan-India fast dispatch</li>
+          </ul>
+        </div>
       </div>
     </div>
+
+    <!-- SLIDE 2: Healthcare/B2B focused -->
+    <div class="swiper-slide">
+      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1600&q=80'); background-position: center 40%;"></div>
+      <div class="slide-overlay slide-overlay-2"></div>
+      <div class="slide-hex"></div>
+      <div class="slide-content">
+        <div class="slide-text">
+          <div class="slide-eyebrow">🏥 Complete Healthcare Supply Partner</div>
+          <h1 class="slide-h1">
+            Full-Spectrum PPE
+            <em>For Healthcare & Clinics</em>
+          </h1>
+          <p class="slide-sub">Equipping hospitals, clinics, and pharmaceutical labs with sterile gloves, patient-care products, and complete PPE solutions — from a single trusted B2B source.</p>
+          <div class="slide-cta">
+            <a href="#" class="btn-primary">
+              Explore Products
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#" class="btn-gold">
+              Get Bulk Quote
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="slide-panel">
+          <div class="slide-panel-title">Healthcare <em>Solutions</em></div>
+          <div class="slide-panel-sub">From OPDs to surgical suites — covered</div>
+          <ul class="slide-panel-list">
+            <li><span class="panel-icon green">💊</span> Sterile & powder-free nitrile gloves</li>
+            <li><span class="panel-icon green">🔬</span> Lab-grade latex & vinyl options</li>
+            <li><span class="panel-icon gold">🏥</span> Medical-grade certified products</li>
+            <li><span class="panel-icon gold">🤝</span> Dedicated B2B account managers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+  <!-- Controls -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-progress" id="swiperProgress"></div>
 </section>
 
 <!-- BRANDS -->
@@ -1935,20 +2674,138 @@ footer {
   Shop Gloves
 </a>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-// Scroll reveal
+// ===== MOBILE NAV =====
+const hamburger      = document.getElementById('hamburger');
+const mobileNav      = document.getElementById('mobileNav');
+const mobileNavClose = document.getElementById('mobileNavClose');
+const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+
+function openMNav() {
+  mobileNav.classList.add('open');
+  hamburger.classList.add('open');
+  document.body.classList.add('nav-open');
+}
+function closeMNav() {
+  mobileNav.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.classList.remove('nav-open');
+}
+hamburger.addEventListener('click', openMNav);
+mobileNavClose.addEventListener('click', closeMNav);
+mobileNavOverlay.addEventListener('click', closeMNav);
+
+function toggleMSub(id, el) {
+  const sub = document.getElementById(id);
+  const isOpen = sub.classList.contains('open');
+  // close all
+  document.querySelectorAll('.mnav-sub').forEach(s => s.classList.remove('open'));
+  document.querySelectorAll('.mnav-link svg').forEach(s => s.style.transform = '');
+  if (!isOpen) {
+    sub.classList.add('open');
+    el.querySelector('svg').style.transform = 'rotate(180deg)';
+  }
+}
+
+// ===== SWIPER HERO =====
+const SLIDE_DURATION = 6000;
+const heroSwiper = new Swiper('#heroSwiper', {
+  loop: true,
+  speed: 900,
+  effect: 'fade',
+  fadeEffect: { crossFade: true },
+  autoplay: { delay: SLIDE_DURATION, disableOnInteraction: false },
+  pagination: { el: '.swiper-pagination', clickable: true },
+  navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+});
+
+// Progress bar
+const progressBar = document.getElementById('swiperProgress');
+function resetProgress() {
+  progressBar.style.transition = 'none';
+  progressBar.style.width = '0%';
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    progressBar.style.transition = `width ${SLIDE_DURATION}ms linear`;
+    progressBar.style.width = '100%';
+  }));
+}
+resetProgress();
+heroSwiper.on('slideChange', resetProgress);
+
+// ===== TOPBAR TICKER + COUNT-UP =====
+const tickerStats = [
+  { el: document.getElementById('tickerCount0'), target: 5000,  display: '5K',   duration: 2000 },
+  { el: document.getElementById('tickerCount1'), target: 600000, display: '600K', duration: 2400 },
+];
+const tickerItems  = [
+  document.getElementById('tickerItem0'),
+  document.getElementById('tickerItem1'),
+];
+
+let tickerActive = 0;
+let countDone    = [false, false];
+
+function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+function runCountUp(stat) {
+  const start = performance.now();
+  function step(now) {
+    const elapsed  = now - start;
+    const progress = Math.min(elapsed / stat.duration, 1);
+    const eased    = easeOutCubic(progress);
+    const val      = Math.floor(eased * stat.target);
+    // Format nicely
+    if (val >= 1000000)      stat.el.textContent = (val / 1000000).toFixed(1).replace('.0','') + 'M';
+    else if (val >= 1000)    stat.el.textContent = (val / 1000).toFixed(val % 1000 === 0 ? 0 : 1).replace('.0','') + 'K';
+    else                     stat.el.textContent = val;
+    if (progress < 1) requestAnimationFrame(step);
+    else stat.el.textContent = stat.display;
+  }
+  requestAnimationFrame(step);
+}
+
+function showTickerItem(idx) {
+  // Exit current
+  const prev = tickerActive;
+  tickerItems[prev].classList.remove('active');
+  tickerItems[prev].classList.add('exit');
+  setTimeout(() => tickerItems[prev].classList.remove('exit'), 500);
+
+  // Enter new
+  tickerActive = idx;
+  tickerItems[idx].classList.add('active');
+
+  // Run count-up if not yet done
+  if (!countDone[idx]) {
+    countDone[idx] = true;
+    runCountUp(tickerStats[idx]);
+  }
+}
+
+// Boot: run count-up for item 0 immediately (it's already visible)
+runCountUp(tickerStats[0]);
+countDone[0] = true;
+
+// Auto-cycle every 3.5s
+setInterval(() => {
+  const next = (tickerActive + 1) % tickerItems.length;
+  showTickerItem(next);
+}, 3500);
+
+// ===== SCROLL REVEAL =====
 const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
+const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
       setTimeout(() => entry.target.classList.add('visible'), i * 60);
-      observer.unobserve(entry.target);
+      revealObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-reveals.forEach(el => observer.observe(el));
+reveals.forEach(el => revealObserver.observe(el));
 
-// Sticky header shrink
+// Sticky header shadow
 const header = document.querySelector('header');
 window.addEventListener('scroll', () => {
   header.style.boxShadow = window.scrollY > 40
@@ -1956,11 +2813,14 @@ window.addEventListener('scroll', () => {
     : '0 2px 20px rgba(3,35,59,0.12)';
 });
 
-// Search focus effect
+// Search focus scale
 const searchInput = document.querySelector('.search-bar input');
-searchInput.addEventListener('focus', () => document.querySelector('.search-bar').style.transform = 'scale(1.02)');
-searchInput.addEventListener('blur', () => document.querySelector('.search-bar').style.transform = 'scale(1)');
-document.querySelector('.search-bar').style.transition = 'transform 0.2s ease';
+if (searchInput) {
+  const sb = document.querySelector('.search-bar');
+  sb.style.transition = 'transform 0.2s ease';
+  searchInput.addEventListener('focus', () => sb.style.transform = 'scale(1.02)');
+  searchInput.addEventListener('blur',  () => sb.style.transform = 'scale(1)');
+}
 </script>
 </body>
 </html>
