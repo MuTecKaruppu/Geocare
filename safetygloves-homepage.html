@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafetyGloves.co.uk – The UK's Safety Gloves Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== CSS VARIABLES ===== */
+:root {
+  --navy:   #03233B;
+  --teal:   #003B46;
+  --cream:  #F7EFE7;
+  --green:  #008F5A;
+  --gold:   #D6A73C;
+  --white:  #ffffff;
+  --text:   #1a1a2e;
+  --muted:  #6b7280;
+  --border: rgba(255,255,255,0.08);
+  --shadow: 0 4px 24px rgba(3,35,59,0.18);
+  --transition: 0.28s cubic-bezier(0.4,0,0.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+  background: var(--navy);
+  color: #c9d4dc;
+  font-size: 0.78rem;
+  padding: 7px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  animation: slideDown 0.5s ease both;
+}
+.topbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+.topbar span { display: flex; align-items: center; gap: 6px; }
+.topbar svg { width:14px; height:14px; flex-shrink:0; }
+.topbar .trustpilot { display: flex; align-items: center; gap: 8px; }
+.stars { color: #00b67a; letter-spacing: 1px; font-size: 1rem; }
+.topbar a { color: var(--gold); text-decoration: none; transition: opacity var(--transition); }
+.topbar a:hover { opacity: 0.8; }
+
+/* ===== HEADER ===== */
+header {
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  box-shadow: 0 2px 20px rgba(3,35,59,0.12);
+  animation: slideDown 0.4s 0.1s ease both;
+}
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 72px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo-icon {
+  width: 42px; height: 42px;
+  background: var(--navy);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-icon svg { width: 26px; height: 26px; fill: var(--gold); }
+.logo-text { line-height: 1; }
+.logo-text .brand {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+.logo-text .brand em { color: var(--green); font-style: normal; }
+.logo-text .domain { font-size: 0.68rem; color: var(--muted); font-weight: 500; letter-spacing: 0.5px; margin-top: 1px; }
+
+/* Search */
+.search-bar {
+  flex: 1;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+.search-bar input {
+  width: 100%;
+  padding: 11px 48px 11px 18px;
+  border: 2px solid #e0ddd8;
+  border-radius: 50px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.9rem;
+  background: #f9f7f4;
+  color: var(--text);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+.search-bar input:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(0,59,70,0.12);
+  background: #fff;
+}
+.search-bar button {
+  position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+  background: var(--green);
+  border: none; border-radius: 50px;
+  width: 34px; height: 34px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+.search-bar button:hover { background: var(--teal); transform: translateY(-50%) scale(1.05); }
+.search-bar button svg { width:16px; height:16px; stroke: #fff; fill:none; }
+
+/* Header actions */
+.header-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.btn-ghost {
+  padding: 9px 16px;
+  border: 1.5px solid #d0ccc6;
+  border-radius: 50px;
+  background: none;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--navy);
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition), color var(--transition);
+  text-decoration: none;
+  display: inline-flex; align-items: center; gap: 5px;
+}
+.btn-ghost:hover { border-color: var(--teal); color: var(--teal); background: rgba(0,59,70,0.04); }
+.btn-basket {
+  padding: 9px 18px;
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  display: flex; align-items: center; gap: 8px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.btn-basket:hover { background: var(--teal); transform: translateY(-1px); }
+.basket-count {
+  background: var(--gold);
+  color: var(--navy);
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  font-size: 0.72rem;
+  font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ===== NAV ===== */
+nav {
+  background: var(--teal);
+  position: relative;
+  z-index: 800;
+}
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+}
+.nav-item {
+  position: relative;
+}
+.nav-link {
+  display: flex; align-items: center; gap: 5px;
+  padding: 15px 18px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  transition: color var(--transition), background var(--transition);
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav-link:hover, .nav-link.active { color: var(--gold); background: rgba(255,255,255,0.06); border-bottom-color: var(--gold); }
+.nav-link svg { width:12px; height:12px; fill:none; stroke:currentColor; stroke-width:2.5; transition: transform var(--transition); }
+.nav-item:hover .nav-link svg { transform: rotate(180deg); }
+
+/* ===== MEGA MENU ===== */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(3,35,59,0.2);
+  border-top: 3px solid var(--green);
+  min-width: 860px;
+  padding: 36px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0 24px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 999;
+}
+.mega-menu.wide { min-width: 1000px; }
+.nav-item:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.mega-col h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--green);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f0ece6;
+}
+.mega-col ul { list-style: none; }
+.mega-col ul li { margin-bottom: 5px; }
+.mega-col ul li a {
+  text-decoration: none;
+  color: #374151;
+  font-size: 0.83rem;
+  font-weight: 500;
+  display: block;
+  padding: 3px 0;
+  transition: color var(--transition), padding-left var(--transition);
+  border-radius: 3px;
+}
+.mega-col ul li a:hover { color: var(--teal); padding-left: 6px; }
+.mega-more {
+  display: inline-flex; align-items: center; gap: 5px;
+  margin-top: 10px;
+  padding: 6px 14px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background var(--transition);
+}
+.mega-more:hover { background: var(--green); }
+
+/* ===== HERO ===== */
+.hero {
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 30% 50%, rgba(0,59,70,0.6) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 80% 30%, rgba(0,143,90,0.08) 0%, transparent 60%);
+}
+/* Hex pattern */
+.hero-hex {
+  position: absolute;
+  right: -60px; top: -40px;
+  width: 55%;
+  height: 140%;
+  opacity: 0.07;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17' fill='none' stroke='white' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 56px 100px;
+}
+.hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.hero-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(214,167,60,0.15);
+  border: 1px solid rgba(214,167,60,0.3);
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  animation: fadeUp 0.6s 0.2s both;
+}
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+  animation: fadeUp 0.6s 0.3s both;
+}
+.hero h1 em { color: var(--gold); font-style: normal; }
+.hero-sub {
+  color: rgba(247,239,231,0.7);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  animation: fadeUp 0.6s 0.4s both;
+}
+.hero-cta {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  animation: fadeUp 0.6s 0.5s both;
+}
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 32px;
+  background: var(--green);
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 20px rgba(0,143,90,0.35);
+}
+.btn-primary:hover { background: #00a367; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,143,90,0.45); }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px;
+  background: transparent;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color var(--transition), background var(--transition), transform var(--transition);
+}
+.btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+.hero-visual {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  animation: fadeLeft 0.8s 0.3s both;
+}
+.hero-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 28px;
+  max-width: 340px;
+  width: 100%;
+}
+.hero-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.hero-card-title em { color: var(--gold); font-style: normal; }
+.hero-card-sub { color: rgba(247,239,231,0.55); font-size: 0.8rem; margin-bottom: 20px; }
+.feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.feature-list li {
+  display: flex; align-items: center; gap: 12px;
+  color: rgba(247,239,231,0.85);
+  font-size: 0.88rem;
+}
+.feature-icon {
+  width: 32px; height: 32px;
+  background: rgba(0,143,90,0.2);
+  border: 1px solid rgba(0,143,90,0.3);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.feature-icon svg { width:15px; height:15px; stroke: var(--green); fill:none; stroke-width:2; }
+
+/* ===== BRANDS ===== */
+.brands {
+  background: #fff;
+  padding: 24px 0;
+  border-bottom: 1px solid #ede9e4;
+  overflow: hidden;
+}
+.brands-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.brands-track {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  animation: marquee 22s linear infinite;
+  width: max-content;
+}
+.brand-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #9ca3af;
+  transition: color var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.brand-logo:hover { color: var(--teal); }
+
+/* ===== SECTION TITLE ===== */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,143,90,0.08);
+  border: 1px solid rgba(0,143,90,0.2);
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+}
+.section-title span { color: var(--green); }
+
+/* ===== FEATURED PRODUCTS ===== */
+.featured {
+  padding: 64px 0;
+  background: var(--cream);
+}
+.featured .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.featured-header {
+  background: var(--teal);
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.featured-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 60px; height: 3px;
+  background: var(--gold);
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #e0dcd6;
+  border: 1px solid #e0dcd6;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+}
+.product-card {
+  background: #fff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background var(--transition), transform var(--transition);
+  position: relative;
+}
+.product-card:hover { background: #fdfcfb; }
+.product-card-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.product-img {
+  width: 90px; height: 90px;
+  object-fit: contain;
+  background: #f7f5f2;
+  border-radius: 10px;
+  padding: 8px;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.product-img-placeholder {
+  width: 90px; height: 90px;
+  background: linear-gradient(135deg, #e8e4de, #d4cfc9);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.product-img-placeholder svg { width:40px; height:40px; opacity:0.3; }
+.product-price-box { text-align: right; }
+.price-from { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.price-amount {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--navy);
+}
+.badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 8px;
+  border-radius: 50px;
+}
+.badge-best { background: var(--gold); color: var(--navy); }
+.badge-top { background: var(--green); color: #fff; }
+.badge-sale { background: #ef4444; color: #fff; }
+.product-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--navy);
+  line-height: 1.3;
+}
+.stars-row { display: flex; align-items: center; gap: 4px; }
+.star-icons { color: var(--gold); font-size: 0.85rem; letter-spacing: 1px; }
+.star-count { font-size: 0.73rem; color: var(--muted); }
+.product-features { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+.product-features li {
+  font-size: 0.78rem;
+  color: #4b5563;
+  display: flex; align-items: flex-start; gap: 6px;
+  line-height: 1.4;
+}
+.product-features li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.product-delivery {
+  font-size: 0.75rem;
+  color: var(--green);
+  font-weight: 600;
+  display: flex; align-items: center; gap: 5px;
+  padding-top: 8px;
+  border-top: 1px solid #f0ece6;
+}
+.product-delivery svg { width:13px; height:13px; }
+.btn-details {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 20px;
+  background: var(--green);
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--transition), transform var(--transition);
+  width: fit-content;
+}
+.btn-details:hover { background: var(--teal); transform: translateX(2px); }
+.btn-details svg { width:12px; height:12px; stroke: #fff; fill: none; stroke-width: 2.5; }
+
+/* ===== CATEGORY GRID ===== */
+.categories {
+  padding: 64px 0;
+  background: #fff;
+}
+.categories .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.cat-card {
+  background: var(--cream);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.cat-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(3,35,59,0.14); }
+.cat-img {
+  height: 160px;
+  background: linear-gradient(135deg, var(--teal) 0%, var(--navy) 100%);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.cat-img-icon { font-size: 4rem; opacity: 0.9; }
+.cat-img::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='70'%3E%3Cpolygon points='20,2 38,12 38,32 20,42 2,32 2,12' fill='none' stroke='white' stroke-width='0.5'/%3E%3C/svg%3E");
+  background-size: 40px 70px;
+  opacity: 0.06;
+}
+.cat-body { padding: 20px; flex: 1; }
+.cat-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--navy);
+  letter-spacing: 0.3px;
+  margin-bottom: 6px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.cat-name svg { width:16px; height:16px; stroke: var(--green); fill: none; stroke-width: 2.5; }
+.cat-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+.cat-tag {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--green);
+  background: rgba(0,143,90,0.08);
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+/* ===== INFO BLOCKS ===== */
+.info-row {
+  padding: 64px 0;
+  background: var(--cream);
+}
+.info-row .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 32px;
+  align-items: stretch;
+}
+.info-aside {
+  background: var(--navy);
+  border-radius: 20px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.info-aside::before {
+  content: '';
+  position: absolute; top: -40px; right: -40px;
+  width: 160px; height: 160px;
+  background: rgba(214,167,60,0.08);
+  border-radius: 50%;
+}
+.info-aside-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.info-aside h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.1;
+}
+.info-aside p { font-size: 0.88rem; color: rgba(247,239,231,0.7); line-height: 1.7; }
+.info-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.info-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.info-card:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(3,35,59,0.1); }
+.info-card-img {
+  height: 130px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem;
+}
+.info-card-body { padding: 16px; }
+.info-card-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.info-card-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+/* ===== LEARN ROW ===== */
+.learn-row {
+  padding: 64px 0;
+  background: #fff;
+}
+.learn-row .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 32px;
+  align-items: stretch;
+}
+.learn-aside {
+  background: var(--green);
+  border-radius: 20px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.learn-aside::before {
+  content: '';
+  position: absolute; bottom: -30px; left: -30px;
+  width: 120px; height: 120px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+}
+.learn-aside h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.1;
+}
+.learn-aside p { font-size: 0.88rem; color: rgba(255,255,255,0.8); line-height: 1.7; }
+.btn-outline-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 24px;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 50px;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: fit-content;
+  transition: background var(--transition), border-color var(--transition);
+}
+.btn-outline-white:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+
+/* ===== BULK ROW ===== */
+.bulk-row {
+  padding: 64px 0;
+  background: var(--cream);
+}
+.bulk-row .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 32px;
+  align-items: stretch;
+}
+.bulk-aside {
+  background: var(--gold);
+  border-radius: 20px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.bulk-aside::after {
+  content: '';
+  position: absolute; top: -20px; right: -20px;
+  width: 100px; height: 100px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 50%;
+}
+.bulk-aside h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--navy);
+  line-height: 1.1;
+}
+.bulk-aside p { font-size: 0.88rem; color: rgba(3,35,59,0.7); line-height: 1.7; }
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  background: var(--teal);
+  padding: 72px 0;
+  position: relative;
+  overflow: hidden;
+}
+.about-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpolygon points='28,2 54,17 54,47 28,62 2,47 2,17' fill='none' stroke='white' stroke-width='0.5'/%3E%3C/svg%3E");
+  background-size: 56px 100px;
+  opacity: 0.04;
+}
+.about-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+}
+.about-text-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.about-text h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+.about-text p { font-size: 0.95rem; color: rgba(247,239,231,0.75); line-height: 1.8; margin-bottom: 16px; }
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.stat-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 24px;
+  transition: background var(--transition);
+}
+.stat-card:hover { background: rgba(255,255,255,0.12); }
+.stat-number {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+.stat-label { font-size: 0.82rem; color: rgba(247,239,231,0.65); margin-top: 4px; }
+
+/* ===== NEWSLETTER ===== */
+.newsletter {
+  background: var(--navy);
+  padding: 48px 0;
+  border-top: 3px solid var(--green);
+}
+.newsletter-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.newsletter-text h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.newsletter-text p { font-size: 0.85rem; color: rgba(247,239,231,0.6); }
+.newsletter-form { display: flex; gap: 10px; flex: 1; max-width: 440px; }
+.newsletter-form input {
+  flex: 1;
+  padding: 13px 20px;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 50px;
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color var(--transition);
+}
+.newsletter-form input::placeholder { color: rgba(247,239,231,0.4); }
+.newsletter-form input:focus { border-color: var(--green); }
+.newsletter-form button {
+  padding: 13px 24px;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+.newsletter-form button:hover { background: #00a367; }
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding: 56px 0 32px;
+}
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-col h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.footer-col ul li a {
+  font-size: 0.82rem;
+  color: rgba(247,239,231,0.55);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.footer-col ul li a:hover { color: var(--cream); }
+.footer-bottom {
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-bottom p { font-size: 0.75rem; color: rgba(247,239,231,0.35); }
+.footer-phone {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.footer-phone span { color: var(--gold); }
+.footer-hours { font-size: 0.72rem; color: rgba(247,239,231,0.45); margin-top: 2px; }
+.payment-icons { display: flex; gap: 8px; flex-wrap: wrap; }
+.payment-icon {
+  background: rgba(255,255,255,0.1);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(247,239,231,0.6);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(32px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== FLOATING CTA ===== */
+.float-cta {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  z-index: 1000;
+  background: var(--green);
+  color: #fff;
+  border-radius: 50px;
+  padding: 14px 24px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 28px rgba(0,143,90,0.4);
+  cursor: pointer;
+  border: none;
+  transition: background var(--transition), transform var(--transition);
+  display: flex; align-items: center; gap: 8px;
+  text-decoration: none;
+  animation: fadeUp 0.6s 1s both;
+}
+.float-cta:hover { background: var(--teal); transform: translateY(-2px); }
+.float-dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; animation: pulse 1.5s ease infinite; }
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,59,70,0.15), transparent);
+  margin: 0;
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      Free UK delivery on all orders over £40
+    </span>
+    <span class="trustpilot">
+      <span>Excellent</span>
+      <span class="stars">★★★★★</span>
+      <a href="#">5,370 reviews on Trustpilot</a>
+    </span>
+    <span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.55a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call our sales team: <a href="tel:02075011104">020 7501 1104</a>
+    </span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5" fill="none" stroke="#D6A73C" stroke-width="1.5"/><path d="M2 12l10 5 10-5" fill="none" stroke="#D6A73C" stroke-width="1.5" opacity="0.6"/></svg>
+      </div>
+      <div class="logo-text">
+        <div class="brand">Safety<em>Gloves</em></div>
+        <div class="domain">.co.uk · The UK's Safety Gloves Specialist</div>
+      </div>
+    </a>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search for gloves...">
+      <button>
+        <svg viewBox="0 0 24 24" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+    </div>
+
+    <div class="header-actions">
+      <a href="#" class="btn-ghost">Sign In</a>
+      <a href="#" class="btn-ghost">New Account</a>
+      <button class="btn-basket">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Basket
+        <span class="basket-count">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+
+    <div class="nav-item">
+      <a href="#" class="nav-link active">Home</a>
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-link">Full Shop
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </span>
+      <div class="mega-menu wide">
+        <div class="mega-col">
+          <h4>Popular Brands</h4>
+          <ul>
+            <li><a href="#">Ansell</a></li><li><a href="#">ATG Gloves</a></li><li><a href="#">Aurelia</a></li>
+            <li><a href="#">Black Mamba</a></li><li><a href="#">Delta Plus</a></li><li><a href="#">Ejendals Tegera</a></li>
+            <li><a href="#">Grippaz</a></li><li><a href="#">HexArmor</a></li><li><a href="#">KLASS</a></li>
+            <li><a href="#">Polyco</a></li><li><a href="#">Portwest</a></li><li><a href="#">Showa</a></li>
+            <li><a href="#">Skytec</a></li><li><a href="#">Traffiglove</a></li><li><a href="#">Uvex</a></li>
+          </ul>
+          <a href="#" class="mega-more">More...</a>
+        </div>
+        <div class="mega-col">
+          <h4>Environment</h4>
+          <ul>
+            <li><a href="#">Clean</a></li><li><a href="#">Cold</a></li><li><a href="#">Cutting</a></li>
+            <li><a href="#">Dark</a></li><li><a href="#">Dirty</a></li><li><a href="#">Dry</a></li>
+            <li><a href="#">Freezers</a></li><li><a href="#">Garden</a></li><li><a href="#">Grease</a></li>
+            <li><a href="#">Hot</a></li><li><a href="#">Indoor</a></li><li><a href="#">Kitchen</a></li>
+            <li><a href="#">Oil</a></li><li><a href="#">Outdoor</a></li><li><a href="#">Thermal</a></li>
+            <li><a href="#">Waterproof</a></li><li><a href="#">Wet</a></li><li><a href="#">Winter Work</a></li>
+          </ul>
+        </div>
+        <div class="mega-col">
+          <h4>Hazard (A–F)</h4>
+          <ul>
+            <li><a href="#">Abrasion</a></li><li><a href="#">Adhesives</a></li><li><a href="#">Anti-Static</a></li>
+            <li><a href="#">Barbed Wire</a></li><li><a href="#">Blade</a></li><li><a href="#">Cans</a></li>
+            <li><a href="#">Chainsaws</a></li><li><a href="#">Chemicals</a></li><li><a href="#">Cold</a></li>
+            <li><a href="#">Cut</a></li><li><a href="#">Cut + Heat</a></li><li><a href="#">Debris</a></li>
+            <li><a href="#">Detergents</a></li><li><a href="#">Electricity</a></li><li><a href="#">Fire</a></li>
+            <li><a href="#">Food</a></li><li><a href="#">Freezing Temp</a></li>
+          </ul>
+        </div>
+        <div class="mega-col">
+          <h4>Hazard (G–S)</h4>
+          <ul>
+            <li><a href="#">Glass</a></li><li><a href="#">Grease</a></li><li><a href="#">HAVS</a></li>
+            <li><a href="#">Heat</a></li><li><a href="#">Hot Water</a></li><li><a href="#">Hygiene</a></li>
+            <li><a href="#">Impact</a></li><li><a href="#">Janitorial</a></li><li><a href="#">Kilns</a></li>
+            <li><a href="#">Knives</a></li><li><a href="#">Medical Contamination</a></li><li><a href="#">Needlestick</a></li>
+            <li><a href="#">Oil</a></li><li><a href="#">Puncture</a></li><li><a href="#">Sharp Objects</a></li>
+          </ul>
+        </div>
+        <div class="mega-col">
+          <h4>Hazard (T–Z)</h4>
+          <ul>
+            <li><a href="#">Tear</a></li><li><a href="#">Thermal</a></li><li><a href="#">Thermal + Waterproof</a></li>
+            <li><a href="#">Vibration</a></li><li><a href="#">Visibility</a></li><li><a href="#">Waterproof</a></li>
+            <li><a href="#">Wood</a></li><li><a href="#">Welding</a></li>
+          </ul>
+          <h4 style="margin-top:16px">Disposable</h4>
+          <ul>
+            <li><a href="#">Latex Gloves</a></li><li><a href="#">Nitrile</a></li><li><a href="#">Powder Free</a></li>
+            <li><a href="#">PVC</a></li><li><a href="#">Surgical Gloves</a></li><li><a href="#">Vinyl</a></li>
+          </ul>
+        </div>
+        <div class="mega-col">
+          <h4>Reusable Gloves</h4>
+          <ul>
+            <li><a href="#">Chainmail</a></li><li><a href="#">Cotton</a></li><li><a href="#">Cotton Drill</a></li>
+            <li><a href="#">Cut Resistant</a></li><li><a href="#">Dyneema</a></li><li><a href="#">Fingerless</a></li>
+            <li><a href="#">Gauntlet</a></li><li><a href="#">Kevlar</a></li><li><a href="#">Latex</a></li>
+            <li><a href="#">Leather</a></li><li><a href="#">Liners</a></li><li><a href="#">Neoprene</a></li>
+            <li><a href="#">PVC</a></li><li><a href="#">Rigger</a></li><li><a href="#">Rubber</a></li>
+            <li><a href="#">Thermal</a></li><li><a href="#">Touchscreen</a></li><li><a href="#">Vegan</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-link">Industry (A–Z)
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </span>
+      <div class="mega-menu">
+        <div class="mega-col">
+          <h4>A – C</h4>
+          <ul>
+            <li><a href="#">Agriculture</a></li><li><a href="#">Automotive</a></li><li><a href="#">Building</a></li>
+            <li><a href="#">Catering</a></li><li><a href="#">Chemical</a></li><li><a href="#">Construction</a></li>
+          </ul>
+        </div>
+        <div class="mega-col">
+          <h4>D – F</h4>
+          <ul>
+            <li><a href="#">Dental</a></li><li><a href="#">Electronics</a></li><li><a href="#">Engineering</a></li>
+            <li><a href="#">Farming</a></li><li><a href="#">Fire Service</a></li><li><a href="#">Fishing</a></li>
+          </ul>
+        </div>
+        <div class="mega-col">
+          <h4>G – L</h4>
+          <ul>
+            <li><a href="#">Gardening</a></li><li><a href="#">Glass</a></li><li><a href="#">Healthcare</a></li>
+            <li><a href="#">Hospitality</a></li><li><a href="#">Industrial</a></li><li><a href="#">Logistics</a></li>
+          </ul>
+        </div>
+        <div class="mega-col">
+          <h4>M – P</h4>
+          <ul>
+            <li><a href="#">Manufacturing</a></li><li><a href="#">Medical</a></li><li><a href="#">Mining</a></li>
+            <li><a href="#">Oil & Gas</a></li><li><a href="#">Petrochemical</a></li><li><a href="#">Pharmaceutical</a></li>
+          </ul>
+        </div>
+        <div class="mega-col">
+          <h4>R – Z</h4>
+          <ul>
+            <li><a href="#">Retail</a></li><li><a href="#">Security</a></li><li><a href="#">Utilities</a></li>
+            <li><a href="#">Veterinary</a></li><li><a href="#">Warehousing</a></li><li><a href="#">Welding</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-link">Industry (1–9)
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </span>
+      <div class="mega-menu">
+        <div class="mega-col">
+          <h4>Standards</h4>
+          <ul>
+            <li><a href="#">EN 388</a></li><li><a href="#">EN 374</a></li><li><a href="#">EN 407</a></li>
+            <li><a href="#">EN 511</a></li><li><a href="#">EN 420</a></li>
+          </ul>
+        </div>
+        <div class="mega-col">
+          <h4>Cut Level</h4>
+          <ul>
+            <li><a href="#">Level A</a></li><li><a href="#">Level B</a></li><li><a href="#">Level C</a></li>
+            <li><a href="#">Level D</a></li><li><a href="#">Level E</a></li><li><a href="#">Level F</a></li>
+          </ul>
+        </div>
+        <div class="mega-col">
+          <h4>Protection</h4>
+          <ul>
+            <li><a href="#">Chemical Grade 1</a></li><li><a href="#">Chemical Grade 2</a></li>
+            <li><a href="#">Chemical Grade 3</a></li><li><a href="#">Heat Level 1-4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <a href="#" class="nav-link" style="color: var(--gold);">Special Offers
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="mega-menu">
+        <div class="mega-col">
+          <h4>Deals</h4>
+          <ul>
+            <li><a href="#">Clearance Lines</a></li><li><a href="#">Bundle Offers</a></li>
+            <li><a href="#">Bulk Discounts</a></li><li><a href="#">New In</a></li>
+          </ul>
+        </div>
+        <div class="mega-col">
+          <h4>By Price</h4>
+          <ul>
+            <li><a href="#">Under £1</a></li><li><a href="#">£1 – £5</a></li>
+            <li><a href="#">£5 – £10</a></li><li><a href="#">£10+</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <span class="nav-link">Our Guides
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </span>
+      <div class="mega-menu">
+        <div class="mega-col">
+          <h4>Buying Guides</h4>
+          <ul>
+            <li><a href="#">How to Choose Gloves</a></li><li><a href="#">Sizing Guide</a></li>
+            <li><a href="#">Material Guide</a></li><li><a href="#">EN Standards Explained</a></li>
+          </ul>
+        </div>
+        <div class="mega-col">
+          <h4>Industry Guides</h4>
+          <ul>
+            <li><a href="#">Construction Guide</a></li><li><a href="#">Healthcare Guide</a></li>
+            <li><a href="#">Chemical Guide</a></li><li><a href="#">Food Industry Guide</a></li>
+          </ul>
+        </div>
+        <div class="mega-col">
+          <h4>Knowledge Base</h4>
+          <ul>
+            <li><a href="#">PPE Regulations UK</a></li><li><a href="#">Glove Care Tips</a></li>
+            <li><a href="#">Blog & News</a></li><li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-hex"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-label">
+        <span>🛡️</span> UK's No.1 Safety Gloves Specialist
+      </div>
+      <h1>Keep Your Hands<br><em>Safe & Protected</em></h1>
+      <p class="hero-sub">From nitrile disposables to cut-resistant work gloves — the most comprehensive range of safety gloves for every industry and application.</p>
+      <div class="hero-cta">
+        <a href="#" class="btn-primary">
+          Shop Now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#" class="btn-secondary">Browse All Categories</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-title"><em>ATG</em> Gloves with AD-APT</div>
+        <div class="hero-card-sub">Cooling Technology — Keep Hands Cool, Dry & Productive</div>
+        <ul class="feature-list">
+          <li>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Touchscreen compatible, ultra-thin grip
+          </li>
+          <li>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Heat protection up to 100°C
+          </li>
+          <li>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Seamless, flexible, long-lasting comfort
+          </li>
+          <li>
+            <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Free UK delivery on orders over £40
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<div class="brands">
+  <div class="brands-inner">
+    <div class="brands-track">
+      <span class="brand-logo">Portwest</span>
+      <span class="brand-logo">Traffi.</span>
+      <span class="brand-logo">Skytec</span>
+      <span class="brand-logo">GTG</span>
+      <span class="brand-logo">Polyco</span>
+      <span class="brand-logo">Ejendals</span>
+      <span class="brand-logo">Aurelia</span>
+      <span class="brand-logo">Ansell</span>
+      <span class="brand-logo">Supertouch</span>
+      <span class="brand-logo">Ultimate</span>
+      <span class="brand-logo">ATG</span>
+      <span class="brand-logo">UniGloves</span>
+      <!-- duplicate for seamless loop -->
+      <span class="brand-logo">Portwest</span>
+      <span class="brand-logo">Traffi.</span>
+      <span class="brand-logo">Skytec</span>
+      <span class="brand-logo">GTG</span>
+      <span class="brand-logo">Polyco</span>
+      <span class="brand-logo">Ejendals</span>
+      <span class="brand-logo">Aurelia</span>
+      <span class="brand-logo">Ansell</span>
+      <span class="brand-logo">Supertouch</span>
+      <span class="brand-logo">Ultimate</span>
+      <span class="brand-logo">ATG</span>
+      <span class="brand-logo">UniGloves</span>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED PRODUCTS -->
+<section class="featured">
+  <div class="container">
+    <div class="featured-header">Featured Products</div>
+    <div class="products-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card reveal">
+        <div class="product-card-top">
+          <div class="product-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 11V6a2 2 0 00-2-2v0a2 2 0 00-2 2v0M14 10V4a2 2 0 00-2-2v0a2 2 0 00-2 2v2M10 10.5V6a2 2 0 00-2-2v0a2 2 0 00-2 2v8l2.5-1.5"/><path d="M18 8a2 2 0 014 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
+          </div>
+          <div class="product-price-box">
+            <div class="price-from">from</div>
+            <div class="price-amount">£2.70</div>
+          </div>
+        </div>
+        <div class="product-name">Skytec Aria Heat-Resistant Touchscreen Work Gloves</div>
+        <div class="stars-row">
+          <span class="star-icons">★★★★★</span>
+          <span class="star-count">(9)</span>
+        </div>
+        <ul class="product-features">
+          <li>Lightweight & grippy with touchscreen capability</li>
+          <li>High-level abrasion and tear resistance</li>
+          <li>Heat protection up to 100°C</li>
+          <li>Seamless liner and breathable flexible design</li>
+        </ul>
+        <div class="product-delivery">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          In stock, delivery as soon as Tuesday 19 May
+        </div>
+        <a href="#" class="btn-details">Details <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card reveal">
+        <span class="badge badge-best">Best Seller</span>
+        <div class="product-card-top">
+          <div class="product-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 11V6a2 2 0 00-2-2v0a2 2 0 00-2 2v0M14 10V4a2 2 0 00-2-2v0a2 2 0 00-2 2v2M10 10.5V6a2 2 0 00-2-2v0a2 2 0 00-2 2v8l2.5-1.5"/><path d="M18 8a2 2 0 014 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
+          </div>
+          <div class="product-price-box">
+            <div class="price-from">from</div>
+            <div class="price-amount">£0.74</div>
+          </div>
+        </div>
+        <div class="product-name">Polyco Matrix F Grip Work Gloves</div>
+        <div class="stars-row">
+          <span class="star-icons">★★★★★</span>
+          <span class="star-count">(24)</span>
+        </div>
+        <ul class="product-features">
+          <li>Nitrile palm coated for light, tactile & handling work</li>
+          <li>Ideal for outdoor, tactile work to machine handling</li>
+          <li>Offers light resistance to water, oil and grease</li>
+          <li>Price is per pair of gloves</li>
+        </ul>
+        <div class="product-delivery">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          In stock, delivery as soon as Tuesday 19 May
+        </div>
+        <a href="#" class="btn-details">Details <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card reveal">
+        <span class="badge badge-top">Top Pick</span>
+        <div class="product-card-top">
+          <div class="product-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 11V6a2 2 0 00-2-2v0a2 2 0 00-2 2v0M14 10V4a2 2 0 00-2-2v0a2 2 0 00-2 2v2M10 10.5V6a2 2 0 00-2-2v0a2 2 0 00-2 2v8l2.5-1.5"/><path d="M18 8a2 2 0 014 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
+          </div>
+          <div class="product-price-box">
+            <div class="price-from">from</div>
+            <div class="price-amount">£6.11</div>
+          </div>
+        </div>
+        <div class="product-name">Aurelia Robust Medical Grade Nitrile Gloves 93895-9</div>
+        <div class="stars-row">
+          <span class="star-icons">★★★★★</span>
+          <span class="star-count">(14)</span>
+        </div>
+        <ul class="product-features">
+          <li>Price is per box of 100 gloves</li>
+          <li>Blue nitrile construction for added protection</li>
+          <li>Can resist forces up to 6 Newtons</li>
+          <li>Ambidextrous gloves</li>
+        </ul>
+        <div class="product-delivery">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          In stock, delivery as soon as Tuesday 19 May
+        </div>
+        <a href="#" class="btn-details">Details <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card reveal">
+        <div class="product-card-top">
+          <div class="product-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 11V6a2 2 0 00-2-2v0a2 2 0 00-2 2v0M14 10V4a2 2 0 00-2-2v0a2 2 0 00-2 2v2M10 10.5V6a2 2 0 00-2-2v0a2 2 0 00-2 2v8l2.5-1.5"/><path d="M18 8a2 2 0 014 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
+          </div>
+          <div class="product-price-box">
+            <div class="price-from">from</div>
+            <div class="price-amount">£1.39</div>
+          </div>
+        </div>
+        <div class="product-name">Portwest A350 Dermiflex Nitrile Foam Gloves</div>
+        <div class="stars-row">
+          <span class="star-icons">★★★★☆</span>
+          <span class="star-count">(76)</span>
+        </div>
+        <ul class="product-features">
+          <li>Nylon and elastane liner for exceptional lightweight dexterity</li>
+          <li>Full soft nitrile foam PU coating enhances grip</li>
+          <li>Suitable for general handling in oil and grease</li>
+          <li>Price shown is per pair of gloves</li>
+        </ul>
+        <div class="product-delivery">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          In stock, delivery as soon as Tuesday 19 May
+        </div>
+        <a href="#" class="btn-details">Details <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card reveal">
+        <span class="badge badge-best">Best Seller</span>
+        <div class="product-card-top">
+          <div class="product-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 11V6a2 2 0 00-2-2v0a2 2 0 00-2 2v0M14 10V4a2 2 0 00-2-2v0a2 2 0 00-2 2v2M10 10.5V6a2 2 0 00-2-2v0a2 2 0 00-2 2v8l2.5-1.5"/><path d="M18 8a2 2 0 014 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
+          </div>
+          <div class="product-price-box">
+            <div class="price-from">from</div>
+            <div class="price-amount">£0.38</div>
+          </div>
+        </div>
+        <div class="product-name">Portwest A120 Black PU Palm Gloves</div>
+        <div class="stars-row">
+          <span class="star-icons">★★★★★</span>
+          <span class="star-count">(380)</span>
+        </div>
+        <ul class="product-features">
+          <li>PU palm coating ideal for general handling</li>
+          <li>Sensitive design suited to tactile tasks</li>
+          <li>Available in a wide range of colours and sizes</li>
+          <li>Price is per pair</li>
+        </ul>
+        <div class="product-delivery">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          In stock, delivery as soon as Tuesday 19 May
+        </div>
+        <a href="#" class="btn-details">Details <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card reveal">
+        <div class="product-card-top">
+          <div class="product-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><path d="M18 11V6a2 2 0 00-2-2v0a2 2 0 00-2 2v0M14 10V4a2 2 0 00-2-2v0a2 2 0 00-2 2v2M10 10.5V6a2 2 0 00-2-2v0a2 2 0 00-2 2v8l2.5-1.5"/><path d="M18 8a2 2 0 014 0v6a8 8 0 01-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 012.83-2.82L7 15"/></svg>
+          </div>
+          <div class="product-price-box">
+            <div class="price-from">from</div>
+            <div class="price-amount">£6.66</div>
+          </div>
+        </div>
+        <div class="product-name">Aurelia Bold Medical-Grade Black Nitrile Gloves (Box of 100)</div>
+        <div class="stars-row">
+          <span class="star-icons">★★★★☆</span>
+          <span class="star-count">(76)</span>
+        </div>
+        <ul class="product-features">
+          <li>Box of 100 nitrile gloves for medical and food handling</li>
+          <li>Designed with micro-texture palms for secure grip</li>
+          <li>Completely latex-free and suitable for sensitive skin</li>
+        </ul>
+        <div class="product-delivery">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          In stock, delivery as soon as Tuesday 19 May
+        </div>
+        <a href="#" class="btn-details">Details <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES ROW 1 -->
+<section class="categories">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Browse by Type</div>
+      <div class="section-title">Find Out All <span>About Us</span></div>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card reveal">
+        <div class="cat-img"><span class="cat-img-icon">✂️</span></div>
+        <div class="cat-body">
+          <div class="cat-name">Cut Resistant Gloves <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          <p class="cat-desc">Whether you're working with knives or just sharp-edged objects, our cut-resistant gloves are a must-have. We provide the highest level of resistance.</p>
+          <span class="cat-tag">Shop Range</span>
+        </div>
+      </div>
+      <div class="cat-card reveal">
+        <div class="cat-img"><span class="cat-img-icon">🔥</span></div>
+        <div class="cat-body">
+          <div class="cat-name">Heat Resistant Gloves <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          <p class="cat-desc">When the temperature starts to rise, it's vital you have the correct heat-resistant gloves. Protect your hands from burns today.</p>
+          <span class="cat-tag">Shop Range</span>
+        </div>
+      </div>
+      <div class="cat-card reveal">
+        <div class="cat-img"><span class="cat-img-icon">❄️</span></div>
+        <div class="cat-body">
+          <div class="cat-name">Thermal Gloves <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          <p class="cat-desc">Keep your hands warm, comfortable and dry with our excellent range of thermal gloves. Perfect for cold, wet and windy conditions.</p>
+          <span class="cat-tag">Shop Range</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INFO ROW -->
+<div class="info-row">
+  <div class="container">
+    <div class="info-aside reveal">
+      <div>
+        <div class="info-aside-label">Explore</div>
+        <h3>Find Out All About Us</h3>
+      </div>
+      <p>Learn more about SafetyGloves.co.uk — who we are, the wide selection we have available, and exactly what we can do to help protect your hands.</p>
+      <a href="#" class="btn-primary" style="width:fit-content">Learn More →</a>
+    </div>
+    <div class="info-main">
+      <div class="info-card reveal">
+        <div class="info-card-img">🌱</div>
+        <div class="info-card-body">
+          <div class="info-card-name">Gardening Gloves</div>
+          <p class="info-card-desc">Full selection of high-quality gardening gloves ideal for both professional landscapers and everyday amateur use.</p>
+        </div>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-card-img">⚗️</div>
+        <div class="info-card-body">
+          <div class="info-card-name">Chemical Gloves</div>
+          <p class="info-card-desc">If you're dealing with dangerous, corrosive chemicals, having the right pair of chemical-resistant gloves is absolutely crucial.</p>
+        </div>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-card-img">🌿</div>
+        <div class="info-card-body">
+          <div class="info-card-name">Thorn Proof Gloves</div>
+          <p class="info-card-desc">From pruning roses to picking blackberries from brambles — we've got the perfect thorn-proof gardening gloves for you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEARN ROW -->
+<div class="learn-row">
+  <div class="container">
+    <div class="learn-aside reveal">
+      <div>
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:8px;">Knowledge Centre</div>
+        <h3>Learn About Gloves</h3>
+      </div>
+      <p>With our wide selection of work gloves, you may be a little unsure about which gloves are right for you. Our Knowledge Centre is full of helpful guides to help you choose.</p>
+      <a href="#" class="btn-outline-white">Learn More →</a>
+    </div>
+    <div class="info-main">
+      <div class="info-card reveal">
+        <div class="info-card-img" style="background: linear-gradient(135deg,#003B46,#008F5A);">🧤</div>
+        <div class="info-card-body">
+          <div class="info-card-name">Nitrile Gloves</div>
+          <p class="info-card-desc">Ideal for protection against chemicals, nitrile gloves provide low irritation and are excellent for a number of industries. View our extensive range.</p>
+        </div>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-card-img" style="background: linear-gradient(135deg,#6b4c2a,#9c6f3a);">🥊</div>
+        <div class="info-card-body">
+          <div class="info-card-name">Leather Gloves</div>
+          <p class="info-card-desc">Hardwearing and dependable, our range of leather gloves provides excellent protection that lasts longer. Suitable for a wide variety of industries.</p>
+        </div>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-card-img" style="background: linear-gradient(135deg,#1a4a3a,#2d7a55);">🌲</div>
+        <div class="info-card-body">
+          <div class="info-card-name">Outdoor Gloves</div>
+          <p class="info-card-desc">From hardwearing gloves for felling timber to thermal gloves for cold weather, our range of outdoor gloves will keep your hands safe outdoors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BULK ROW -->
+<div class="bulk-row">
+  <div class="container">
+    <div class="bulk-aside reveal">
+      <div>
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(3,35,59,0.65);margin-bottom:8px;">Wholesale</div>
+        <h3>Bulk Buying & Wholesale</h3>
+      </div>
+      <p>If you're looking to buy in bulk, we can help you save money on your PPE. We offer discounts on all of our gloves when you are buying wholesale.</p>
+      <a href="#" class="btn-primary" style="width:fit-content;background:var(--navy)">Learn More →</a>
+    </div>
+    <div class="info-main">
+      <div class="info-card reveal">
+        <div class="info-card-img" style="background:linear-gradient(135deg,var(--navy),var(--teal))">📦</div>
+        <div class="info-card-body">
+          <div class="info-card-name">Bulk Discounts</div>
+          <p class="info-card-desc">The more you order, the more you save. We offer tiered pricing across our entire catalogue for volume buyers and trade accounts.</p>
+        </div>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-card-img" style="background:linear-gradient(135deg,var(--teal),var(--green))">🏭</div>
+        <div class="info-card-body">
+          <div class="info-card-name">Trade Accounts</div>
+          <p class="info-card-desc">Set up a dedicated trade account for streamlined ordering, invoicing, and priority dispatch for your business.</p>
+        </div>
+      </div>
+      <div class="info-card reveal">
+        <div class="info-card-img" style="background:linear-gradient(135deg,var(--green),#00b870)">🤝</div>
+        <div class="info-card-body">
+          <div class="info-card-name">Custom Orders</div>
+          <p class="info-card-desc">Need a bespoke solution? Our team can source, brand, or customise gloves for your organisation's specific requirements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="about-inner">
+    <div class="about-text reveal">
+      <div class="about-text-label">The Experts in Hand Protection</div>
+      <h2>Safety Gloves — <br>The UK's No.1 <br>Specialist</h2>
+      <p>Welcome to SafetyGloves.co.uk — the experts in safety gloves and hand protection. Our focus is on providing the UK's most comprehensive range of safety gloves to help protect your hands.</p>
+      <p>Safety gloves play a crucial part in safe handling and can be a vital addition to your PPE. If you're looking to protect your hands in the workplace, we can help — with a team of hand protection experts ready to assist.</p>
+      <a href="#" class="btn-primary" style="width:fit-content">Read More →</a>
+    </div>
+    <div class="about-stats">
+      <div class="stat-card reveal">
+        <div class="stat-number">5,370+</div>
+        <div class="stat-label">Verified Trustpilot Reviews</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-number">10,000+</div>
+        <div class="stat-label">Products In Stock</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-number">£40</div>
+        <div class="stat-label">Free UK Delivery Threshold</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-number">24hrs</div>
+        <div class="stat-label">Fast Dispatch on Most Orders</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-text">
+      <h3>Sign Up for Exclusive Offers</h3>
+      <p>Get the latest updates on new products, special offers, and news from SafetyGloves.co.uk. No spam, ever.</p>
+    </div>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Enter your email address">
+      <button>Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Popular Searches</h4>
+        <ul>
+          <li><a href="#">Cut Resistant Gloves</a></li>
+          <li><a href="#">Thermal Waterproof Gloves</a></li>
+          <li><a href="#">Gardening Gloves</a></li>
+          <li><a href="#">Nitrile Gloves</a></li>
+          <li><a href="#">Waterproof Gloves</a></li>
+          <li><a href="#">Outdoor Work Gloves</a></li>
+          <li><a href="#">Heat Resistant Gloves</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Your Account</h4>
+        <ul>
+          <li><a href="#">Track My Order</a></li>
+          <li><a href="#">New Account</a></li>
+          <li><a href="#">Sign In</a></li>
+          <li><a href="#">Basket (0)</a></li>
+          <li><a href="#">Purchase Orders</a></li>
+          <li><a href="#">Site Visits</a></li>
+          <li><a href="#">Wholesale Orders</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Delivery Information</a></li>
+          <li><a href="#">Returns Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Track My Order</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company Info</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Affiliates & Partners</a></li>
+          <li><a href="#">Invoice Printing</a></li>
+          <li><a href="#">Net Zero Commitment</a></li>
+          <li><a href="#">Site Map</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Helpline</h4>
+        <div class="footer-phone"><span>020 7501</span> 1104</div>
+        <div class="footer-hours">Lines open 9:00am to 5:30pm, Monday to Friday</div>
+        <br>
+        <div class="payment-icons">
+          <span class="payment-icon">Visa</span>
+          <span class="payment-icon">MC</span>
+          <span class="payment-icon">Amex</span>
+          <span class="payment-icon">PayPal</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Health and Care (UK) Ltd | Reg No. 03808815 | Reg in England & Wales | Unit 8, Union Court, Union Road, London, SW4 6JP<br>Information on this site is for reference only and does not constitute medical, clinical, or scientific advice.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING CTA -->
+<a href="#" class="float-cta">
+  <span class="float-dot"></span>
+  Shop Gloves
+</a>
+
+<script>
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 60);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// Sticky header shrink
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+  header.style.boxShadow = window.scrollY > 40
+    ? '0 4px 30px rgba(3,35,59,0.18)'
+    : '0 2px 20px rgba(3,35,59,0.12)';
+});
+
+// Search focus effect
+const searchInput = document.querySelector('.search-bar input');
+searchInput.addEventListener('focus', () => document.querySelector('.search-bar').style.transform = 'scale(1.02)');
+searchInput.addEventListener('blur', () => document.querySelector('.search-bar').style.transform = 'scale(1)');
+document.querySelector('.search-bar').style.transition = 'transform 0.2s ease';
+</script>
+</body>
+</html>
