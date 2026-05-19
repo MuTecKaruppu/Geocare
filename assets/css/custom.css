@@ -1541,9 +1541,10 @@ footer .footer-inner-wrapper .footer-col:last-child h4:after {
   transition: var(--mt-transition);
 }
 footer .footer-col ul li a:hover { text-decoration: underline; }
-footer .footer-bottom { padding: 30px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; background:url(/assets/images/ybg.jpg); }
+footer .footer-bottom { padding: 30px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; background:var(--mt-teritary); }
 footer .footer-bottom .footer-bottom-wrapper { display: flex; justify-content: space-between; align-items: center; }
 footer .footer-bottom p { font-size: 13px; line-height: 1.85; color: var(--mt-accent-white); }
+footer .footer-bottom .footer-bottom-wrapper img { width: 80px; }
 footer .footer-phone {
   font-family: var(--mt-head-font);
   font-size: 37px;
@@ -1554,7 +1555,7 @@ footer .footer-hours,
 footer .footer-cards { font-size: 14px; color: var(--mt-accent-white); margin-top: 2px; }
 footer .footer-cards { margin-top: 16px; }
 footer .payment-icons { display: flex; gap: 8px; flex-wrap: wrap; }
-footer .payment-icon img { border-radius: var(--mt-radius); height: 54px; }
+footer .payment-icons img { border-radius: var(--mt-radius); height: 54px; }
 
 
 /* ===== NEWSLETTER ===== */
