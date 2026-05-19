@@ -1728,7 +1728,7 @@ footer .payment-icons img { border-radius: var(--mt-radius); height: 54px; }
 .info-row .info-card-img,
 .learn-row .info-card-img,
 .bulk-row .info-card-img { /* height: 160px; */ display: flex; 
-    align-items: center; justify-content: center; font-size: 3rem; }
+    align-items: center; justify-content: center; font-size: 3rem; border-radius: 10px; overflow: hidden; }
 .info-row .info-card-body,
 .learn-row .info-card-body,
 .bulk-row .info-card-body { padding-top: 16px; }
