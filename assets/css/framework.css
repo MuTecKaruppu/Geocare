@@ -2,15 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'); /* Figtree Font */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap'); /* DM Sans */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); /* Inter Font */
 
 
 
 /* @theme variables */
 
 :root {  
-	--mt-base-font: "DM Sans", sans-serif;
+	--mt-base-font: "Inter", sans-serif;
 	--mt-base-font-weight: 400;
-	--mt-base-line-height: 1.625;
+	--mt-base-line-height: 1.85;
 	
 	--mt-head-font: "Figtree", sans-serif;
 	--mt-head-font-weight: 700;
