@@ -21,7 +21,7 @@
 
 </head>
 
-<body>
+<body class="index">
 
     <div class="wrapper">
         <div class="inner-wrapper">
@@ -57,7 +57,6 @@
                                     <div class="tb-ticker">
                                         <!-- Item 1: Businesses -->
                                         <div class="tb-ticker-item active" id="tickerItem0">
-                                            <span class="tb-ticker-icon">🏢</span>
                                             <div class="tb-ticker-text">
                                                 <span class="tb-ticker-num" id="tickerCount0">0</span>
                                                 <span>+</span>
@@ -66,7 +65,6 @@
                                         </div>
                                         <!-- Item 2: Products -->
                                         <div class="tb-ticker-item" id="tickerItem1">
-                                            <span class="tb-ticker-icon">📦</span>
                                             <div class="tb-ticker-text">
                                                 <span class="tb-ticker-num" id="tickerCount1">0</span>
                                                 <span>+</span>
@@ -255,79 +253,6 @@
                             </div>
                         </div>
                     </nav>
-                </div>
-
-
-                <!-- MOBILE NAV DRAWER -->
-                <div class="mobile-nav" id="mobileNav">
-                <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-                <div class="mobile-nav-drawer">
-                    <div class="mnav-header">
-                    <img src="https://muteckaruppu.github.io/Geocare/assets/images/header/geocare-logo.png" alt="GeoCare">
-                    <button class="mnav-close" id="mobileNavClose">✕</button>
-                    </div>
-                    <div class="mnav-links">
-                    <a href="#" class="mnav-link">Home</a>
-
-                    <div class="mnav-link" onclick="toggleMSub('msub1',this)">
-                        Full Shop
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
-                    <div class="mnav-sub" id="msub1">
-                        <div style="padding:8px 20px 4px 32px;font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)">Popular Brands</div>
-                        <a href="#">Ansell</a><a href="#">ATG Gloves</a><a href="#">Aurelia</a><a href="#">Portwest</a><a href="#">Skytec</a><a href="#">Traffiglove</a><a href="#">Uvex</a>
-                        <div style="padding:8px 20px 4px 32px;font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)">Reusable Gloves</div>
-                        <a href="#">Cut Resistant</a><a href="#">Leather</a><a href="#">Thermal</a><a href="#">Waterproof</a><a href="#">Kevlar</a>
-                        <div style="padding:8px 20px 4px 32px;font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)">Disposable Gloves</div>
-                        <a href="#">Nitrile</a><a href="#">Latex</a><a href="#">Vinyl</a><a href="#">Surgical</a>
-                    </div>
-
-                    <div class="mnav-link" onclick="toggleMSub('msub2',this)">
-                        Industry (A–Z)
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
-                    <div class="mnav-sub" id="msub2">
-                        <a href="#">Agriculture</a><a href="#">Automotive</a><a href="#">Construction</a>
-                        <a href="#">Healthcare</a><a href="#">Hospitality</a><a href="#">Manufacturing</a>
-                        <a href="#">Medical</a><a href="#">Oil &amp; Gas</a><a href="#">Warehousing</a>
-                    </div>
-
-                    <div class="mnav-link" onclick="toggleMSub('msub3',this)">
-                        Special Offers
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
-                    <div class="mnav-sub" id="msub3">
-                        <a href="#">Clearance Lines</a><a href="#">Bundle Offers</a>
-                        <a href="#">Bulk Discounts</a><a href="#">New In</a>
-                    </div>
-
-                    <div class="mnav-link" onclick="toggleMSub('msub4',this)">
-                        Our Guides
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
-                    <div class="mnav-sub" id="msub4">
-                        <a href="#">How to Choose Gloves</a><a href="#">Sizing Guide</a>
-                        <a href="#">Material Guide</a><a href="#">Blog &amp; News</a><a href="#">FAQs</a>
-                    </div>
-                    </div>
-
-                    <div class="mnav-footer">
-                    <div class="mnav-phone">
-                        <a href="tel:+919100000000">
-                        <span class="b2b-tag">Bulk B2B</span>
-                        +91 91000 00000
-                        </a>
-                        <a href="tel:+919200000000">
-                        <span class="b2c-tag">Retail B2C</span>
-                        +91 92000 00000
-                        </a>
-                    </div>
-                    <div class="mnav-ctas">
-                        <a href="b2b-terms.html" class="b2b-cta">Wholesale →</a>
-                        <a href="b2c-terms.html" class="b2c-cta">Retail →</a>
-                    </div>
-                    </div>
-                </div>
                 </div>
 
                 <!-- NAV -->
@@ -1110,10 +1035,80 @@
                 </div>
             </footer>
 
-            <!-- Floating CTA -->
-            <a href="#" class="float-cta"> <span class="float-dot"></span> Shop Gloves </a>
-
             <!-- Footer End -->
+
+
+            <!-- MOBILE NAV DRAWER -->
+                <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+                <div class="mobile-nav-drawer">
+                    <div class="mnav-header">
+                    <img src="https://muteckaruppu.github.io/Geocare/assets/images/header/geocare-logo.png" alt="GeoCare">
+                    <button class="mnav-close" id="mobileNavClose">✕</button>
+                    </div>
+                    <div class="mnav-links">
+                    <a href="#" class="mnav-link">Home</a>
+
+                    <div class="mnav-link" onclick="toggleMSub('msub1',this)">
+                        Full Shop
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="mnav-sub" id="msub1">
+                        <div style="padding:8px 20px 4px 32px;font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)">Popular Brands</div>
+                        <a href="#">Ansell</a><a href="#">ATG Gloves</a><a href="#">Aurelia</a><a href="#">Portwest</a><a href="#">Skytec</a><a href="#">Traffiglove</a><a href="#">Uvex</a>
+                        <div style="padding:8px 20px 4px 32px;font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)">Reusable Gloves</div>
+                        <a href="#">Cut Resistant</a><a href="#">Leather</a><a href="#">Thermal</a><a href="#">Waterproof</a><a href="#">Kevlar</a>
+                        <div style="padding:8px 20px 4px 32px;font-size:0.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold)">Disposable Gloves</div>
+                        <a href="#">Nitrile</a><a href="#">Latex</a><a href="#">Vinyl</a><a href="#">Surgical</a>
+                    </div>
+
+                    <div class="mnav-link" onclick="toggleMSub('msub2',this)">
+                        Industry (A–Z)
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="mnav-sub" id="msub2">
+                        <a href="#">Agriculture</a><a href="#">Automotive</a><a href="#">Construction</a>
+                        <a href="#">Healthcare</a><a href="#">Hospitality</a><a href="#">Manufacturing</a>
+                        <a href="#">Medical</a><a href="#">Oil &amp; Gas</a><a href="#">Warehousing</a>
+                    </div>
+
+                    <div class="mnav-link" onclick="toggleMSub('msub3',this)">
+                        Special Offers
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="mnav-sub" id="msub3">
+                        <a href="#">Clearance Lines</a><a href="#">Bundle Offers</a>
+                        <a href="#">Bulk Discounts</a><a href="#">New In</a>
+                    </div>
+
+                    <div class="mnav-link" onclick="toggleMSub('msub4',this)">
+                        Our Guides
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="mnav-sub" id="msub4">
+                        <a href="#">How to Choose Gloves</a><a href="#">Sizing Guide</a>
+                        <a href="#">Material Guide</a><a href="#">Blog &amp; News</a><a href="#">FAQs</a>
+                    </div>
+                    </div>
+
+                    <div class="mnav-footer">
+                    <div class="mnav-phone">
+                        <a href="tel:+919100000000">
+                        <span class="b2b-tag">Bulk B2B</span>
+                        +91 91000 00000
+                        </a>
+                        <a href="tel:+919200000000">
+                        <span class="b2c-tag">Retail B2C</span>
+                        +91 92000 00000
+                        </a>
+                    </div>
+                    <div class="mnav-ctas">
+                        <a href="b2b-terms.html" class="b2b-cta">Wholesale →</a>
+                        <a href="b2c-terms.html" class="b2c-cta">Retail →</a>
+                    </div>
+                    </div>
+                </div>
+                </div>
 
         </div>
     </div>
