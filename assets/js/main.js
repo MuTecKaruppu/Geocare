@@ -100,7 +100,7 @@
             const progress = Math.min(elapsed / stat.duration, 1);
             const eased    = easeOutCubic(progress);
             const val      = Math.floor(eased * stat.target);
-            // Format nicely
+            
             if (val >= 1000000)      stat.el.textContent = (val / 1000000).toFixed(1).replace('.0','') + 'M';
             else if (val >= 1000)    stat.el.textContent = (val / 1000).toFixed(val % 1000 === 0 ? 0 : 1).replace('.0','') + 'K';
             else                     stat.el.textContent = val;
@@ -111,28 +111,24 @@
     }
 
     function showTickerItem(idx) {
-        // Exit current
+        
         const prev = tickerActive;
         tickerItems[prev].classList.remove('active');
         tickerItems[prev].classList.add('exit');
         setTimeout(() => tickerItems[prev].classList.remove('exit'), 500);
 
-        // Enter new
         tickerActive = idx;
         tickerItems[idx].classList.add('active');
 
-        // Run count-up if not yet done
         if (!countDone[idx]) {
             countDone[idx] = true;
             runCountUp(tickerStats[idx]);
         }
     }
 
-    // Boot: run count-up for item 0 immediately (it's already visible)
     runCountUp(tickerStats[0]);
     countDone[0] = true;
 
-    // Auto-cycle every 3.5s
     setInterval(() => {
         const next = (tickerActive + 1) % tickerItems.length;
         showTickerItem(next);
@@ -154,7 +150,6 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(el => revealObserver.observe(el));
 
-    // Sticky header shadow
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
     header.style.boxShadow = window.scrollY > 40
@@ -162,7 +157,6 @@
         : '0 2px 20px rgba(3,35,59,0.12)';
     });
 
-    // Search focus scale
     const searchInput = document.querySelector('.search-bar input');
     if (searchInput) {
         const sb = document.querySelector('.search-bar');
@@ -170,3 +164,50 @@
         searchInput.addEventListener('focus', () => sb.style.transform = 'scale(1.02)');
         searchInput.addEventListener('blur',  () => sb.style.transform = 'scale(1)');
     }
+
+/*
+    5. Mega Menu
+*/
+
+    function megaMenu() {
+
+        const headerContainer = document.querySelector("header .mt__navbar");
+        if (!headerContainer) return;
+
+        const scrollX = window.pageXOffset || window.scrollX || 0;
+        const headerLeft = headerContainer.getBoundingClientRect().left + scrollX;
+
+        const megaMenus = document.querySelectorAll("li.has-mega-menu");
+
+        megaMenus.forEach(function (parent) {
+            const parentLeft = parent.getBoundingClientRect().left + scrollX;
+            const subMenu = parent.querySelector(":scope > ul.sub-menu");
+            if (!subMenu) return;
+
+            subMenu.style.left = `${headerLeft - parentLeft}px`;
+        });
+    }
+
+    megaMenu();
+    window.addEventListener("resize", megaMenu);
+
+
+/** 
+    6. Brand Section Swiper
+*/
+
+    const brandSwiper = new Swiper('#brandSwiper', {
+        loop: true,
+        speed: 900,
+        effect: 'default',
+        slidesPerView: '6',
+        spaceBetween: 30,
+        autoplay: { delay: 2000, disableOnInteraction: false },
+        breakpoints: {
+            320: { slidesPerView: 2, spaceBetween: 15 },
+            480: { slidesPerView: 3, spaceBetween: 20 },
+            768: { slidesPerView: 4, spaceBetween: 25 },
+            1024: { slidesPerView: 5, spaceBetween: 30 },
+            1280: { slidesPerView: 6, spaceBetween: 30 },
+        }
+    });
