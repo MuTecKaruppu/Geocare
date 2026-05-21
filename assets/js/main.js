@@ -171,6 +171,7 @@
 
     function megaMenu() {
 
+        const headerMain = document.querySelector("header");
         const headerContainer = document.querySelector("header .mt__navbar");
         if (!headerContainer) return;
 
@@ -185,6 +186,7 @@
             if (!subMenu) return;
 
             subMenu.style.left = `${headerLeft - parentLeft}px`;
+            subMenu.style.width = `${headerMain.offsetWidth}px`;
         });
     }
 
