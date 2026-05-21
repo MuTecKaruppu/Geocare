@@ -24,7 +24,7 @@
 /* 1. Header */
 
 
-    .mt__header { position: relative; z-index: 10; }
+    .mt__header { position: relative; z-index: 10; background-color: var(--mt-body-bg); }
     body:not(.index) .mt__header { margin-bottom: clamp(1.875rem, 1.3462rem + 2.1795vw, 4.125rem); }
 
     /* 1.1 Topbar */
@@ -81,13 +81,13 @@
             text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
         .btn-ghost:hover { color: var(--mt-primary); }
 
-        .btn-basket { background: var(--mt-primary); color: var(--mt-accent-white); margin: 0; padding: 10px 16px;
+        .btn-basket { background: var(--mt-quaternary); color: var(--mt-accent-white); margin: 0; padding: 10px 16px;
             border: none; border-radius: 8px; font-family: var(--mt-base-font); font-size: 0.82rem; 
             font-weight: normal; cursor: pointer; transition: var(--mt-transition);
             display: flex; align-items: center; gap: 8px; letter-spacing: 0.5px; text-transform: capitalize; }
         .btn-basket:hover { background: var(--mt-teritary); }
 
-        .basket-count { background: var(--mt-quinery); color: var(--mt-primary); width: 20px; 
+        .basket-count { background: var(--mt-primary); color: var(--mt-accent-white); width: 20px; 
             height: 20px; border-radius: 50%; font-size: 0.72rem; font-weight: 800; display: flex; 
             align-items: center; justify-content: center; }
 
@@ -270,7 +270,7 @@
 
     /* Slide visual panel */
 
-    .slide-panel { background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.12); 
+    .slide-panel { background: rgba(255, 255, 255, 0.06); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.12); display: none;
         border-radius: var(--mt-radius); padding: 50px; opacity: 0; transform: translateX(28px); transition: var(--mt-transition); height: 100%; }
     .swiper-slide-active .slide-panel { opacity: 1; transform: translateX(0); }
 
@@ -341,7 +341,7 @@
     3. Brand Logos
 */
 
-    .brand-section { background: var(--mt-accent-white); padding: 24px 0; border-bottom: 1px solid #ede9e4; overflow: hidden; }
+    .brand-section { background: var(--mt-bg-light); padding: 24px 0; border-bottom: 1px solid #ede9e4; overflow: hidden; }
 
     .brand-section #brandSwiper { overflow: hidden; }
     .brand-logo { font-family: var(--mt-head-font); font-size: 1.1rem; font-weight: 800; letter-spacing: 1px; 
@@ -358,7 +358,7 @@
     .featured-header { background: var(--mt-primary); color: var(--mt-accent-white); text-align: center; padding: 14px 30px;
         padding: 14px; font-family: var(--mt-head-font); border-radius: 10px 10px 0 0; position: relative; overflow: hidden; }
 
-    .featured-products .products-main { overflow: hidden; }
+    .featured-products .products-main { overflow: hidden; background-color: var(--mt-body-bg); }
     .featured-products .products-main .products-grid { display: flex; flex-wrap: wrap; justify-content: flex-start; width: auto; margin: 0px;
         border-top: 1px solid var(--mt-border-clr); border-left: 1px solid var(--mt-border-clr); }
 
@@ -458,7 +458,7 @@
     7. Info Row / Learn Row / Bulk Row
 */
 
-    .info-row, .learn-row, .bulk-row { background: var(--mt-accent-white); }
+    /* .info-row, .learn-row, .bulk-row { background: var(--mt-accent-white); } */
 
     .info-row .info-row-inner-wrapper, .learn-row .learn-row-inner-wrapper,
     .bulk-row .bulk-row-inner-wrapper { display: grid; grid-template-columns: 1fr 2.5fr; gap: 40px; align-items: stretch; }
@@ -494,7 +494,7 @@
     .bulk-row .bulk-aside p { color: var(--mt-accent-white); line-height: var(--mt-base-line-height); }
 
     .info-row .info-card, .learn-row .info-card,
-    .bulk-row .info-card { background: var(--mt-accent-white); border-radius: 0; overflow: hidden; transition: var(--mt-transition); }
+    .bulk-row .info-card { border-radius: 0; overflow: hidden; transition: var(--mt-transition); }
 
     .info-row .info-card-img, .learn-row .info-card-img,
     .bulk-row .info-card-img { /* height: 160px; */ display: flex; 
@@ -517,7 +517,7 @@
 
     .learn-row .learn-aside a { background-color: var(--mt-quinery); color: var(--mt-accent-white); }
 
-    .info-row { padding: 60px 0 0 0; }
+    /* .info-row { padding: 60px 0 0 0; } */
     .learn-row { padding: 60px 0 60px 0; }
     .bulk-row { padding: 0 0 60px 0; }
 

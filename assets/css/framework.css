@@ -25,13 +25,15 @@
 	--mt-padding-btn: 16px 24px;
 	--mt-transition: 375ms cubic-bezier(0.7, 0, 0.3, 1);
 
-	--mt-primary: #082c3a;
+	--mt-primary: #012e2b;
 	--mt-scondery: #018057;
-	--mt-teritary: #003e57;
-	--mt-quaternary: #591404;
+	--mt-teritary: #003c35;
+	--mt-quaternary: #fb8701;
 	--mt-quinery: #D6A73C;
 
-	--mt-body-bg: #f8ede7;
+    --mt-bg-light: #dbe2da;
+
+	--mt-body-bg: #f6f1ee;
 	--mt-body-text: #4d4d4d;
 	--mt-heading: #0c0d11;
 	--mt-link-clr: #0c0d11;
@@ -99,7 +101,8 @@
     3. Typography 
 */
 
-body { color: var(--mt-body-text); background-color: var(--mt-body-bg); max-width: 1920px; margin: 0 auto; overflow-x: hidden; }
+body { color: var(--mt-body-text); background-color: var(--mt-body-bg); max-width: 1920px; margin: 0 auto; overflow-x: hidden; 
+    background-image: url('../images/bg-patten.png'); background-repeat: repeat; background-size: auto; }
 
 body, button, input, textarea, select {
     font-family: var(--mt-base-font);

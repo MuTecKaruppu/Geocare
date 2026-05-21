@@ -539,11 +539,7 @@ footer .payment-icons img { border-radius: var(--mt-radius); height: 54px; }
 
 /* ===== ABOUT SECTION ===== */
 
-.about-section {
-  position: relative;
-  overflow: hidden;
-  background: var(--Gray);
-}
+.about-section { position: relative; overflow: hidden; }
 
 .about-section .about-inner { margin: 0 auto; align-items: flex-end; position: relative; display: flex; /* padding: 0 24px; */ }
 
