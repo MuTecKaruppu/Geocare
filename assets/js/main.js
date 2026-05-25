@@ -22,26 +22,48 @@
         hamburger.classList.add('open');
         document.body.classList.add('nav-open');
     }
+
     function closeMNav() {
         mobileNav.classList.remove('open');
         hamburger.classList.remove('open');
         document.body.classList.remove('nav-open');
     }
+
     hamburger.addEventListener('click', openMNav);
     mobileNavClose.addEventListener('click', closeMNav);
     mobileNavOverlay.addEventListener('click', closeMNav);
 
-    function toggleMSub(id, el) {
-        const sub = document.getElementById(id);
-        const isOpen = sub.classList.contains('open');
-        // close all
-        document.querySelectorAll('.mnav-sub').forEach(s => s.classList.remove('open'));
-        document.querySelectorAll('.mnav-link svg').forEach(s => s.style.transform = '');
-        if (!isOpen) {
-            sub.classList.add('open');
-            el.querySelector('svg').style.transform = 'rotate(180deg)';
+
+    const mnavLinks = document.querySelectorAll('.menu-link');
+    mnavLinks.forEach(link => {
+        const sub = link.nextElementSibling;
+        if (sub && sub.classList.contains('sub-menu')) {
+
+            let createdGoBackEle = document.createElement('li');
+            createdGoBackEle.classList.add('go-back');
+            createdGoBackEle.innerHTML = '<a href="#"><span class="icon-left"></span> Back</a>';
+            // clicking back closes this submenu
+            createdGoBackEle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                sub.classList.remove('is-open');
+            });
+            sub.insertBefore(createdGoBackEle, sub.firstChild);
+
+            link.addEventListener('click', () => {
+                const isOpen = sub.classList.contains('is-open');
+                // close all
+                // document.querySelectorAll('.sub-menu').forEach(items => {
+                //     items.classList.remove('is-open');
+                // });
+
+                if (!isOpen) {
+                    sub.classList.add('is-open');
+                }
+
+            });
         }
-    }
+    });
 
 
 /** 

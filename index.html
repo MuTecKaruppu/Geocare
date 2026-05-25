@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/framework.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/products.css">
     <link rel="stylesheet" href="assets/css/custom.css">
 
 </head>
@@ -1189,85 +1190,170 @@
 
                 <!-- Navigation Drawer -->
                 <div class="mobile-nav-drawer">
-                    <div class="mnav-header">
+                    <div class="mob-nav-header">
                         <img src="./assets/images/header/geocare-logo.png" alt="Site Logo">
-                        <button class="mnav-close" id="mobileNavClose">✕</button>
-                    </div>
-                    <div class="mnav-links">
-
-                        <a href="#" class="mnav-link">Home</a>
-
-                        <div class="mnav-link" onclick="toggleMSub('msub1',this)">
-                            Full Shop
-                            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                        </div>
-                        <div class="mnav-sub" id="msub1">
-
-                            <div class="mnav-sub-mega-title">Popular Brands</div>
-                            <a href="#">Ansell</a>
-                            <a href="#">ATG Gloves</a>
-                            <a href="#">Aurelia</a>
-                            <a href="#">Portwest</a>
-                            <a href="#">Skytec</a>
-                            <a href="#">Traffiglove</a>
-                            <a href="#">Uvex</a>
-
-                            <div class="mnav-sub-mega-title">Reusable Gloves</div>
-                            <a href="#">Cut Resistant</a>
-                            <a href="#">Leather</a>
-                            <a href="#">Thermal</a>
-                            <a href="#">Waterproof</a>
-                            <a href="#">Kevlar</a>
-
-                            <div class="mnav-sub-mega-title">Disposable Gloves</div>
-                            <a href="#">Nitrile</a>
-                            <a href="#">Latex</a>
-                            <a href="#">Vinyl</a>
-                            <a href="#">Surgical</a>
-                        </div>
-
-                        <div class="mnav-link" onclick="toggleMSub('msub2',this)">
-                            Industry (A–Z)
-                            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                        </div>
-                        <div class="mnav-sub" id="msub2">
-                            <a href="#">Agriculture</a>
-                            <a href="#">Automotive</a>
-                            <a href="#">Construction</a>
-                            <a href="#">Healthcare</a>
-                            <a href="#">Hospitality</a>
-                            <a href="#">Manufacturing</a>
-                            <a href="#">Medical</a>
-                            <a href="#">Oil &amp; Gas</a>
-                            <a href="#">Warehousing</a>
-                        </div>
-
-                        <div class="mnav-link" onclick="toggleMSub('msub3',this)">
-                            Special Offers
-                            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                        </div>
-                        <div class="mnav-sub" id="msub3">
-                            <a href="#">Clearance Lines</a>
-                            <a href="#">Bundle Offers</a>
-                            <a href="#">Bulk Discounts</a>
-                            <a href="#">New In</a>
-                        </div>
-
-                        <div class="mnav-link" onclick="toggleMSub('msub4',this)">
-                            Our Guides
-                            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                        </div>
-                        <div class="mnav-sub" id="msub4">
-                            <a href="#">How to Choose Gloves</a>
-                            <a href="#">Sizing Guide</a>
-                            <a href="#">Material Guide</a>
-                            <a href="#">Blog &amp; News</a>
-                            <a href="#">FAQs</a>
-                        </div>
+                        <button class="mob-nav-close" id="mobileNavClose">✕</button>
                     </div>
 
-                    <div class="mnav-footer">
-                        <div class="mnav-phone">
+                    <ul class="mt-primary-menu">
+
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">Home</a>
+                        </li>
+
+                        <li class="menu-item"> 
+                            <a href="#" class="menu-link">Full Shop</a>
+
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Popular Brands</a>
+                                    
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Ansell</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">ATG Gloves</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Aurelia</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Portwest</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Skytec</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Traffiglove</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Uvex</a>
+                                        </li>
+                                    </ul>
+                                </li>
+    
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Reusable Gloves</a>
+
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Cut Resistant</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Leather</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Thermal</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Waterproof</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Kevlar</a>
+                                        </li>
+                                    </ul>
+                                </li>
+    
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Disposable Gloves</a>
+
+                                    <ul class="sub-menu">
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Nitrile</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Latex</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Vinyl</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#" class="menu-link">Surgical</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-item"> 
+                            <a href="#" class="menu-link">Industry (A–Z) </a>
+
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Agriculture</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Automotive</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Construction</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Healthcare</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Hospitality</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Manufacturing</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Medical</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Oil &amp; Gas</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Warehousing</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-item"> 
+                            <a href="#" class="menu-link">Special Offers</a>
+
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Clearance Lines</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Bundle Offers</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Bulk Discounts</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">New In</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-item"> 
+                            <a href="#" class="menu-link">Our Guides</a>
+                            
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">How to Choose Gloves</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Sizing Guide</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Material Guide</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Blog &amp; News</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">FAQs</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="mob-nav-footer">
+                        <div class="mob-nav-phone">
                             <a href="tel:+919100000000">
                                 <span class="b2b-tag">Bulk B2B</span> +91 91000 00000
                             </a>
@@ -1275,7 +1361,7 @@
                                 <span class="b2c-tag">Retail B2C</span> +91 92000 00000
                             </a>
                         </div>
-                        <div class="mnav-ctas">
+                        <div class="mob-nav-ctas">
                             <a href="b2b-terms.html" class="b2b-cta">Wholesale</a>
                             <a href="b2c-terms.html" class="b2c-cta">Retail</a>
                         </div>
