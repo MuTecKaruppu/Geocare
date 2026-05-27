@@ -15,6 +15,7 @@
         2.9 Widget Text
         2.10 Widget Image
         2.11 Widget custom Image
+        2.12 Widget product filters
     3. Common & Custom Widget Styles
     4. Colors
         4.1 Primary Color
@@ -275,6 +276,12 @@
 	.widget_custom_block .block_promo .mt_button:hover,
 	.widget_custom_block .block_promo .mt_button:focus { background-color: var(--mt-quinery); color: var(--mt-primary);
 		box-shadow: 4px 4px rgb(var(--mt-accent-black-rgb), .7); }
+
+/** 
+    2.12 Widget product filters
+*/
+
+	.widget.widget_product_filters .product-filters { margin: 0 -10px; }
 
 /**
     3. Common & Custom Widget Styles

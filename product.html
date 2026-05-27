@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/framework.css">
     <link rel="stylesheet" href="assets/css/widget.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/products.css">
     <link rel="stylesheet" href="assets/css/custom.css">
@@ -508,6 +509,23 @@
                             </section>
     
                             <section class="products-main">
+
+                                <div class="product-loop-sorting reveal">
+                                    <div class="product-sorting-inner">
+                                        <!-- Post Count -->
+                                        <div class="product-count">
+                                            <span>285 Items</span>
+                                        </div>
+
+                                        <!-- Page Navigation -->
+                                        <div class="refine-toggle">
+                                            <button class="refine-trigger mt_button" id="refineCanvasTrigger" aria-label="Open sidebar">
+                                                Refine
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="product-grid">
                                     <!-- Product Item -->
                                     <div class="product-item">
@@ -778,7 +796,7 @@
 
                                 </div>
 
-                                <nav class="page-navigation">
+                                <div class="page-navigation">
                                     <ul class="pagination">
                                         <li class="page-item">
                                             <a class="page-link" href="#"> <span aria-hidden="true">&laquo;</span> </a>
@@ -790,7 +808,7 @@
                                             <a class="page-link" href="#"> <span aria-hidden="true">&raquo;</span> </a>
                                         </li>
                                     </ul>
-                                </nav>
+                                </div>
 
                             </section>
     
@@ -833,14 +851,155 @@
                                 <!-- Product Filters -->
 
                                 <aside class="widget widget_product_filters reveal">
-                                    <h3 class="widgettitle">Filter by</h3>
-                                    <ul class="product-filters">
-                                        <li class="filter-item"><a href="#">Brand</a></li>
-                                        <li class="filter-item"><a href="#">Price</a></li>
-                                        <li class="filter-item"><a href="#">Rating</a></li>
-                                        <li class="filter-item"><a href="#">Material</a></li>
-                                        <li class="filter-item"><a href="#">Size</a></li>
-                                    </ul>
+                                    <h3 class="widgettitle">Refine Results</h3>
+                                    <div class="product-filters">
+
+                                        <!-- Sort by filter -->
+                                        <div class="product_sort">
+                                            <select name="order" id="order" class="orderby">
+                                                <option value="1">Order: Name</option>
+                                                <option value="2">Order: Newest</option>
+                                                <option value="3">Order: Price Asc</option>
+                                                <option value="4">Order: Price Desc</option>
+                                                <option selected="" value="5">Order: Top Sellers</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- Product Refine -->
+                                        <div class="block_refine">
+
+                                            <!-- Size -->
+                                            <div class="filter-group">
+                                                <button class="filter-title"> Size </button>
+
+                                                <div class="collapse">
+                                                    <div class="filter-item">
+                                                        <input type="checkbox" id="size10">
+                                                        <label for="size10">Size 10 <span>(3)</span></label>
+                                                    </div>
+
+                                                    <div class="filter-item">
+                                                        <input type="checkbox" id="size7">
+                                                        <label for="size7">Size 7 <span>(3)</span></label>
+                                                    </div>
+
+                                                    <div class="filter-item">
+                                                        <input type="checkbox" id="size8">
+                                                        <label for="size8">Size 8 <span>(3)</span></label>
+                                                    </div>
+
+                                                    <div class="filter-item">
+                                                        <input type="checkbox" id="size9">
+                                                        <label for="size9">Size 9 <span>(3)</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Type of Resistance -->
+                                            <div class="filter-group">
+                                                <button class="filter-title"> Type of Resistanc </button>
+
+                                                <div class="collapse">
+                                                    <div class="filter-item">
+                                                        <input type="checkbox" id="cut">
+                                                        <label for="cut">Cut <span>(4)</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Glove Type -->
+                                            <div class="filter-group">
+                                                <button class="filter-title"> Glove Type </button>
+
+                                                <div class="collapse">
+                                                    <div class="filter-item">
+                                                        <input type="checkbox" id="foodsafe">
+                                                        <label for="foodsafe">Food Safe <span>(3)</span></label>
+                                                    </div>
+
+                                                    <div class="filter-item">
+                                                        <input type="checkbox" id="gauntlet">
+                                                        <label for="gauntlet">Gauntlet <span>(1)</span></label>
+                                                    </div>
+
+                                                    <div class="filter-item">
+                                                        <input type="checkbox" id="reusable">
+                                                        <label for="reusable">Reusable <span>(6)</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Level of Cut Resistance -->
+                                            <div class="filter-group">
+                                                <button class="filter-title"> Level of Cut Resistance </button>
+
+                                                <div class="collapse">
+                                                    <div class="filter-item">
+                                                        <input type="checkbox" id="leveld">
+                                                        <label for="leveld">Level D <span>(1)</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Brand -->
+                                            <div class="filter-group">
+                                                <button class="filter-title"> Brand </button>
+
+                                                <div class="collapse">
+
+                                                    <div class="filter-item">
+                                                        <input type="checkbox" id="honeywell">
+                                                        <label for="honeywell">Honeywell <span>(4)</span></label>
+                                                    </div>
+
+                                                    <div class="filter-item">
+                                                        <input type="checkbox" id="manulatex">
+                                                        <label for="manulatex">Manulatex <span>(15)</span></label>
+                                                    </div>
+
+                                                    <div class="filter-item">
+                                                        <input type="checkbox" id="portwest">
+                                                        <label for="portwest">Portwest <span>(2)</span></label>
+                                                    </div>
+
+                                                    <div class="filter-item">
+                                                        <input type="checkbox" id="supertouch">
+                                                        <label for="supertouch">Supertouch <span>(1)</span></label>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <!-- Price -->
+                                            <div class="filter-group">
+                                                <button class="filter-title"> Price </button>
+
+                                                <div class="collapse show">
+                                                    <fieldset class="filter-price">
+   
+                                                        <div class="price-field">
+                                                            <input type="range"  min="100" max="500" value="100" id="lower">
+                                                            <input type="range" min="100" max="500" value="500" id="upper">
+                                                        </div>
+                                                        <div class="price-wrap">
+                                                            <div class="price-wrap-1">
+                                                                <label for="one">$</label>
+                                                                <input id="one" value="0">
+                                                            </div>
+                                                            <div class="price-wrap_line">-</div>
+                                                            <div class="price-wrap-2">
+                                                                <label for="two">$</label>
+                                                                <input id="two" value="500">
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                                
+                                        </div>
+
+                                    </div>
+                                </aside>
     
                                 <!-- Category -->
                                 <aside class="widget widget_block widget_categories reveal">
@@ -1232,12 +1391,171 @@
                 </div>
             </div>
 
-        </div>
+            <!-- Product Refine Filter -->
+            <div class="refine-canvas" id="refineCanvas">
+
+                <!-- Product Refine Overlay -->
+                <div class="refine-canvas-overlay" id="refineCanvasOverlay"></div>
+
+                <!-- Product Refine Drawer -->
+                <div class="refine-canvas-drawer mt_dark">
+                    <!-- Header -->
+                    <div class="refine-canvas-header">
+                        <h5 class="offcanvas-title">Filter Products</h5>
+                        <button class="refine-canvas-close" id="refineCanvasClose">✕</button>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="refine-canvas-body">
+                        <!-- Product Refine -->
+                        <div class="block_refine">
+
+                            <!-- Size -->
+                            <div class="filter-group">
+                                <button class="filter-title"> Size </button>
+
+                                <div class="collapse">
+                                    <div class="filter-item">
+                                        <input type="checkbox" id="size10">
+                                        <label for="size10">Size 10 <span>(3)</span></label>
+                                    </div>
+
+                                    <div class="filter-item">
+                                        <input type="checkbox" id="size7">
+                                        <label for="size7">Size 7 <span>(3)</span></label>
+                                    </div>
+
+                                    <div class="filter-item">
+                                        <input type="checkbox" id="size8">
+                                        <label for="size8">Size 8 <span>(3)</span></label>
+                                    </div>
+
+                                    <div class="filter-item">
+                                        <input type="checkbox" id="size9">
+                                        <label for="size9">Size 9 <span>(3)</span></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Type of Resistance -->
+                            <div class="filter-group">
+                                <button class="filter-title"> Type of Resistanc </button>
+
+                                <div class="collapse">
+                                    <div class="filter-item">
+                                        <input type="checkbox" id="cut">
+                                        <label for="cut">Cut <span>(4)</span></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Glove Type -->
+                            <div class="filter-group">
+                                <button class="filter-title"> Glove Type </button>
+
+                                <div class="collapse">
+                                    <div class="filter-item">
+                                        <input type="checkbox" id="foodsafe">
+                                        <label for="foodsafe">Food Safe <span>(3)</span></label>
+                                    </div>
+
+                                    <div class="filter-item">
+                                        <input type="checkbox" id="gauntlet">
+                                        <label for="gauntlet">Gauntlet <span>(1)</span></label>
+                                    </div>
+
+                                    <div class="filter-item">
+                                        <input type="checkbox" id="reusable">
+                                        <label for="reusable">Reusable <span>(6)</span></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Level of Cut Resistance -->
+                            <div class="filter-group">
+                                <button class="filter-title"> Level of Cut Resistance </button>
+
+                                <div class="collapse">
+                                    <div class="filter-item">
+                                        <input type="checkbox" id="leveld">
+                                        <label for="leveld">Level D <span>(1)</span></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Brand -->
+                            <div class="filter-group">
+                                <button class="filter-title"> Brand </button>
+
+                                <div class="collapse">
+
+                                    <div class="filter-item">
+                                        <input type="checkbox" id="honeywell">
+                                        <label for="honeywell">Honeywell <span>(4)</span></label>
+                                    </div>
+
+                                    <div class="filter-item">
+                                        <input type="checkbox" id="manulatex">
+                                        <label for="manulatex">Manulatex <span>(15)</span></label>
+                                    </div>
+
+                                    <div class="filter-item">
+                                        <input type="checkbox" id="portwest">
+                                        <label for="portwest">Portwest <span>(2)</span></label>
+                                    </div>
+
+                                    <div class="filter-item">
+                                        <input type="checkbox" id="supertouch">
+                                        <label for="supertouch">Supertouch <span>(1)</span></label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Price -->
+                            <div class="filter-group">
+                                <button class="filter-title"> Price </button>
+
+                                <div class="collapse show">
+                                    <fieldset class="filter-price">
+
+                                        <div class="price-field">
+                                            <input type="range"  min="100" max="500" value="100" id="lower">
+                                            <input type="range" min="100" max="500" value="500" id="upper">
+                                        </div>
+                                        <div class="price-wrap">
+                                            <div class="price-wrap-1">
+                                                <label for="one">$</label>
+                                                <input id="one" value="0">
+                                            </div>
+                                            <div class="price-wrap_line">-</div>
+                                            <div class="price-wrap-2">
+                                                <label for="two">$</label>
+                                                <input id="two" value="500">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                                
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="refine-canvas-footer">
+                        <button class="btn-clear">Clear All</button>
+                        <button class="btn-apply">View Results</button>
+                    </div>
+                </div>
+            </div>
+
+            
     </div>
 
     <!-- All JS files -->
+    <script src="assets/js/jquery-4.0.0.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- <script src="assets/js/product.js"></script> -->
+    <script src="assets/js/select2.min.js"></script>
     <script src="assets/js/main.js"></script>
 
 </body>

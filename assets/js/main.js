@@ -4,6 +4,10 @@
     2. Swiper Hero
     3. Topbar Ticker + Count-Up
     4. Scroll Reveal
+    5. Mega Menu
+    6. Brand Section Swiper
+    7. Select2 Js
+    8. Product Filter (Sidebar)
 
 ////////////////////////////////////// */
 
@@ -234,3 +238,58 @@
             1280: { slidesPerView: 6, spaceBetween: 30 },
         }
     });
+
+/** 
+    7. Select2 Js
+*/
+
+    $(document).ready(function() {
+        $('select:not(.no-select2)').select2();
+    });
+
+/** 
+    8. Product Filter (Sidebar)
+*/
+
+    $(document).ready(function () {
+        $('.block_refine').each(function () {
+            const filterTitle = $(this).find('.filter-title');
+
+            if (!filterTitle.find('.icon-down').length) {
+                filterTitle.append('<span class="icon-down"></span>');
+            }
+
+            filterTitle.each(function () {
+                const $this = $(this);
+                const filterContent = $this.next();
+
+                $this.on('click', function () {
+                    filterContent.stop(true, true).slideToggle();
+                    $this.toggleClass('active');
+                    filterContent.toggleClass('show');
+                });
+
+            });
+        });
+    });
+
+    const refineCanvasTrigger = document.getElementById('refineCanvasTrigger');
+    const refineCanvas        = document.getElementById('refineCanvas');
+    const refineCanvasClose   = document.getElementById('refineCanvasClose');
+    const refineCanvasOverlay = document.getElementById('refineCanvasOverlay');
+
+    function openCanvas() {
+        refineCanvas.classList.add('open');
+        refineCanvasTrigger.classList.add('open');
+        document.body.classList.add('nav-open');
+    }
+
+    function closeCanvas() {
+        refineCanvas.classList.remove('open');
+        refineCanvasTrigger.classList.remove('open');
+        document.body.classList.remove('nav-open');
+    }
+
+    refineCanvasTrigger.addEventListener('click', openCanvas);
+    refineCanvasClose.addEventListener('click', closeCanvas);
+    refineCanvasOverlay.addEventListener('click', closeCanvas);
