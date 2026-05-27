@@ -34,7 +34,7 @@
     mobileNavOverlay.addEventListener('click', closeMNav);
 
 
-    const mnavLinks = document.querySelectorAll('.menu-link');
+    const mnavLinks = document.querySelectorAll('.mobile-nav .menu-link');
     mnavLinks.forEach(link => {
         const sub = link.nextElementSibling;
         if (sub && sub.classList.contains('sub-menu')) {
@@ -42,7 +42,7 @@
             let createdGoBackEle = document.createElement('li');
             createdGoBackEle.classList.add('go-back');
             createdGoBackEle.innerHTML = '<a href="#"><span class="icon-left"></span> Back</a>';
-            // clicking back closes this submenu
+            
             createdGoBackEle.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -52,11 +52,7 @@
 
             link.addEventListener('click', () => {
                 const isOpen = sub.classList.contains('is-open');
-                // close all
-                // document.querySelectorAll('.sub-menu').forEach(items => {
-                //     items.classList.remove('is-open');
-                // });
-
+                
                 if (!isOpen) {
                     sub.classList.add('is-open');
                 }
@@ -86,6 +82,7 @@
 
     const progressBar = document.getElementById('swiperProgress');
     function resetProgress() {
+        if (!progressBar) return;
         progressBar.style.transition = 'none';
         progressBar.style.width = '0%';
         requestAnimationFrame(() => requestAnimationFrame(() => {
@@ -93,8 +90,10 @@
             progressBar.style.width = '100%';
         }));
     }
-    resetProgress();
-    heroSwiper.on('slideChange', resetProgress);
+    if (progressBar) {
+        resetProgress();
+        heroSwiper.on('slideChange', resetProgress);
+    }
 
 
 /** 

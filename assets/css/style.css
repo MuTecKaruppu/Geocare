@@ -29,7 +29,26 @@
     .wrapper { clear: both; float: left; margin: 0; padding: 0; width: 100%; }
     .inner-wrapper { float: left; margin: 0; padding: 0; overflow: hidden; width: 100%; }
 
-    .container { clear: both; margin: 0 auto; position: relative; width: 100%; max-width: 1600px; padding: 0 30px; }
+    .container { clear: both; margin: 0 auto; position: relative; width: 100%; max-width: var(--mt-container); padding: 0 30px; }
+
+    #main { clear: both; display: block; float: left; margin: 0; padding: 0; width: 100%; }
+
+    .with-sidebar-row { display: flex; }
+    .with-sidebar-row:has(> #primary.with-left-sidebar) { flex-direction: row-reverse; }
+
+	#primary.page-with-sidebar { width: calc(100% - var(--mt-sidebar-width) - var(--mt-sidebar-gap)); 
+        margin:0; padding: 0; float: none; display: inline-block; position: relative; }
+    
+	#primary.with-left-sidebar { float: right; margin-left: var(--mt-sidebar-gap); overflow: hidden; }
+	#primary.with-right-sidebar { float: left; margin-right: var(--mt-sidebar-gap); overflow: hidden; }
+
+	#secondary { width: var(--mt-sidebar-width); margin: 0 0 clamp(1.875rem, 1.3462rem + 2.1795vw, 4.125rem); padding: 0; position: relative; z-index: 1; }
+
+    #secondary.mt-sidebar-right { float: right; }
+    #secondary.mt-sidebar-left { float: left; }
+
+	#primary.page-with-sidebar > *:last-child { margin-bottom: clamp(1.875rem, 1.3462rem + 2.1795vw, 4.125rem); 
+        position: relative; float: left; width: 100%; }
 
 
 
@@ -631,7 +650,7 @@
         transition:var(--mt-transition); white-space: nowrap; position: absolute; right: -2px; margin-top: 0; }
     .footer-wrapper .newsletter .newsletter-form button:hover { background: var(--mt-link-hover-clr); }
 
-    footer { background: var(--mt-primary); border-top: 0px solid var(--mt-border-clr); padding: 0; }
+    footer { background: var(--mt-primary); border-top: 0px solid var(--mt-border-clr); padding: 0; clear: both; }
     footer .footer-inner-wrapper { display: flex; flex-wrap: wrap; justify-content: space-between; 
         padding-bottom: 40px; margin: -25px -10px; }
     
@@ -729,6 +748,9 @@
 
         .info-row .info-row-inner-wrapper, .learn-row .learn-row-inner-wrapper, 
         .bulk-row .bulk-row-inner-wrapper { grid-template-columns: 1fr; }
+
+        #secondary { display: none; }
+        #primary.page-with-sidebar { width: 100%; margin: 0; }
     }
 
     @media only screen and (min-width: 991px) { 
