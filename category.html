@@ -15,14 +15,17 @@
 
     <!-- All CSS files -->
     <link rel="stylesheet" href="assets/css/framework.css">
+    <link rel="stylesheet" href="assets/css/widget.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/products.css">
+    <link rel="stylesheet" href="assets/css/category.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
     <link rel="stylesheet" href="assets/css/custom.css">
 
 </head>
 
-<body class="index">
+<body class="product-page">
 
     <div class="wrapper">
         <div class="inner-wrapper">
@@ -267,6 +270,18 @@
                                                 <a class="dropdown-item menu-link" href="#">
                                                     <span>Geo Underpad 10s Pack</span>
                                                 </a>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item">
+                                                        <a class="dropdown-item menu-link" href="#">
+                                                            <span>Patient Kit</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a class="dropdown-item menu-link" href="#">
+                                                            <span>Air Bed Mattress</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                             </li>
                                             <li class="menu-item">
                                                 <a class="dropdown-item menu-link" href="#">
@@ -438,593 +453,344 @@
 
             <!-- Content Start -->
             <main class="main-area">
-                <div id="primary">
-
-                    <!-- Main Banner Slider -->
-                    <section class="hero-swiper swiper" id="heroSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-
-                                <div class="slide-bg" style="background-image: url('./assets/images/main-banner/construction-slideshow.jpg');"></div>
-                                <div class="slide-overlay slide-overlay-1"></div>
-                                <div class="slide-content">
-                                    <div class="slide-text">
-                                        <div class="slide-eyebrow">India's Trusted PPE Supplier</div>
-                                        <h2 class="slide-h1">
-                                            Premium Geocare Healthcare
-                                            <em>For Every Hazard</em>
-                                        </h2>
-                                        <p class="slide-sub">From cut-resistant work gloves to sterile nitrile disposables — the most comprehensive range of Geocare Healthcare for industrial, medical, and food-handling applications.</p>
-                                        <div class="slide-cta">
-                                            <a href="#" class="btn-primary">
-                                                Shop Now
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                                            </a>
-                                            <a href="#" class="btn-secondary">View Full Range</a>
+                <div class="container">
+                    <div class="row with-sidebar-row">
+                        <!-- Primary -->
+                        <div id="primary" class="page-with-sidebar with-left-sidebar">
+    
+                            <section class="support-banner">
+                                <div class="support-items">
+                                    <div class="mt-column reveal">
+                                        <div class="support-item">
+                                            <div class="media-group">
+                                                <img src="./assets/images/upsell-delivery.png" alt="Support Icon 1" class="support-icon">
+                                            </div>
+                                            <div class="support-text">
+                                                <h5 class="support-title">FREE UK delivery</h5>
+                                                <p class="support-description">On all orders of £40 and above.</p>
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <div class="slide-panel">
-                                        <div class="slide-panel-title">Why Choose <em>GeoCare?</em></div>
-                                        <div class="slide-panel-sub">Trusted by 5,000+ businesses across India</div>
-                                        <ul class="slide-panel-list">
-                                            <li><span class="panel-icon green">✂️</span> Cut, heat & chemical resistant options</li>
-                                            <li><span class="panel-icon green">🧤</span> EN 388 & ISO certified gloves</li>
-                                            <li><span class="panel-icon gold">📦</span> Bulk wholesale pricing available</li>
-                                            <li><span class="panel-icon gold">🚚</span> Pan-India fast dispatch</li>
-                                        </ul>
+                                    <div class="mt-column reveal">
+                                        <div class="support-item">
+                                            <div class="media-group">
+                                                <img src="./assets/images/upsell-bulk.png" alt="Support Icon 2" class="support-icon">
+                                            </div>
+                                            <div class="support-text">
+                                                <h5 class="support-title">Buying in bulk?</h5>
+                                                <p class="support-description">Find out about purchase orders.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-column reveal">
+                                        <div class="support-item">
+                                            <div class="media-group">
+                                                <img src="./assets/images/upsell-service.png" alt="Support Icon 3" class="support-icon">
+                                            </div>
+                                            <div class="support-text">
+                                                <h5 class="support-title">Got a question?</h5>
+                                                <p class="support-description">Get in touch with our sales team.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                            </section>
+    
+                            <section class="product-page-header reveal">
 
-                            </div>
-                            <div class="swiper-slide">
+                                <h3 class="product-page-title">Category Title</h3>
 
-                                <div class="slide-bg" style="background-image: url('./assets/images/main-banner/construction-slideshow-1.jpg');"></div>
-                                <div class="slide-overlay slide-overlay-2"></div>
-                                <div class="slide-content">
-                                    <div class="slide-text">
-                                        <div class="slide-eyebrow">Complete Healthcare Supply Partner</div>
-                                        <h2 class="slide-h1">
-                                            Full-Spectrum PPE
-                                            <em>For Healthcare & Clinics</em>
-                                        </h2>
-                                        <p class="slide-sub">Equipping hospitals, clinics, and pharmaceutical labs with sterile gloves, patient-care products, and complete PPE solutions — from a single trusted B2B source.</p>
-                                        <div class="slide-cta">
-                                            <a href="#" class="btn-primary">
-                                                Explore Products
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                                            </a>
-                                            <a href="#" class="btn-gold">
-                                                Get Bulk Quote
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="15" height="15"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="slide-panel">
-                                        <div class="slide-panel-title">Healthcare <em>Solutions</em></div>
-                                        <div class="slide-panel-sub">From OPDs to surgical suites — covered</div>
-                                        <ul class="slide-panel-list">
-                                            <li><span class="panel-icon green">💊</span> Sterile & powder-free nitrile gloves</li>
-                                            <li><span class="panel-icon green">🔬</span> Lab-grade latex & vinyl options</li>
-                                            <li><span class="panel-icon gold">🏥</span> Medical-grade certified products</li>
-                                            <li><span class="panel-icon gold">🤝</span> Dedicated B2B account managers</li>
-                                        </ul>
-                                    </div>
+                                <div class="breadcrumb">
+                                    <a href="index.html">Home</a>
+                                    <span class="breadcrumb-separator">/</span>
+                                    <span class="breadcrumb-current">Category</span>
                                 </div>
-                            </div>
-                        </div>
+    
+                                <p class="product-page-description"> 
+                                    Discover our extensive range of high-quality gloves designed to provide superior protection and comfort for various industries and applications. From disposable gloves for medical use to heavy-duty gloves for industrial work, we have the perfect solution to meet your hand protection needs.
+                                </p>
+    
+                            </section>
 
-                        <!-- Navigation Controls -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-progress" id="swiperProgress"></div>
-                    </section>
+                            <section class="mt__category">
+                                <div class="container-fluid">
+                                    <div class="category-grid">
 
-                    <!-- Brand Logos -->
-                    <section class="brand-section">
-                        <div class="container">
-                            <div id="brandSwiper">
-                                <div class="swiper-wrapper brands">
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Featured Products -->
-                    <section class="featured-products">
-                        <div class="container">
-                            <h4 class="featured-header">Featured Products</h4>
-
-                            <div class="products-main">
-                                <div class="products-grid">
-
-                                    <div class="product-card reveal">
-                                        <div class="product-card-top">
-                                            <div class="product-img">
-                                                <a href="#">
-                                                    <img src="./assets/images/products/product.jpg" alt="Product Image">
-                                                </a>
+                                        <div class="mt__col reveal">
+                                            <div class="category-card">
+                                                <div class="media-group">
+                                                    <a href="#">
+                                                        <img src="https://dummyimage.com/500x500/cccccc/959595.jpg" alt="Disposable Ansell Gloves" class="category-image">
+                                                    </a>
+                                                </div>
+                                                <div class="content-group">
+                                                    <h5 class="category-title">
+                                                        <a href="#">Disposable Ansell Gloves</a>
+                                                    </h5>
+                                                    <a href="#" class="mt_button">Shop Range</a>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="product-content">
-                                            <h5 class="product-name">
-                                                <a href="#">Skytec Aria Heat-Resistant Touchscreen Work Gloves</a>
-                                            </h5>
-                                            <div class="stars-row">
-                                                <span class="star-icons"></span>
-                                                <span class="star-count">(9)</span>
-                                            </div>
-                                            <ul class="product-features">
-                                                <li>Lightweight & grippy with touchscreen capability</li>
-                                                <li>High-level abrasion and tear resistance</li>
-                                                <li>Heat protection up to 100°C</li>
-                                                <li>Seamless liner and breathable flexible design</li>
-                                            </ul>
-                                            <div class="product-delivery">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                                                In stock, delivery as soon as <span>Tuesday 19 May</span>
+                                        <div class="mt__col reveal">
+                                            <div class="category-card">
+                                                <div class="media-group">
+                                                    <a href="#">
+                                                        <img src="https://dummyimage.com/500x500/cccccc/959595.jpg" alt="Oil-Resistant Ansell Gloves" class="category-image">
+                                                    </a>
+                                                </div>
+                                                <div class="content-group">
+                                                    <h5 class="category-title">
+                                                        <a href="#">Oil-Resistant Ansell Gloves</a>
+                                                    </h5>
+                                                    <a href="#" class="mt_button">Shop Range</a>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="product-price-box">
-                                            <div class="price-wrapper">
-                                                <small class="price-from">from</small>
-                                                <span class="price-amount">£2.70</span>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <a href="#" class="btn-primary">
-                                                    Details 
-                                                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-                                                </a>
+                                        <div class="mt__col reveal">
+                                            <div class="category-card">
+                                                <div class="media-group">
+                                                    <a href="#">
+                                                        <img src="https://dummyimage.com/500x500/cccccc/959595.jpg" alt="Waterproof Ansell Gloves" class="category-image">
+                                                    </a>
+                                                </div>
+                                                <div class="content-group">
+                                                    <h5 class="category-title">
+                                                        <a href="#">Waterproof Ansell Gloves</a>
+                                                    </h5>
+                                                    <a href="#" class="mt_button">Shop Range</a>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        <div class="mt__col reveal">
+                                            <div class="category-card">
+                                                <div class="media-group">
+                                                    <a href="#">
+                                                        <img src="https://dummyimage.com/500x500/cccccc/959595.jpg" alt="Grip Ansell Gloves" class="category-image">
+                                                    </a>
+                                                </div>
+                                                <div class="content-group">
+                                                    <h5 class="category-title">
+                                                        <a href="#">Grip Ansell Gloves</a>
+                                                    </h5>
+                                                    <a href="#" class="mt_button">Shop Range</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt__col reveal">
+                                            <div class="category-card">
+                                                <div class="media-group">
+                                                    <a href="#">
+                                                        <img src="https://dummyimage.com/500x500/cccccc/959595.jpg" alt="Disposable Ansell Gloves" class="category-image">
+                                                    </a>
+                                                </div>
+                                                <div class="content-group">
+                                                    <h5 class="category-title">
+                                                        <a href="#">Disposable Ansell Gloves</a>
+                                                    </h5>
+                                                    <a href="#" class="mt_button">Shop Range</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt__col reveal">
+                                            <div class="category-card">
+                                                <div class="media-group">
+                                                    <a href="#">
+                                                        <img src="https://dummyimage.com/500x500/cccccc/959595.jpg" alt="Oil-Resistant Ansell Gloves" class="category-image">
+                                                    </a>
+                                                </div>
+                                                <div class="content-group">
+                                                    <h5 class="category-title">
+                                                        <a href="#">Oil-Resistant Ansell Gloves</a>
+                                                    </h5>
+                                                    <a href="#" class="mt_button">Shop Range</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt__col reveal">
+                                            <div class="category-card">
+                                                <div class="media-group">
+                                                    <a href="#">
+                                                        <img src="https://dummyimage.com/500x500/cccccc/959595.jpg" alt="Waterproof Ansell Gloves" class="category-image">
+                                                    </a>
+                                                </div>
+                                                <div class="content-group">
+                                                    <h5 class="category-title">
+                                                        <a href="#">Waterproof Ansell Gloves</a>
+                                                    </h5>
+                                                    <a href="#" class="mt_button">Shop Range</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt__col reveal">
+                                            <div class="category-card">
+                                                <div class="media-group">
+                                                    <a href="#">
+                                                        <img src="https://dummyimage.com/500x500/cccccc/959595.jpg" alt="Grip Ansell Gloves" class="category-image">
+                                                    </a>
+                                                </div>
+                                                <div class="content-group">
+                                                    <h5 class="category-title">
+                                                        <a href="#">Grip Ansell Gloves</a>
+                                                    </h5>
+                                                    <a href="#" class="mt_button">Shop Range</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt__col reveal">
+                                            <div class="category-card">
+                                                <div class="media-group">
+                                                    <a href="#">
+                                                        <img src="https://dummyimage.com/500x500/cccccc/959595.jpg" alt="Disposable Ansell Gloves" class="category-image">
+                                                    </a>
+                                                </div>
+                                                <div class="content-group">
+                                                    <h5 class="category-title">
+                                                        <a href="#">Disposable Ansell Gloves</a>
+                                                    </h5>
+                                                    <a href="#" class="mt_button">Shop Range</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt__col reveal">
+                                            <div class="category-card">
+                                                <div class="media-group">
+                                                    <a href="#">
+                                                        <img src="https://dummyimage.com/500x500/cccccc/959595.jpg" alt="Oil-Resistant Ansell Gloves" class="category-image">
+                                                    </a>
+                                                </div>
+                                                <div class="content-group">
+                                                    <h5 class="category-title">
+                                                        <a href="#">Oil-Resistant Ansell Gloves</a>
+                                                    </h5>
+                                                    <a href="#" class="mt_button">Shop Range</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt__col reveal">
+                                            <div class="category-card">
+                                                <div class="media-group">
+                                                    <a href="#">
+                                                        <img src="https://dummyimage.com/500x500/cccccc/959595.jpg" alt="Waterproof Ansell Gloves" class="category-image">
+                                                    </a>
+                                                </div>
+                                                <div class="content-group">
+                                                    <h5 class="category-title">
+                                                        <a href="#">Waterproof Ansell Gloves</a>
+                                                    </h5>
+                                                    <a href="#" class="mt_button">Shop Range</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt__col reveal">
+                                            <div class="category-card">
+                                                <div class="media-group">
+                                                    <a href="#">
+                                                        <img src="https://dummyimage.com/500x500/cccccc/959595.jpg" alt="Grip Ansell Gloves" class="category-image">
+                                                    </a>
+                                                </div>
+                                                <div class="content-group">
+                                                    <h5 class="category-title">
+                                                        <a href="#">Grip Ansell Gloves</a>
+                                                    </h5>
+                                                    <a href="#" class="mt_button">Shop Range</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         
                                     </div>
+                                </div>
 
-                                    <div class="product-card reveal">
-                                        <div class="product-card-top">
-                                            <div class="product-img">
-                                                <a href="#">
-                                                    <img src="./assets/images/products/product.jpg" alt="Product Image">
-                                                </a>
-                                            </div>
-                                        </div>
+                            </section>
+    
+    
+                        </div>
+                        <!-- Primary End -->
+    
+                        <!-- Secondary -->
+                        <div id="secondary" class="secondary-sidebar mt-sidebar-left">
+                            <div class="sidebar-area">
+    
+                                <!-- Image -->
+                                <aside class="widget widget_media_image reveal">
+                                    <div class="wp-block-image size-large">
+                                        <a href="#" target="_blank" rel="noopener">
+                                            <img src="./assets/images/products/trust.jpg" alt="Gloves Category Image" class="size-full"/>
+                                        </a>
+                                    </div>
+                                </aside>
+    
+                                <!-- Image -->
+                                <aside class="widget widget_media_image reveal">
+                                    <div class="wp-block-image size-large">
+                                        <a href="#" target="_blank" rel="noopener">
+                                            <img src="./assets/images/products/trust.jpg" alt="Gloves Category Image" class="size-full"/>
+                                        </a>
+                                    </div>
+                                </aside>
 
-                                        <div class="product-content">
-                                            <h5 class="product-name">
-                                                <a href="#">Skytec Aria Heat-Resistant Touchscreen Work Gloves</a>
-                                            </h5>
-                                            <div class="stars-row">
-                                                <span class="star-icons"></span>
-                                                <span class="star-count">(9)</span>
-                                            </div>
-                                            <ul class="product-features">
-                                                <li>Lightweight & grippy with touchscreen capability</li>
-                                                <li>High-level abrasion and tear resistance</li>
-                                                <li>Heat protection up to 100°C</li>
-                                                <li>Seamless liner and breathable flexible design</li>
+                                <!-- Custom Ad Block -->
+                                <aside class="widget widget_custom_block reveal">
+                                    <div class="block_promo">
+                                        <a class="mt_button" href="#">Shop Now</a> 
+                                        <a href="#">
+                                            <img src="https://dummyimage.com/800x800/cccccc/959595.jpg" loading="lazy" alt="Our Best Waterproof Gloves" title="Our Best Waterproof Gloves">
+                                        </a>
+                                    </div>
+                                </aside>
+    
+                                <!-- Category -->
+                                <aside class="widget widget_block widget_categories reveal">
+                                    <h3 class="widgettitle">Category</h3>
+                                    <ul class="block-categories">
+                                        <li class="cat-item"><a href="/all-gloves.html">All Gloves</a></li>
+                                        <li class="cat-item"><a href="/gloves-by-brand.html">Gloves by Brand</a></li>
+                                        <li class="cat-item"><a href="/gloves-by-environment.html">Gloves by Environment</a></li>
+                                        <li class="cat-item"><a href="/gloves-by-hazard.html">Gloves by Hazard</a></li>
+                                        <li class="cat-item">
+                                            <a href="/gloves-by-style.html">Gloves by Style</a>
+                                            <ul class="sub-menu">
+                                                <li class="cat-item"> <a href="/abattoir-gloves.html" class="sub">Abattoir Gloves</a> </li>
+                                                <li class="cat-item"> <a href="/abseiling-gloves.html" class="sub" >Abseiling Gloves</a > </li>
+                                                <li class="cat-item"> <a href="/aerospace-gloves.html" class="sub" >Aerospace Gloves</a > </li>
+                                                <li class="cat-item"> <a href="/agricultural-gloves.html" class="sub" >Agricultural Gloves</a > </li>
+                                                <li class="cat-item"> <a href="/airport-security-gloves.html" class="sub" >Airport Security Gloves</a > </li>
+                                                <li class="cat-item"> <a href="/animal-handling-gloves.html" class="sub" >Animal Handling Gloves</a > </li>
+                                                <li class="cat-item"> <a href="/aquarium-gloves.html" class="sub">Aquarium Gloves</a> </li>
+                                                <li class="cat-item"> <a href="/arborist-gloves.html" class="sub">Arborist Gloves</a> </li>
+                                                <li class="cat-item"> <a href="/art-gloves.html" class="sub">Art Gloves</a> </li>
+                                                <li class="cat-item"> <a href="/assembly-gloves.html" class="sub">Assembly Gloves</a> </li>
+                                                <li class="cat-item"> <a href="/autoclave-gloves.html" class="sub" >Autoclave Gloves</a > </li>
+                                                <li class="cat-item"> <a href="/automotive-gloves.html" class="sub" >Automotive Gloves</a > </li>
+                                                <li class="cat-item"> <a href="/beauty-gloves.html" class="sub">Beauty Gloves</a> </li>
+                                                <li class="cat-item"> <a href="/baggage-handling-gloves.html" class="sub" >Baggage Handling Gloves</a > </li>
+                                                <li class="cat-item"> <a href="/bailiff-gloves.html" class="sub">Bailiff Gloves</a> </li>
+                                                <li class="cat-item"> <a href="/bakers-gloves.html" class="sub">Bakers Gloves</a> </li>
+                                                <li class="cat-item"> <a href="/baling-gloves.html" class="sub">Baling Gloves</a> </li>
+                                                <li class="cat-item"> <a href="/barbering-gloves.html" class="sub" >Barbering Gloves</a > </li>
                                             </ul>
-                                            <div class="product-delivery">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                                                In stock, delivery as soon as <span>Tuesday 19 May</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-price-box">
-                                            <div class="price-wrapper">
-                                                <small class="price-from">from</small>
-                                                <span class="price-amount">£2.70</span>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <a href="#" class="btn-primary">
-                                                    Details 
-                                                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-
-                                    <div class="product-card reveal">
-                                        <div class="product-card-top">
-                                            <div class="product-img">
-                                                <a href="#">
-                                                    <img src="./assets/images/products/product.jpg" alt="Product Image">
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-content">
-                                            <h5 class="product-name">
-                                                <a href="#">Skytec Aria Heat-Resistant Touchscreen Work Gloves</a>
-                                            </h5>
-                                            <div class="stars-row">
-                                                <span class="star-icons"></span>
-                                                <span class="star-count">(9)</span>
-                                            </div>
-                                            <ul class="product-features">
-                                                <li>Lightweight & grippy with touchscreen capability</li>
-                                                <li>High-level abrasion and tear resistance</li>
-                                                <li>Heat protection up to 100°C</li>
-                                                <li>Seamless liner and breathable flexible design</li>
-                                            </ul>
-                                            <div class="product-delivery">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                                                In stock, delivery as soon as <span>Tuesday 19 May</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-price-box">
-                                            <div class="price-wrapper">
-                                                <small class="price-from">from</small>
-                                                <span class="price-amount">£2.70</span>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <a href="#" class="btn-primary">
-                                                    Details 
-                                                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-
-                                    <div class="product-card reveal">
-                                        <div class="product-card-top">
-                                            <div class="product-img">
-                                                <a href="#">
-                                                    <img src="./assets/images/products/product.jpg" alt="Product Image">
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-content">
-                                            <h5 class="product-name">
-                                                <a href="#">Skytec Aria Heat-Resistant Touchscreen Work Gloves</a>
-                                            </h5>
-                                            <div class="stars-row">
-                                                <span class="star-icons"></span>
-                                                <span class="star-count">(9)</span>
-                                            </div>
-                                            <ul class="product-features">
-                                                <li>Lightweight & grippy with touchscreen capability</li>
-                                                <li>High-level abrasion and tear resistance</li>
-                                                <li>Heat protection up to 100°C</li>
-                                                <li>Seamless liner and breathable flexible design</li>
-                                            </ul>
-                                            <div class="product-delivery">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                                                In stock, delivery as soon as <span>Tuesday 19 May</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-price-box">
-                                            <div class="price-wrapper">
-                                                <small class="price-from">from</small>
-                                                <span class="price-amount">£2.70</span>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <a href="#" class="btn-primary">
-                                                    Details 
-                                                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-
-                                    <div class="product-card reveal">
-                                        <div class="product-card-top">
-                                            <div class="product-img">
-                                                <a href="#">
-                                                    <img src="./assets/images/products/product.jpg" alt="Product Image">
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-content">
-                                            <h5 class="product-name">
-                                                <a href="#">Skytec Aria Heat-Resistant Touchscreen Work Gloves</a>
-                                            </h5>
-                                            <div class="stars-row">
-                                                <span class="star-icons"></span>
-                                                <span class="star-count">(9)</span>
-                                            </div>
-                                            <ul class="product-features">
-                                                <li>Lightweight & grippy with touchscreen capability</li>
-                                                <li>High-level abrasion and tear resistance</li>
-                                                <li>Heat protection up to 100°C</li>
-                                                <li>Seamless liner and breathable flexible design</li>
-                                            </ul>
-                                            <div class="product-delivery">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                                                In stock, delivery as soon as <span>Tuesday 19 May</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-price-box">
-                                            <div class="price-wrapper">
-                                                <small class="price-from">from</small>
-                                                <span class="price-amount">£2.70</span>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <a href="#" class="btn-primary">
-                                                    Details 
-                                                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-
-                                    <div class="product-card reveal">
-                                        <div class="product-card-top">
-                                            <div class="product-img">
-                                                <a href="#">
-                                                    <img src="./assets/images/products/product.jpg" alt="Product Image">
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-content">
-                                            <h5 class="product-name">
-                                                <a href="#">Skytec Aria Heat-Resistant Touchscreen Work Gloves</a>
-                                            </h5>
-                                            <div class="stars-row">
-                                                <span class="star-icons"></span>
-                                                <span class="star-count">(9)</span>
-                                            </div>
-                                            <ul class="product-features">
-                                                <li>Lightweight & grippy with touchscreen capability</li>
-                                                <li>High-level abrasion and tear resistance</li>
-                                                <li>Heat protection up to 100°C</li>
-                                                <li>Seamless liner and breathable flexible design</li>
-                                            </ul>
-                                            <div class="product-delivery">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                                                In stock, delivery as soon as <span>Tuesday 19 May</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="product-price-box">
-                                            <div class="price-wrapper">
-                                                <small class="price-from">from</small>
-                                                <span class="price-amount">£2.70</span>
-                                            </div>
-                                            <div class="button-wrapper">
-                                                <a href="#" class="btn-primary">
-                                                    Details 
-                                                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                    
-
-                                </div>
+                                        </li>
+                                        <li class="cat-item"><a href="/accessories.html">Accessories</a></li>
+                                        <li class="cat-item"><a href="/special-offers.html">Special Offers</a></li>
+                                    </ul>
+                                </aside>
+    
                             </div>
+                            
                         </div>
-                    </section>
-
-                    <!-- Info row -->
-                    <section class="info-row">
-                        <div class="container">
-                            <div class="info-row-inner-wrapper">
-                                <div class="info-aside reveal">
-                                    <h3>Find Out All About Us</h3>
-                                    <p>Learn more about Geocare Healthcare — who we are, the wide selection we have available, and exactly what we can do to help protect your hands.</p>
-                                    <a href="#" class="btn-primary" style="width:fit-content">Learn More</a>
-                                </div>
-                                <div class="info-main">
-                                    <div class="info-card reveal">
-                                        <div class="info-card-img"> 
-                                            <img src="https://dummyimage.com/600x400/cccccc/959595.jpg" alt="image">
-                                        </div>
-                                        <div class="info-card-body">
-                                            <div class="info-card-name">Gardening Gloves</div>
-                                            <p class="info-card-desc">Full selection of high-quality gardening gloves ideal for both professional landscapers and everyday amateur use.</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-card reveal">
-                                        <div class="info-card-img"> 
-                                            <img src="https://dummyimage.com/600x400/cccccc/959595.jpg" alt="image">
-                                        </div>
-                                        <div class="info-card-body">
-                                            <div class="info-card-name">Chemical Gloves</div>
-                                            <p class="info-card-desc">If you're dealing with dangerous, corrosive chemicals, having the right pair of chemical-resistant gloves is absolutely crucial.</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-card reveal">
-                                        <div class="info-card-img"> 
-                                            <img src="https://dummyimage.com/600x400/cccccc/959595.jpg" alt="image">
-                                        </div>
-                                        <div class="info-card-body">
-                                            <div class="info-card-name">Thorn Proof Gloves</div>
-                                            <p class="info-card-desc">From pruning roses to picking blackberries from brambles — we've got the perfect thorn-proof gardening gloves for you.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- learn row section -->
-                    <section class="learn-row">
-                        <div class="container">
-                            <div class="learn-row-inner-wrapper">
-                                <div class="learn-aside reveal">
-                                    <h3>Learn About Gloves</h3>
-                                    <p>With our wide selection of work gloves, you may be a little unsure about which gloves are right for you. Our Knowledge Centre is full of helpful guides to help you choose.</p>
-                                    <a href="#" class="btn-primary">Learn More</a>
-                                </div>
-                                <div class="info-main">
-                                    <div class="info-card reveal">
-                                        <div class="info-card-img" > 
-                                            <img src="https://dummyimage.com/600x400/cccccc/959595.jpg" alt="image">    
-                                        </div>
-                                        <div class="info-card-body">
-                                            <div class="info-card-name">Nitrile Gloves</div>
-                                            <p class="info-card-desc">Ideal for protection against chemicals, nitrile gloves provide low irritation and are excellent for a number of industries. View our extensive range.</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-card reveal">
-                                        <div class="info-card-img" > 
-                                            <img src="https://dummyimage.com/600x400/cccccc/959595.jpg" alt="image">    
-                                        </div>
-                                        <div class="info-card-body">
-                                            <div class="info-card-name">Leather Gloves</div>
-                                            <p class="info-card-desc">Hardwearing and dependable, our range of leather gloves provides excellent protection that lasts longer. Suitable for a wide variety of industries.</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-card reveal">
-                                        <div class="info-card-img" > 
-                                            <img src="https://dummyimage.com/600x400/cccccc/959595.jpg" alt="image">    
-                                        </div>
-                                        <div class="info-card-body">
-                                            <div class="info-card-name">Outdoor Gloves</div>
-                                            <p class="info-card-desc">From hardwearing gloves for felling timber to thermal gloves for cold weather, our range of outdoor gloves will keep your hands safe outdoors.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Bulk Row Section -->
-                    <section class="bulk-row">
-                        <div class="container">
-                            <div class="bulk-row-inner-wrapper">
-                                <div class="bulk-aside reveal">
-                                    <h3>Bulk Buying & Wholesale</h3>
-                                    <p>If you're looking to buy in bulk, we can help you save money on your PPE. We offer discounts on all of our gloves when you are buying wholesale.</p>
-                                    <a href="#" class="btn-primary">Learn More</a>
-                                </div>
-                                <div class="info-main">
-                                    <div class="info-card reveal">
-                                        <div class="info-card-img" > 
-                                            <img src="https://dummyimage.com/600x400/cccccc/959595.jpg" alt="image">
-                                        </div>
-                                        <div class="info-card-body">
-                                            <div class="info-card-name">Bulk Discounts</div>
-                                            <p class="info-card-desc">The more you order, the more you save. We offer tiered pricing across our entire catalogue for volume buyers and trade accounts.</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-card reveal">
-                                        <div class="info-card-img" > 
-                                            <img src="https://dummyimage.com/600x400/cccccc/959595.jpg" alt="image">
-                                        </div>
-                                        <div class="info-card-body">
-                                            <div class="info-card-name">Trade Accounts</div>
-                                            <p class="info-card-desc">Set up a dedicated trade account for streamlined ordering, invoicing, and priority dispatch for your business.</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-card reveal">
-                                        <div class="info-card-img" > 
-                                            <img src="https://dummyimage.com/600x400/cccccc/959595.jpg" alt="image">
-                                        </div>
-                                        <div class="info-card-body">
-                                            <div class="info-card-name">Custom Orders</div>
-                                            <p class="info-card-desc">Need a bespoke solution? Our team can source, brand, or customise gloves for your organisation's specific requirements.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- About -->
-                    <section class="about-section">
-                        <div class="container">
-                            <div class="about-inner">
-                                <div class="about-text reveal">
-                                    <h3>Geocare Healthcare - The experts in hand protection!</h3>
-                                    <p>Welcome to <strong>Geocare Healthcare</strong> - the experts in Geocare Healthcare and hand protection. Our focus is on providing the UK's most comprehensive range of Geocare Healthcare to help protect your hands. Our extensive range of Geocare Healthcare covers a multitude of handling applications, with task specific Geocare Healthcare to ensure your hands are protected the right way.</p>
-                                    <p>Geocare Healthcare play a crucial part in safe handling, and can be a vital addition to your PPE (personal protective equipment). If you're looking to protect your hands in the workplace, we can help. We have a team of hand protection experts that can help you select the correct Geocare Healthcare for your handling application.</p>
-                                    <div style="margin-top:25px;">
-                                        <a href="#" class="btn-primary" >Read More</a>
-                                    </div>
-                                </div>
-                                <div class="about-image">
-                                    <img src="./assets/images/seo-pic.png" alt="seo-alt" class="about-image">
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Brand Logos -->
-                    <section class="brand-section">
-                        <div class="container">
-                            <div id="brandSwiper">
-                                <div class="swiper-wrapper brands">
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/images/brand-logo/brand-logo.png" alt="Logo" class="brand-logo">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
+                        <!--  Secondary End -->
+                    </div>
                 </div>
             </main>
             <!-- Content End -->
